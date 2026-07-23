@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 160000,
+    "chemical": "mekanism_incomparable:electrine"
+  },
+  "item_input": {
+    "count": 2,
+    "item": "mekanism_incomparable:trajectory_alloy"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:resonance_alloy"
+  },
+  "per_tick_usage": false
+}

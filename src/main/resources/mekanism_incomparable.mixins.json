@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.takenokoshi.mekin.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "minecraft.RecipeManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

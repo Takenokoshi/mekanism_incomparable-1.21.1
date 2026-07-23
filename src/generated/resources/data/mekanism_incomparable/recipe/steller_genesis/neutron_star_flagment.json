@@ -1,0 +1,15 @@
+{
+  "type": "mekanism_utilities:stellar_genesis",
+  "left_input": {
+    "amount": 50000000,
+    "chemical": "mekanism:dirty_iron"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:neutron_star_flagment"
+  },
+  "right_input": {
+    "amount": 20000000,
+    "chemical": "mekanism_utilities:dirty_certus_quartz_slurry"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "mekanism_utilities:chemical_cut",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanismelements:nitric_acid"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:metastable_alloy_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:printed_dimentional_processor"
+  },
+  "per_tick_usage": true
+}

@@ -1,0 +1,19 @@
+{
+  "type": "evolvedmekanism:chemixing",
+  "chemical_input": {
+    "amount": 20000,
+    "chemical": "mekanism:antimatter"
+  },
+  "extra_input": {
+    "count": 256,
+    "item": "mekanism_incomparable:metastable_alloy_ingot"
+  },
+  "main_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:antimatter_synchronized_amethyst_shard"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:amethyst_synchronized_metastable_alloy_ingot"
+  }
+}

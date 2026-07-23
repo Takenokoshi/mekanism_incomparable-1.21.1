@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 2000,
+    "chemical": "mekanism:plutonium"
+  },
+  "fluid_input": {
+    "amount": 400,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism_utilities:standard_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:digital_control_matrix"
+    },
+    {
+      "count": 16,
+      "item": "advanced_ae:quantum_unit"
+    },
+    {
+      "count": 1,
+      "item": "megacells:cell_component_4m"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:standard_control_matrix"
+  }
+}

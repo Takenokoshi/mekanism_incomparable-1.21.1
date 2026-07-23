@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:combining",
+  "extra_input": {
+    "count": 2,
+    "item": "mekanism_incomparable:exorefractive_prismatic_alloy"
+  },
+  "main_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:iron_starlight"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:trajectory_alloy"
+  }
+}

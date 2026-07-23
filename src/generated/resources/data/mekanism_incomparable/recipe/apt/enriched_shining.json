@@ -1,0 +1,16 @@
+{
+  "type": "evolvedmekanism:apt",
+  "chemical_input": {
+    "amount": 400,
+    "chemical": "mekanism_utilities:singularity"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_extras:enriched_thermonuclear"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_extras:enriched_shining"
+  },
+  "per_tick_usage": false
+}

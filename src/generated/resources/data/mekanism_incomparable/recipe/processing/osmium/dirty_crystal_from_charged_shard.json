@@ -1,0 +1,21 @@
+{
+  "type": "mekanism_incomparable:leaching",
+  "chemical_input": {
+    "amount": 100,
+    "chemical": "mekanismelements:aqua_regia"
+  },
+  "duration": 100,
+  "energy_required": 0,
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:lava"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:charged_osmium_shard"
+  },
+  "output": {
+    "count": 5,
+    "id": "mekanism_incomparable:dirty_osmium_crystal"
+  }
+}

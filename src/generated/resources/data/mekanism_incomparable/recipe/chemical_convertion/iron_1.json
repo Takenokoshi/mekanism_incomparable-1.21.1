@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:chemical_conversion",
+  "input": {
+    "count": 1,
+    "item": "mekanism:dust_iron"
+  },
+  "output": {
+    "amount": 10,
+    "id": "mekanism_incomparable:iron"
+  }
+}

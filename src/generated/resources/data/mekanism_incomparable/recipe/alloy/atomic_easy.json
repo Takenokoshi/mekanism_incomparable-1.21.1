@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 640,
+    "chemical": "mekanism:refined_obsidian"
+  },
+  "item_input": {
+    "count": 16,
+    "item": "mekanism:crystal_osmium"
+  },
+  "output": {
+    "count": 8,
+    "id": "mekanism:alloy_atomic"
+  },
+  "per_tick_usage": false
+}

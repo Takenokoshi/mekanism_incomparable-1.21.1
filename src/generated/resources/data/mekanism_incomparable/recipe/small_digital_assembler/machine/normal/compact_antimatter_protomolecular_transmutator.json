@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 5,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "evolvedmekanism:quantum_control_circuit"
+    },
+    {
+      "count": 8,
+      "item": "evolvedmekanism:alloy_subatomic"
+    },
+    {
+      "count": 52,
+      "item": "evolvedmekanism:apt_casing"
+    },
+    {
+      "count": 4,
+      "item": "evolvedmekanism:apt_port"
+    },
+    {
+      "count": 82,
+      "item": "mekanism:structural_glass"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:compact_antimatter_protomolecular_transmutator"
+  }
+}

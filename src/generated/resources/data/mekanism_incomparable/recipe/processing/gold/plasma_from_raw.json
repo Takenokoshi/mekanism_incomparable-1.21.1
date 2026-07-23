@@ -1,0 +1,15 @@
+{
+  "type": "mekanism_incomparable:aet",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism:antimatter"
+  },
+  "item_input": {
+    "count": 1,
+    "tag": "c:raw_materials/gold"
+  },
+  "output": {
+    "amount": 600,
+    "id": "mekanism_incomparable:gold_plasma"
+  }
+}

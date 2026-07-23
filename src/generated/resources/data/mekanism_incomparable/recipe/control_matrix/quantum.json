@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 8000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "evolvedmekanism:quantum_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:overclocked_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:silver_ingot"
+    },
+    {
+      "count": 1,
+      "item": "advanced_ae:quantum_storage_component"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:quantum_control_matrix"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekanismelements:americium"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:chemical_dissolution_chamber"
+    },
+    {
+      "count": 8,
+      "item": "emextras:supreme_quantum_control_circuit"
+    },
+    {
+      "count": 8,
+      "item": "evolvedmekanism:alloy_subatomic"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_extras:alloy_thermonuclear"
+    },
+    {
+      "count": 256,
+      "tag": "c:ingots/tin"
+    },
+    {
+      "count": 256,
+      "tag": "c:ingots/netherite"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:supreme_quantum_chemical_dissolution_chamber"
+  }
+}

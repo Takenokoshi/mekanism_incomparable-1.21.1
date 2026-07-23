@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 2000,
+    "chemical": "mekanism:clean_gold"
+  },
+  "output": {
+    "amount": 1600,
+    "id": "mekanism:gold"
+  }
+}

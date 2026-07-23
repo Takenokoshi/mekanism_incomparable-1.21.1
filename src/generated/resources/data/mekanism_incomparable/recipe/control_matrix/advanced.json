@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1280,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 200,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:advanced_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:basic_control_matrix"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:hdpe_sheet"
+    },
+    {
+      "count": 1,
+      "item": "ae2:cell_component_256k"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:advanced_control_matrix"
+  }
+}

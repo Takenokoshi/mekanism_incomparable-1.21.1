@@ -1,0 +1,45 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekmm:uu_matter"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "emextras:infinite_multiversal_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_extras:alloy_spectrum"
+    },
+    {
+      "count": 4,
+      "item": "evolvedmekanism:alloy_exoversal"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_extras:infinite_induction_cell"
+    },
+    {
+      "count": 8,
+      "item": "evolvedmekanism:multiversal_induction_cell"
+    },
+    {
+      "count": 64,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 64,
+      "item": "mekanism:block_steel"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:flux_condenser"
+  }
+}

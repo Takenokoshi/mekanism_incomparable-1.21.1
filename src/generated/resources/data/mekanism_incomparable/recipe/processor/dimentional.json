@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism_incomparable:scarlet_silver"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:printed_dimentional_processor"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:semiconductive_alloy_circuit_board"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:dimentional_processor"
+  }
+}

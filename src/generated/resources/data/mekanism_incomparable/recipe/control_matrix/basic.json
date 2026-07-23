@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1280,
+    "chemical": "mekanism:redstone"
+  },
+  "fluid_input": {
+    "amount": 200,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:basic_control_circuit"
+    },
+    {
+      "count": 4,
+      "tag": "c:dusts/lithium"
+    },
+    {
+      "count": 4,
+      "item": "mekanismelements:dust_calcium_oxide"
+    },
+    {
+      "count": 1,
+      "item": "ae2:cell_component_16k"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:basic_control_matrix"
+  }
+}

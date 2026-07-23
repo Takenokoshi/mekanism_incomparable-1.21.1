@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism:lithium"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 2,
+      "item": "emextras:supreme_quantum_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_extras:alloy_thermonuclear"
+    },
+    {
+      "count": 2,
+      "item": "evolvedmekanism:alloy_subatomic"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_utilities:iridium_dust"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:chemical_washer"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:electrolytic_separator"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:chemical_extractor"
+  }
+}

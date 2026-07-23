@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 2000,
+    "chemical": "mekanism:clean_uranium"
+  },
+  "output": {
+    "amount": 1600,
+    "id": "evolvedmekanism:uranium"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 1600,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:elite_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_utilities:iridium_dust"
+    },
+    {
+      "count": 1,
+      "item": "megacells:cell_component_64m"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:ultimate_control_matrix"
+  }
+}

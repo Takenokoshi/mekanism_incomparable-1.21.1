@@ -1,0 +1,19 @@
+{
+  "type": "mekanism_incomparable:chemical_extraction",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism_utilities:dirty_certus_quartz_slurry"
+  },
+  "fluid_input": {
+    "amount": 1,
+    "tag": "c:water"
+  },
+  "main_output": {
+    "amount": 20,
+    "id": "mekanism_utilities:clean_certus_quartz_slurry"
+  },
+  "secondary_output": {
+    "amount": 1,
+    "id": "mekanism_utilities:clean_quartz_slurry"
+  }
+}

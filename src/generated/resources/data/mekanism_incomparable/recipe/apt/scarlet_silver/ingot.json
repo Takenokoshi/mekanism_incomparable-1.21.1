@@ -1,0 +1,16 @@
+{
+  "type": "evolvedmekanism:apt",
+  "chemical_input": {
+    "amount": 800,
+    "chemical": "mekanism:redstone"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:silver_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:scarlet_silver_ingot"
+  },
+  "per_tick_usage": false
+}

@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 4000000,
+    "chemical": "mekanism_utilities:iridium"
+  },
+  "fluid_input": {
+    "amount": 10000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:titanium_ingot"
+    },
+    {
+      "count": 256,
+      "item": "mekanism:steel_casing"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:titanium_casing"
+  }
+}

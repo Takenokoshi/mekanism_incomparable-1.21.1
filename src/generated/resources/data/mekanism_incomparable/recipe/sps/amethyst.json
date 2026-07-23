@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 2000,
+    "chemical": "mekanism_utilities:clean_amethyst_slurry"
+  },
+  "output": {
+    "amount": 1600,
+    "id": "mekanism_incomparable:amethyst"
+  }
+}

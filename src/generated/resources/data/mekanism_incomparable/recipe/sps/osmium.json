@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 100,
+    "chemical": "mekanism:clean_osmium"
+  },
+  "output": {
+    "amount": 1600,
+    "id": "mekanism:osmium"
+  }
+}

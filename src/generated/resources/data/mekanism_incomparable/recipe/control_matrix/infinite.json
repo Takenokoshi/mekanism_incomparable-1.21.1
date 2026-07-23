@@ -1,0 +1,45 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 8000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism_extras:infinite_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:cosmic_control_matrix"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:fluorite_starlight"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:gold_starlight"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:naquadah_starlight"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:lapis_lazuli_starlight"
+    },
+    {
+      "count": 1,
+      "item": "extendedae_plus:infinity_core"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:infinite_control_matrix"
+  }
+}

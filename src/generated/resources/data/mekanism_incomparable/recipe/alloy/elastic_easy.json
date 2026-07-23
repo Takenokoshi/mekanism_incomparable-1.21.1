@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism_utilities:fluix"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:crystal_tin"
+  },
+  "output": {
+    "count": 32,
+    "id": "mekanism_utilities:elastic_alloy"
+  },
+  "per_tick_usage": false
+}

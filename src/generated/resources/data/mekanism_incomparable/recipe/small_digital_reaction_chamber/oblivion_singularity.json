@@ -1,0 +1,46 @@
+{
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekmm:uu_matter"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 10000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "extendedae_plus:oblivion_singularity"
+  },
+  "list_item_input": [
+    {
+      "count": 512,
+      "item": "ae2:singularity"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_utilities:artificial_star"
+    },
+    {
+      "count": 16,
+      "item": "advanced_ae:shattered_singularity"
+    },
+    {
+      "count": 16,
+      "item": "extendedae:entro_dust"
+    },
+    {
+      "count": 32,
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "count": 32,
+      "item": "mekanism:pellet_polonium"
+    },
+    {
+      "count": 32,
+      "item": "mekanism_incomparable:titanium_ingot"
+    }
+  ]
+}

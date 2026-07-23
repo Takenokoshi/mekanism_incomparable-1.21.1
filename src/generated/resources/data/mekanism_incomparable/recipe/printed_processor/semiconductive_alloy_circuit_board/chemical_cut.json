@@ -1,0 +1,16 @@
+{
+  "type": "mekanism_utilities:chemical_cut",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanismelements:compressed_air"
+  },
+  "item_input": {
+    "count": 4,
+    "item": "mekanism_incomparable:semiconductive_alloy_ingot"
+  },
+  "output": {
+    "count": 4,
+    "id": "mekanism_incomparable:semiconductive_alloy_circuit_board"
+  },
+  "per_tick_usage": true
+}

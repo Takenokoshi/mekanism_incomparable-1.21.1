@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:chemical_conversion",
+  "input": {
+    "count": 1,
+    "item": "mekanism_incomparable:enriched_scarlet_silver"
+  },
+  "output": {
+    "amount": 80,
+    "id": "mekanism_incomparable:scarlet_silver"
+  }
+}

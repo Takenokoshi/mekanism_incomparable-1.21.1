@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1280,
+    "chemical": "mekanism:osmium"
+  },
+  "fluid_input": {
+    "amount": 400,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:elite_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:advanced_control_matrix"
+    },
+    {
+      "count": 16,
+      "item": "mekanismelements:pellet_neutron_source"
+    },
+    {
+      "count": 1,
+      "item": "megacells:cell_component_4m"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:elite_control_matrix"
+  }
+}

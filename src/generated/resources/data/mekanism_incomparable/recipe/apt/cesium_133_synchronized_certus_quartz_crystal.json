@@ -1,0 +1,16 @@
+{
+  "type": "evolvedmekanism:apt",
+  "chemical_input": {
+    "amount": 10000000,
+    "chemical": "mekmm:uu_matter"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:certus_quartz_starlight"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:cesium_133_synchronized_certus_quartz_crystal"
+  },
+  "per_tick_usage": false
+}

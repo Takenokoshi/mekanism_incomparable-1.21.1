@@ -1,0 +1,16 @@
+{
+  "type": "mekanism_incomparable:refining",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanism_incomparable:potassium_chlorate"
+  },
+  "item_input": {
+    "count": 16,
+    "tag": "c:crystals/copper"
+  },
+  "output": {
+    "count": 32,
+    "id": "minecraft:copper_ingot"
+  },
+  "per_tick_usage": true
+}

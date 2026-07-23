@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:nucleosynthesizing",
+  "chemical_input": {
+    "amount": 100,
+    "chemical": "mekanism_incomparable:coal_plasma"
+  },
+  "duration": 1,
+  "item_input": {
+    "count": 1,
+    "tag": "c:dusts/obsidian"
+  },
+  "output": {
+    "count": 5,
+    "id": "mekanism_incomparable:charged_coal_shard"
+  },
+  "per_tick_usage": false
+}

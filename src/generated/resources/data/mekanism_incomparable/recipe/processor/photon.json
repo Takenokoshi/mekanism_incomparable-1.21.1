@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism:redstone"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:printed_photon_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:semiconductive_alloy_circuit_board"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "mekanism_incomparable:photon_processor"
+  }
+}

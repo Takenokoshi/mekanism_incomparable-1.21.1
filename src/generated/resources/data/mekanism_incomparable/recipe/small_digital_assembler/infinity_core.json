@@ -1,0 +1,42 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekanism:antimatter"
+  },
+  "energy_required": 8000000,
+  "fluid_input": {
+    "amount": 10000,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 8,
+      "item": "extendedae_plus:quantum_storage_core"
+    },
+    {
+      "count": 8,
+      "item": "extendedae_plus:storage_core"
+    },
+    {
+      "count": 8,
+      "item": "extendedae_plus:energy_storage_core"
+    },
+    {
+      "count": 8,
+      "item": "extendedae_plus:spatial_core"
+    },
+    {
+      "count": 16,
+      "item": "extendedae_plus:oblivion_singularity"
+    },
+    {
+      "count": 64,
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "extendedae_plus:infinity_core"
+  }
+}

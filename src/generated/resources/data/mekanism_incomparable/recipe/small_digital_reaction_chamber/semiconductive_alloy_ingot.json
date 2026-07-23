@@ -1,0 +1,26 @@
+{
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism_utilities:fluix"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 250,
+    "tag": "c:lithium"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "mekanism_incomparable:semiconductive_alloy_ingot"
+  },
+  "list_item_input": [
+    {
+      "count": 8,
+      "item": "ae2:silicon"
+    },
+    {
+      "count": 1,
+      "item": "extendedae:entro_dust"
+    }
+  ]
+}

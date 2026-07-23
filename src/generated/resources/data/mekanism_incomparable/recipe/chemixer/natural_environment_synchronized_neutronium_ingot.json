@@ -1,0 +1,19 @@
+{
+  "type": "evolvedmekanism:chemixing",
+  "chemical_input": {
+    "amount": 20000,
+    "chemical": "mekanism:antimatter"
+  },
+  "extra_input": {
+    "count": 256,
+    "item": "minecraft:grass_block"
+  },
+  "main_input": {
+    "count": 1024,
+    "item": "mekanism_incomparable:neutronium_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:natural_environment_synchronized_neutronium_ingot"
+  }
+}

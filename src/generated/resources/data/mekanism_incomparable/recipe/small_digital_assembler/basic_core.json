@@ -1,0 +1,42 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 2000,
+    "chemical": "mekanism_utilities:astral_ether"
+  },
+  "energy_required": 8000000,
+  "fluid_input": {
+    "amount": 10000,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "megacells:bulk_cell_component"
+    },
+    {
+      "count": 64,
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "count": 32,
+      "item": "ae2:logic_processor"
+    },
+    {
+      "count": 32,
+      "item": "ae2:calculation_processor"
+    },
+    {
+      "count": 32,
+      "item": "ae2:engineering_processor"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:dimentional_processor"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "extendedae_plus:basic_core"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 640,
+    "chemical": "mekanism_utilities:fluix"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_extras:absolute_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:advanced_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:digital_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "advanced_ae:quantum_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_extras:alloy_thermonuclear"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_extras:supreme_control_circuit"
+  }
+}

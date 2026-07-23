@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 160000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:memory_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:cosmic_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:dense_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:random_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:resonance_alloy"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:relativity_control_circuit"
+  }
+}

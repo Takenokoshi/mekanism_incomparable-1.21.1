@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism:redstone"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:control_circuit_component"
+    },
+    {
+      "count": 4,
+      "item": "ae2:calculation_processor"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "mekanism_incomparable:control_circuit_core"
+  }
+}

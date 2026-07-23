@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 6400,
+    "chemical": "mekanism:osmium"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "list_item_input": [
+    {
+      "count": 2,
+      "item": "emextras:absolute_overclocked_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_extras:alloy_radiance"
+    },
+    {
+      "count": 2,
+      "item": "evolvedmekanism:alloy_hypercharged"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:pressurized_reaction_chamber"
+    },
+    {
+      "count": 128,
+      "tag": "c:ingots/bronze"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:chemical_leaching_chamber"
+  }
+}

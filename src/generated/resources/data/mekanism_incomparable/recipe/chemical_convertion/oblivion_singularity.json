@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:chemical_conversion",
+  "input": {
+    "count": 1,
+    "item": "extendedae_plus:oblivion_singularity"
+  },
+  "output": {
+    "amount": 20,
+    "id": "mekanism_incomparable:oblivion_singularity"
+  }
+}

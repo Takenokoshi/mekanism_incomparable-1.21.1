@@ -1,0 +1,26 @@
+{
+  "type": "mekanism_utilities:small_digital_reaction_chamber",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism_incomparable:oblivion_singularity"
+  },
+  "duration": 100,
+  "fluid_input": {
+    "amount": 10,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "item_output": {
+    "count": 1,
+    "id": "mekanism_incomparable:exorefractive_prismatic_alloy"
+  },
+  "list_item_input": [
+    {
+      "count": 2,
+      "tag": "evolvedmekanism:alloys/exoversal"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_extras:alloy_spectrum"
+    }
+  ]
+}

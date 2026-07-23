@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 3200000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 10000,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:relativity_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:infinite_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:multiversal_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:clock_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:coodinate_alloy"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:timespace_control_circuit"
+  }
+}

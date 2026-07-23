@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "count": 1,
+    "tag": "c:raw_materials/certus_quartz"
+  },
+  "output": {
+    "count": 6,
+    "id": "ae2:certus_quartz_crystal"
+  }
+}

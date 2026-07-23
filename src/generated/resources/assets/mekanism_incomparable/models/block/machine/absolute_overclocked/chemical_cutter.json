@@ -1,0 +1,7 @@
+{
+  "parent": "mekanism_utilities:block/base/machine_base_energy",
+  "textures": {
+    "decoration": "mekanism_incomparable:block/tier_decoration/absolute_overclocked",
+    "front": "mekanism_utilities:block/machine_front/chemical_cutter"
+  }
+}

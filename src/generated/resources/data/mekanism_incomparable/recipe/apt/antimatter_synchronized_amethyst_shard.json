@@ -1,0 +1,16 @@
+{
+  "type": "evolvedmekanism:apt",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism:antimatter"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:amethyst_starlight"
+  },
+  "output": {
+    "count": 64,
+    "id": "mekanism_incomparable:antimatter_synchronized_amethyst_shard"
+  },
+  "per_tick_usage": false
+}

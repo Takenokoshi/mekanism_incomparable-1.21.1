@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 5120,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:enrichment_chamber"
+    },
+    {
+      "count": 8,
+      "item": "emextras:absolute_overclocked_control_circuit"
+    },
+    {
+      "count": 8,
+      "item": "evolvedmekanism:alloy_hypercharged"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_extras:alloy_radiance"
+    },
+    {
+      "count": 64,
+      "tag": "c:ingots/uranium"
+    },
+    {
+      "count": 64,
+      "tag": "c:gems/emerald"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:absolute_overclocked_enrichment_chamber"
+  }
+}

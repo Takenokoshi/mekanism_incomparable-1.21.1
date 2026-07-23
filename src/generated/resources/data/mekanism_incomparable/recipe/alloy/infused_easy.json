@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 160,
+    "chemical": "mekanism:redstone"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism:crystal_copper"
+  },
+  "output": {
+    "count": 32,
+    "id": "mekanism:alloy_infused"
+  },
+  "per_tick_usage": false
+}

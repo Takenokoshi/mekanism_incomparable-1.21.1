@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:chemical_conversion",
+  "input": {
+    "count": 1,
+    "item": "mekanism_incomparable:scarlet_silver_dust"
+  },
+  "output": {
+    "amount": 10,
+    "id": "mekanism_incomparable:scarlet_silver"
+  }
+}

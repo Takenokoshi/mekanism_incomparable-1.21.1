@@ -1,0 +1,19 @@
+{
+  "type": "evolvedmekanism:chemixing",
+  "chemical_input": {
+    "amount": 20000,
+    "chemical": "mekanism:antimatter"
+  },
+  "extra_input": {
+    "count": 64,
+    "item": "mekanism_incomparable:scarlet_silver_dust"
+  },
+  "main_input": {
+    "count": 64,
+    "item": "evolvedmekanism:dust_better_gold"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:electrine_dust"
+  }
+}

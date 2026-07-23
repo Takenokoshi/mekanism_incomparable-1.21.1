@@ -1,0 +1,16 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "chemical_input": {
+    "amount": 160,
+    "tag": "evolvedmekanism:better_gold"
+  },
+  "item_input": {
+    "count": 4,
+    "tag": "evolvedmekanism:alloys/subatomic"
+  },
+  "output": {
+    "count": 1,
+    "id": "evolvedmekanism:alloy_singular"
+  },
+  "per_tick_usage": false
+}

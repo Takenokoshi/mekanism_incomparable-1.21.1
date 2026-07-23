@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 10000,
+    "fluid": "mekanismgenerators:fusion_fuel"
+  },
+  "list_item_input": [
+    {
+      "count": 32,
+      "item": "emextras:cosmic_dense_control_circuit"
+    },
+    {
+      "count": 64,
+      "item": "mekanism_extras:alloy_shining"
+    },
+    {
+      "count": 64,
+      "item": "evolvedmekanism:alloy_singular"
+    },
+    {
+      "count": 256,
+      "item": "mekanism_incomparable:titanium_casing"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:antiprotonic_nucleosynthesizer"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:antineutronic_existence_transmutator"
+  }
+}

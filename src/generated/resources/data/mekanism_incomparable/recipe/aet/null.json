@@ -1,0 +1,15 @@
+{
+  "type": "mekanism_incomparable:aet",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism:antimatter"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "extendedae_plus:oblivion_singularity"
+  },
+  "output": {
+    "amount": 1,
+    "id": "mekanism_incomparable:null"
+  }
+}

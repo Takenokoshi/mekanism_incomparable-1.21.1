@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 400,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 10,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_extras:infinite_control_circuit"
+    },
+    {
+      "count": 1,
+      "item": "evolvedmekanism:multiversal_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:absolute_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:overclocked_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:observation_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:exorefractive_prismatic_alloy"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:analysis_control_circuit"
+  }
+}

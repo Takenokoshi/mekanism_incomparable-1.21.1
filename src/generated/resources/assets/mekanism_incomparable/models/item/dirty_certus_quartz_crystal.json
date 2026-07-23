@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "mekanism_utilities:item/crystal/certus_quartz",
+    "layer1": "mekanism_incomparable:item/crystal/dirty"
+  }
+}

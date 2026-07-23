@@ -1,0 +1,19 @@
+{
+  "type": "mekanism_incomparable:chemical_extraction",
+  "chemical_input": {
+    "amount": 2,
+    "chemical": "mekanism:dirty_tin"
+  },
+  "fluid_input": {
+    "amount": 1,
+    "tag": "c:water"
+  },
+  "main_output": {
+    "amount": 20,
+    "id": "mekanism:clean_tin"
+  },
+  "secondary_output": {
+    "amount": 1,
+    "id": "mekanism_incomparable:titanium"
+  }
+}

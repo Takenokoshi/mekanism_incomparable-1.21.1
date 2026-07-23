@@ -1,0 +1,16 @@
+{
+  "type": "mekanism_utilities:chemical_cut",
+  "chemical_input": {
+    "amount": 1,
+    "chemical": "mekanismelements:nitric_acid"
+  },
+  "item_input": {
+    "count": 1,
+    "item": "mekanism_incomparable:antimatter_synchronized_amethyst_shard"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:printed_observation_processor"
+  },
+  "per_tick_usage": true
+}

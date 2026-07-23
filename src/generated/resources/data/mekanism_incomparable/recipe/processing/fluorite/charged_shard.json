@@ -1,0 +1,17 @@
+{
+  "type": "mekanism:nucleosynthesizing",
+  "chemical_input": {
+    "amount": 100,
+    "chemical": "mekanism_incomparable:fluorite_plasma"
+  },
+  "duration": 1,
+  "item_input": {
+    "count": 1,
+    "tag": "c:dusts/obsidian"
+  },
+  "output": {
+    "count": 5,
+    "id": "mekanism_incomparable:charged_fluorite_shard"
+  },
+  "per_tick_usage": false
+}

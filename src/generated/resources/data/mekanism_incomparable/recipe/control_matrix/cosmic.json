@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 8000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism_extras:cosmic_control_circuit"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:supreme_control_matrix"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:redstone_starlight"
+    },
+    {
+      "count": 1,
+      "item": "extendedae_plus:energy_storage_core"
+    },
+    {
+      "count": 1,
+      "item": "extendedae_plus:spatial_core"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:cosmic_control_matrix"
+  }
+}

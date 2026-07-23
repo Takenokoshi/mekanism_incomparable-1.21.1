@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:crushing",
+  "input": {
+    "count": 1,
+    "item": "mekanism_incomparable:scarlet_silver_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:scarlet_silver_dust"
+  }
+}

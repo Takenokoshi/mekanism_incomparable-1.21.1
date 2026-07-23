@@ -1,0 +1,19 @@
+{
+  "type": "ae2:inscriber",
+  "ingredients": {
+    "bottom": {
+      "item": "ae2:silicon"
+    },
+    "middle": {
+      "tag": "c:dusts/redstone"
+    },
+    "top": {
+      "tag": "c:ingots/osmium"
+    }
+  },
+  "mode": "press",
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:control_circuit_component"
+  }
+}

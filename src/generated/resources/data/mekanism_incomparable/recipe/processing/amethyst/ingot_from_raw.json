@@ -1,0 +1,11 @@
+{
+  "type": "mekanism:enriching",
+  "input": {
+    "count": 1,
+    "tag": "c:raw_materials/amethyst"
+  },
+  "output": {
+    "count": 6,
+    "id": "mekanism_utilities:amethyst_dust"
+  }
+}

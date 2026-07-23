@@ -1,0 +1,33 @@
+{
+  "type": "extendedae:crystal_assembler",
+  "input_items": [
+    {
+      "amount": 8,
+      "ingredient": {
+        "item": "mekanism_incomparable:control_circuit_component"
+      }
+    },
+    {
+      "amount": 4,
+      "ingredient": {
+        "item": "mekanism_utilities:digital_control_circuit"
+      }
+    },
+    {
+      "amount": 8,
+      "ingredient": {
+        "item": "megacells:accumulation_processor"
+      }
+    },
+    {
+      "amount": 16,
+      "ingredient": {
+        "item": "mekanism_utilities:convergent_alloy"
+      }
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "mekanism_utilities:standard_control_circuit"
+  }
+}

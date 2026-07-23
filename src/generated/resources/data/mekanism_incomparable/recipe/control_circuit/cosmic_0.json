@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 500,
+    "chemical": "mekanism:polonium"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_extras:supreme_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:elite_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:standard_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:graviton_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_extras:alloy_shining"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_extras:cosmic_control_circuit"
+  }
+}

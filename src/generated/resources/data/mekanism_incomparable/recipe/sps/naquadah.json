@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 2000,
+    "chemical": "mekanism_extras:clean_naquadah"
+  },
+  "output": {
+    "amount": 1600,
+    "id": "mekanism_incomparable:naquadah"
+  }
+}

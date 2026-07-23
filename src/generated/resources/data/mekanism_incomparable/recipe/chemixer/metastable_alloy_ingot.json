@@ -1,0 +1,19 @@
+{
+  "type": "evolvedmekanism:chemixing",
+  "chemical_input": {
+    "amount": 2000,
+    "chemical": "mekanism_extras:polonium-208"
+  },
+  "extra_input": {
+    "count": 8,
+    "item": "advanced_ae:quantum_infused_dust"
+  },
+  "main_input": {
+    "count": 4,
+    "item": "mekanism_incomparable:titanium_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:metastable_alloy_ingot"
+  }
+}

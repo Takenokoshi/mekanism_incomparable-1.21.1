@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 20,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_extras:cosmic_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:ultimate_control_matrix"
+    },
+    {
+      "count": 2,
+      "item": "mekanism_incomparable:augment_control_matrix"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_incomparable:dimentional_processor"
+    },
+    {
+      "count": 4,
+      "item": "mekanism_extras:alloy_spectrum"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_extras:infinite_control_circuit"
+  }
+}
