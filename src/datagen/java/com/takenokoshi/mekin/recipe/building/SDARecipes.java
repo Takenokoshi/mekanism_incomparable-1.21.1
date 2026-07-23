@@ -146,8 +146,8 @@ public class SDARecipes {
                     .smallDigitalAssembler(new ItemStack(data.afterMachine))
                     .addItemInput(data.beforeMachine, 1)
                     .addItemInput(EMExtraItems.ABSOLUTE_OVERCLOCKED_CONTROL_CIRCUIT, 8)
-                    .addItemInput(EMItems.HYPERCHARGED_ALLOY, 8)
-                    .addItemInput(ExtraItems.RADIANCE_ALLOY, 8)
+                    .addItemInput(EMItems.HYPERCHARGED_ALLOY, 16)
+                    .addItemInput(ExtraItems.RADIANCE_ALLOY, 16)
                     .addItemInput(
                             MekanismTags.Items.PROCESSED_RESOURCES.get(ResourceType.INGOT, PrimaryResource.URANIUM), 64)
                     .addItemInput(Tags.Items.GEMS_EMERALD, 64)
@@ -161,8 +161,8 @@ public class SDARecipes {
                     .smallDigitalAssembler(new ItemStack(data.afterMachine))
                     .addItemInput(data.beforeMachine, 1)
                     .addItemInput(EMExtraItems.SUPREME_QUANTUM_CONTROL_CIRCUIT, 8)
-                    .addItemInput(EMItems.SUBATOMIC_ALLOY, 8)
-                    .addItemInput(ExtraItems.THERMONUCLEAR_ALLOY, 8)
+                    .addItemInput(EMItems.SUBATOMIC_ALLOY, 16)
+                    .addItemInput(ExtraItems.THERMONUCLEAR_ALLOY, 16)
                     .addItemInput(
                             MekanismTags.Items.PROCESSED_RESOURCES.get(ResourceType.INGOT, PrimaryResource.TIN), 256)
                     .addItemInput(Tags.Items.INGOTS_NETHERITE, 256)
@@ -178,6 +178,10 @@ public class SDARecipes {
 
     static {
         ABSOLUTE_MACHINES = new ArrayList<>();
+        ABSOLUTE_MACHINES.add(new MachineData(
+                MekUtMachines.COMPACT_BOILER,
+                MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+                "boiler"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.CHEMICAL_CUTTER,
                 MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
@@ -207,9 +211,17 @@ public class SDARecipes {
                 MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
                 "enrichment_chamber"));
         ABSOLUTE_MACHINES.add(new MachineData(
+                MekUtMachines.COMPACT_FISSION_REACTOR,
+                MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                "fission_reactor"));
+        ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.ICE_MAKER,
                 MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
                 "ice_maker"));
+        ABSOLUTE_MACHINES.add(new MachineData(
+                MekUtMachines.COMPACT_INDUSTRIAL_TURBINE,
+                MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
+                "industrial_turbine"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.METALLURGIC_INFUSER,
                 MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,

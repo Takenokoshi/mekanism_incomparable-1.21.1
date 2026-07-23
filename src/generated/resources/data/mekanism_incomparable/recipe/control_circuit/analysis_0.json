@@ -1,8 +1,8 @@
 {
   "type": "mekanism_utilities:small_digital_assembler",
   "chemical_input": {
-    "amount": 400,
-    "chemical": "mekanism:antimatter"
+    "amount": 4,
+    "chemical": "mekanism_incomparable:null"
   },
   "fluid_input": {
     "amount": 10,

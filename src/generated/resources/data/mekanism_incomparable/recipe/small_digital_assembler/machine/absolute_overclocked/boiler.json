@@ -11,7 +11,7 @@
   "list_item_input": [
     {
       "count": 1,
-      "item": "mekanism:rotary_condensentrator"
+      "item": "mekanism_utilities:compact_boiler"
     },
     {
       "count": 8,
@@ -36,6 +36,6 @@
   ],
   "output": {
     "count": 1,
-    "id": "mekanism_incomparable:absolute_overclocked_rotary_condensentrator"
+    "id": "mekanism_incomparable:absolute_overclocked_boiler"
   }
 }

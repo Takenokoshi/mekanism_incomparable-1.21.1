@@ -23,6 +23,7 @@ import mekanism.client.recipe_viewer.jei.RecipeRegistryHelper;
 import mekanism.client.recipe_viewer.jei.machine.ItemStackChemicalToItemStackRecipeCategory;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.client.recipe_viewer.type.RecipeViewerRecipeType;
+import mekanism.generators.client.recipe_viewer.GeneratorsRVRecipeType;
 import mezz.jei.api.IModPlugin;
 import mezz.jei.api.JeiPlugin;
 import mezz.jei.api.helpers.IGuiHelper;
@@ -106,6 +107,9 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekInRecipeViewerRecipeType.TEPS,
         });
         CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.BOILER),
+                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER));
+        CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.CHEMICAL_CUT),
                 List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER));
         CatalystRegistryHelper.register(registration,
@@ -135,6 +139,15 @@ public class MekInJEIPlugin implements IModPlugin {
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.ENRICHING),
                 List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(GeneratorsRVRecipeType.FISSION),
+                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.FISSION_REACTOR),
+                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.ICE_MAKING),
+                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.METALLURGIC_INFUSING),
                 List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER));

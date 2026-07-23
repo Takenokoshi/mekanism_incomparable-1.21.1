@@ -8,6 +8,7 @@ import com.glodblock.github.extendedae.recipe.CrystalAssemblerRecipeBuilder;
 import com.jerry.mekextras.common.registries.ExtraItems;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.registries.MekInBlocks;
+import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInFluids;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekut.recipe.builder.ItemStackListFluidChemicalToItemRecipeBuilder;
@@ -259,7 +260,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.DIMENTIONAL_PROCESSOR, 4)
                 .addItemInput(ExtraItems.SPECTRUM_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(20))
+                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(200))
                 .build(output, MekInConstants.rl("control_circuit/infinite_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(EMItems.MULTIVERSAL_CONTROL_CIRCUIT.asStack(1))
@@ -269,7 +270,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.DIMENTIONAL_PROCESSOR, 4)
                 .addItemInput(EMItems.EXOVERSAL_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(20))
+                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(200))
                 .build(output, MekInConstants.rl("control_circuit/multiversal_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.ANALYSIS_CONTROL_CIRCUIT.asStack(1))
@@ -280,7 +281,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.OBSERVATION_PROCESSOR, 4)
                 .addItemInput(MekInItems.EXOREFRACTIVE_PRISMATIC_ALLOY, 4)
                 .setFluidInput(MekInFluids.FLUX.asStack(10))
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(400))
+                .setChemicalInput(MekInChemicals.NULL.asStack(4))
                 .build(output, MekInConstants.rl("control_circuit/analysis_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.MEMORY_CONTROL_CIRCUIT.asStack(1))
@@ -290,7 +291,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.TRANSMISSION_PROCESSOR, 4)
                 .addItemInput(MekInItems.TRAJECTORY_ALLOY, 4)
                 .setFluidInput(MekInFluids.FLUX.asStack(100))
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
+                .setChemicalInput(MekInChemicals.NULL.asStack(80))
                 .build(output, MekInConstants.rl("control_circuit/memory_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.RELATIVITY_CONTROL_CIRCUIT.asStack(1))
@@ -300,7 +301,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.RANDOM_PROCESSOR, 4)
                 .addItemInput(MekInItems.RESONANCE_ALLOY, 4)
                 .setFluidInput(MekInFluids.FLUX.asStack(1000))
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(160000))
+                .setChemicalInput(MekInChemicals.NULL.asStack(1600))
                 .build(output, MekInConstants.rl("control_circuit/relativity_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.TIMESPACE_CONTROL_CIRCUIT.asStack(1))
@@ -310,7 +311,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(MekInItems.CLOCK_PROCESSOR, 4)
                 .addItemInput(MekInItems.COODINATE_ALLOY, 4)
                 .setFluidInput(MekInFluids.FLUX.asStack(10000))
-                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(3200000))
+                .setChemicalInput(MekInChemicals.NULL.asStack(32000))
                 .build(output, MekInConstants.rl("control_circuit/timespace_0"));
     }
 }

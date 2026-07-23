@@ -2,6 +2,6 @@
   "parent": "mekanism_utilities:block/base/machine_base",
   "textures": {
     "decoration": "mekanism_incomparable:block/tier_decoration/absolute_overclocked",
-    "front": "mekanism_utilities:block/machine_front_active/tep"
+    "front": "mekanism_utilities:block/machine_front/boiler"
   }
 }

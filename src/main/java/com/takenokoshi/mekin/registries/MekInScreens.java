@@ -29,6 +29,8 @@ public class MekInScreens {
         registerMachineGui(event, MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
                 GuiCompactAPT<BECompactAPT>::new);
 
+        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+                GuiCompactBoiler<BEAbsoluteBoiler>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
                 GuiChemicalCutter<BEAbsoluteChemicalCutter>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
@@ -43,8 +45,12 @@ public class MekInScreens {
                 GuiTweakedEnergizedSmelter<BEAbsoluteEnergizedSmelter>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
                 GuiItemStackToItemStackMachine<BEAbsoluteEnrichmentChamber>::new);
+        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                GuiCompactFissionReactor<BEAbsoluteFissionReactor>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
                 GuiFluidToObjectMachine<BEAbsoluteIceMaker>::new);
+        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
+                GuiCompactIndustrialTurbine<BEAbsoluteIndustrialTurbine>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
                 GuiAbsoluteMetallurgicInfuser<BEAbsoluteMetallurgicInfuser>::new);
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,

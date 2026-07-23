@@ -30,6 +30,9 @@ import com.takenokoshi.mekin.blockentity.suprememachine.BESupremeLazerCopmpressN
 import com.takenokoshi.mekin.blockentity.suprememachine.BESupremeSPS;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.core.MekInMathUtils;
+import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactBoiler;
+import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactFissionReactor;
+import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactIndustrialTurbine;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactSPS;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactThermalEvaporationPlant;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractEnergizedSmelter;
@@ -50,6 +53,7 @@ import mekanism.common.config.MekanismConfig;
 import mekanism.common.lib.transmitter.TransmissionType;
 import mekanism.common.registries.MekanismSounds;
 import mekanism.common.util.ChemicalUtil;
+import mekanism.generators.common.registries.GeneratorsSounds;
 
 public class MekInMachines {
     public static final MachineDeferredRegister MACHINES = new MachineDeferredRegister(MekInConstants.MODID);
@@ -154,6 +158,19 @@ public class MekInMachines {
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
                             .withSupportedUpgrades(Upgrade.MUFFLING)
                             .withSound(MekanismSounds.SPS));
+
+    public static final GuiSizedMachineRegistryObject<BEAbsoluteBoiler> ABSOLUTE_OVERCLOCKED_BOILER = MACHINES
+            .registerGuiSized("absolute_overclocked_boiler",
+                    BEAbstractCompactBoiler.SIDE_CONFIG,
+                    BEAbstractCompactBoiler.getContainerAdder(19_251_200_000L, 5_184_000_000L, 8_294_400_000L,
+                            123_200_000)::accept,
+                    BEAbsoluteBoiler::new,
+                    BEAbsoluteBoiler.class,
+                    MekUtMachines.COMPACT_BOILER.descriptionEntry,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.CHEMICAL, TransmissionType.FLUID, TransmissionType.HEAT)
+                            .withSound(MekanismSounds.CHARGEPAD)
+                            .withSupportedUpgrades(Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteChemicalCutter> ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER = MACHINES
             .registerSimple("absolute_overclocked_chemical_cutter",
@@ -261,6 +278,23 @@ public class MekInMachines {
                             .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
                                     ExtraUpgrade.STACK));
 
+    public static final GuiSizedMachineRegistryObject<BEAbsoluteFissionReactor> ABSOLUTE_OVERCLOCKED_FISSION_REACTOR = MACHINES
+            .registerGuiSized("absolute_overclocked_fission_reactor",
+                    BEAbstractCompactFissionReactor.SIDE_CONFIG,
+                    item -> BEAbstractCompactFissionReactor.addContainers(item,
+                            307_200_000L,
+                            34_720_000.0d,
+                            0x7fffffff,
+                            11_664_000_000L,
+                            116_640_000_000L),
+                    BEAbsoluteFissionReactor::new,
+                    BEAbsoluteFissionReactor.class,
+                    MekUtMachines.COMPACT_FISSION_REACTOR.descriptionEntry,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.CHEMICAL, TransmissionType.FLUID, TransmissionType.HEAT)
+                            .withSound(GeneratorsSounds.FISSION_REACTOR)
+                            .withSupportedUpgrades(Upgrade.MUFFLING));
+
     public static final SimpleMachineRegistryObject<BEAbsoluteIceMaker> ABSOLUTE_OVERCLOCKED_ICE_MAKER = MACHINES
             .registerSimple("absolute_overclocked_ice_maker",
                     IFluidToObjectMachine.SIDE_CONFIG_TO_ITEM,
@@ -274,6 +308,18 @@ public class MekInMachines {
                                     MekanismConfig.usage.chemicalCrystallizer,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalCrystallizer, 20))
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY));
+
+    public static final SimpleMachineRegistryObject<BEAbsoluteIndustrialTurbine> ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE = MACHINES
+            .registerSimple("absolute_overclocked_industrial_turbine",
+                    BEAbstractCompactIndustrialTurbine.SIDE_CONFIG,
+                    BEAbstractCompactIndustrialTurbine.getContainerAdder(4_808_960_000L, 259_840_000)::accept,
+                    BEAbsoluteIndustrialTurbine::new,
+                    BEAbsoluteIndustrialTurbine.class,
+                    MekUtMachines.COMPACT_INDUSTRIAL_TURBINE.descriptionEntry,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.CHEMICAL, TransmissionType.ENERGY, TransmissionType.FLUID,
+                                    TransmissionType.ITEM)
+                            .withSupportedUpgrades(Upgrade.FILTER));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteMetallurgicInfuser> ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER = MACHINES
             .registerSimple("absolute_overclocked_metallurgic_infuser",

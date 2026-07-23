@@ -114,6 +114,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/machine_front_active/flux_condenser"));
 
         simpleMachine(
+                MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER, false,
+                "block/machine/absolute_overclocked/boiler",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekUtConstants.rl("block/machine_front/boiler"),
+                MekUtConstants.rl("block/machine_front_active/boiler"));
+        simpleMachine(
                 MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER, true,
                 "block/machine/absolute_overclocked/chemical_cutter",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
@@ -156,11 +162,23 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 Mekanism.rl("block/enrichment_chamber/front"),
                 Mekanism.rl("block/enrichment_chamber/front_active"));
         simpleMachine(
+                MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR, false,
+                "block/machine/absolute_overclocked/fission_reactor",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekUtConstants.rl("block/machine_front/fission_reactor"),
+                MekUtConstants.rl("block/machine_front_active/fission_reactor"));
+        simpleMachine(
                 MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER, true,
                 "block/machine/absolute_overclocked/ice_maker",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/ice_maker"),
                 MekUtConstants.rl("block/machine_front_active/ice_maker"));
+        simpleMachine(
+                MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE, true,
+                "block/machine/absolute_overclocked/industrial_turbine",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekUtConstants.rl("block/machine_front/industrial_turbine"),
+                MekUtConstants.rl("block/machine_front_active/industrial_turbine"));
         simpleMachine(
                 MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER, true,
                 "block/machine/absolute_overclocked/metallurgic_infuser",
