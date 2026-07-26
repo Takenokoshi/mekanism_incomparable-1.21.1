@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 40000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:robit"
+    },
+    {
+      "count": 256,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    {
+      "count": 1,
+      "item": "mekmm:ultimate_max_chemical_tank"
+    },
+    {
+      "count": 1,
+      "tag": "mekanism:personal_storage"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekmm:large_antiprotonic_nucleosynthesizer"
+  }
+}

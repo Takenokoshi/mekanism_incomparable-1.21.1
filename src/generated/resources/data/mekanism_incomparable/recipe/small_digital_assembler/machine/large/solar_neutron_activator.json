@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekanism:ethene"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:robit"
+    },
+    {
+      "count": 256,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:laser"
+    },
+    {
+      "count": 16,
+      "item": "evolvedmekanism:ultimate_solar_generator"
+    },
+    {
+      "count": 2,
+      "item": "mekmm:ultimate_max_chemical_tank"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekmm:large_solar_neutron_activator"
+  }
+}

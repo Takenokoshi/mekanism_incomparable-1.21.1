@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 48000,
+    "chemical": "mekanism_extras:molten_thermonuclear"
+  },
+  "fluid_input": {
+    "amount": 50000,
+    "fluid": "mekanismelements:superheated_helium"
+  },
+  "list_item_input": [
+    {
+      "count": 16,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 64,
+      "tag": "c:ingots/refined_obsidian"
+    },
+    {
+      "count": 64,
+      "item": "ae2:quartz_vibrant_glass"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mwgr:lava_generator"
+  }
+}

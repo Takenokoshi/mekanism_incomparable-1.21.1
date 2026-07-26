@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:elite_control_circuit"
+    },
+    {
+      "count": 8,
+      "tag": "c:ingots/steel"
+    },
+    {
+      "count": 8,
+      "tag": "c:ingots/lead"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanismgenerators:control_rod_assembly"
+  }
+}

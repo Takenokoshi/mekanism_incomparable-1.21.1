@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanismelements:helium"
+  },
+  "fluid_input": {
+    "amount": 10000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 8,
+      "item": "mekanism:electrolytic_core"
+    },
+    {
+      "count": 32,
+      "item": "mekanism:alloy_atomic"
+    },
+    {
+      "count": 16,
+      "tag": "c:dusts/netherite"
+    },
+    {
+      "count": 8,
+      "tag": "c:dusts/diamond"
+    },
+    {
+      "count": 8,
+      "tag": "c:dusts/lapis"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekmm:advanced_electrolysis_core"
+  }
+}

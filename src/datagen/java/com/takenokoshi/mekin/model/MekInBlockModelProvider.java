@@ -83,12 +83,6 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/machine_front/aet"),
                 MekInConstants.rl("block/machine_front_active/aet"));
         simpleMachine(
-                MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR, true,
-                "block/machine/compact_apt",
-                MekInConstants.rl("block/tier_decoration/quantum"),
-                MekInConstants.rl("block/machine_front/apt"),
-                MekInConstants.rl("block/machine_front_active/apt"));
-        simpleMachine(
                 MekInMachines.CHEMICAL_EXTRACTOR, true,
                 "block/machine/chemical_extractor",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
@@ -106,6 +100,18 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/supreme"),
                 MekInConstants.rl("block/machine_front/chemical_refiner"),
                 MekInConstants.rl("block/machine_front_active/chemical_refiner"));
+        simpleMachine(
+                MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR, true,
+                "block/machine/compact_apt",
+                MekInConstants.rl("block/tier_decoration/quantum"),
+                MekInConstants.rl("block/machine_front/apt"),
+                MekInConstants.rl("block/machine_front_active/apt"));
+        simpleMachine(
+                MekInMachines.COMPACT_NAQUADAH_REACTOR, true,
+                "block/machine/compact_naquadah_reactor",
+                MekInConstants.rl("block/tier_decoration/cosmic"),
+                MekInConstants.rl("block/machine_front/naquadah_reactor"),
+                MekInConstants.rl("block/machine_front_active/naquadah_reactor"));
         simpleMachine(
                 MekInMachines.FLUX_CONDENSER, true,
                 "block/machine/flux_condenser",

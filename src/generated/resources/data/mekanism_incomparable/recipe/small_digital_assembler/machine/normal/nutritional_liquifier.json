@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 800,
+    "chemical": "mekanism:osmium"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:basic_control_circuit"
+    },
+    {
+      "count": 16,
+      "tag": "c:dusts/redstone"
+    },
+    {
+      "count": 4,
+      "item": "minecraft:bowl"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:nutritional_liquifier"
+  }
+}

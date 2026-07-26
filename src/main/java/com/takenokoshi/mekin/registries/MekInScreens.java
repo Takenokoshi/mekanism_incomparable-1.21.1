@@ -20,14 +20,16 @@ public class MekInScreens {
     public static void registerScreens(RegisterMenuScreensEvent event) {
 
         registerMachineGui(event, MekInMachines.ANTINEUTRONIC_EXISTENCE_TRANSMUTATOR, GuiAET<BlockEntityAET>::new);
-        registerMachineGui(event, MekInMachines.FLUX_CONDENSER, GuiFluxCondenser::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_EXTRACTOR, GuiChemicalExtractor<BEChemicalExtractor>::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_LEACHING_CHAMBER,
                 GuiChemicalLeacher<BEChemicalLeachingChamber>::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_REFINER, GuiChemicalCutter<BEChemicalRefiner>::new);
-        registerMachineGui(event, MekInMachines.TEPS, GuiCompactAPT<BEAbstractTEPS>::new);
         registerMachineGui(event, MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
                 GuiCompactAPT<BECompactAPT>::new);
+        registerMachineGui(event, MekInMachines.COMPACT_NAQUADAH_REACTOR,
+                GuiCompactFusionReactor<BECompactNaquadahReactor>::new);
+        registerMachineGui(event, MekInMachines.FLUX_CONDENSER, GuiFluxCondenser::new);
+        registerMachineGui(event, MekInMachines.TEPS, GuiCompactAPT<BEAbstractTEPS>::new);
 
         registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER,
                 GuiCompactBoiler<BEAbsoluteBoiler>::new);

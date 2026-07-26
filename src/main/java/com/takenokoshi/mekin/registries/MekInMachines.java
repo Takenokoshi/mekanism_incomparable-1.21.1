@@ -1,5 +1,6 @@
 package com.takenokoshi.mekin.registries;
 
+import com.jerry.genextras.common.config.GeneratorsExtraConfig;
 import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.registration.GuiSizedMachineRegistryObject;
 import com.takenokoshi.mekaddonlib.registration.MachineDeferredRegister;
@@ -21,6 +22,7 @@ import com.takenokoshi.mekin.blockentity.machine.BEChemicalExtractor;
 import com.takenokoshi.mekin.blockentity.machine.BEChemicalLeachingChamber;
 import com.takenokoshi.mekin.blockentity.machine.BEChemicalRefiner;
 import com.takenokoshi.mekin.blockentity.machine.BECompactAPT;
+import com.takenokoshi.mekin.blockentity.machine.BECompactNaquadahReactor;
 import com.takenokoshi.mekin.blockentity.machine.BEFluxCondenser;
 import com.takenokoshi.mekin.blockentity.machine.BlockEntityAET;
 import com.takenokoshi.mekin.blockentity.suprememachine.BESupremeChemicalCrystallizer;
@@ -32,6 +34,7 @@ import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.core.MekInMathUtils;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactBoiler;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactFissionReactor;
+import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactFusionReactor;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactIndustrialTurbine;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactSPS;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractCompactThermalEvaporationPlant;
@@ -120,6 +123,32 @@ public class MekInMachines {
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.CHEMICAL, Upgrade.MUFFLING,
                                     ExtraUpgrade.STACK));
 
+    public static final GuiSizedMachineRegistryObject<BECompactAPT> COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR = MACHINES
+            .registerGuiSized("compact_antimatter_protomolecular_transmutator",
+                    AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
+                    BEAbstractCompactAPT.getContainerAddar(10000L)::accept,
+                    BECompactAPT::new,
+                    BECompactAPT.class,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    EMConfig.general.aptEnergyConsumption,
+                                    EMConfig.general.aptEnergyStorage)
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.MUFFLING)
+                            .withSound(MekanismSounds.SPS));
+
+    public static final GuiSizedMachineRegistryObject<BECompactNaquadahReactor> COMPACT_NAQUADAH_REACTOR = MACHINES
+            .registerGuiSized("compact_naquadah_reactor",
+                    BEAbstractCompactFusionReactor.SIDE_CONFIG,
+                    BECompactNaquadahReactor
+                            .getContainerAdder(GeneratorsExtraConfig.extraGenerators.reactorFuelCapacity)::accept,
+                    BECompactNaquadahReactor::new,
+                    BECompactNaquadahReactor.class,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.values())
+                            .withSound(GeneratorsSounds.FUSION_REACTOR)
+                            .withSupportedUpgrades(Upgrade.MUFFLING));
+
     public static final SimpleMachineRegistryObject<BEFluxCondenser> FLUX_CONDENSER = MACHINES
             .registerSimple("flux_condenser",
                     BEFluxCondenser.SIDE_CONFIG,
@@ -141,20 +170,6 @@ public class MekInMachines {
                             .withEnergyConfig(
                                     MekInMathUtils.multiplyClamped(EMConfig.general.aptEnergyConsumption, 20),
                                     MekInMathUtils.multiplyClamped(EMConfig.general.aptEnergyStorage, 20))
-                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
-                            .withSupportedUpgrades(Upgrade.MUFFLING)
-                            .withSound(MekanismSounds.SPS));
-
-    public static final GuiSizedMachineRegistryObject<BECompactAPT> COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR = MACHINES
-            .registerGuiSized("compact_antimatter_protomolecular_transmutator",
-                    AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
-                    BEAbstractCompactAPT.getContainerAddar(10000L)::accept,
-                    BECompactAPT::new,
-                    BECompactAPT.class,
-                    builder -> builder
-                            .withEnergyConfig(
-                                    EMConfig.general.aptEnergyConsumption,
-                                    EMConfig.general.aptEnergyStorage)
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
                             .withSupportedUpgrades(Upgrade.MUFFLING)
                             .withSound(MekanismSounds.SPS));

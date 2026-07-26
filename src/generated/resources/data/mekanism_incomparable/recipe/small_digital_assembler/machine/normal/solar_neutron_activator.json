@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 800,
+    "chemical": "mekanism:osmium"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:elite_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:alloy_reinforced"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:hdpe_sheet"
+    },
+    {
+      "count": 32,
+      "tag": "c:ingots/bronze"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:solar_neutron_activator"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 4800,
+    "chemical": "mekanism:tin"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "fluid": "advanced_ae:quantum_infusion_source"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "mwgr:water_generator"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:dynamic_tank"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mwgr:heavywater_generator"
+  }
+}

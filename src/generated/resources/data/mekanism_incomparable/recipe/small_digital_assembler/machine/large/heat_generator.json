@@ -1,0 +1,41 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism:lithium"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 1,
+      "item": "mekanism:robit"
+    },
+    {
+      "count": 256,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:ultimate_control_circuit"
+    },
+    {
+      "count": 2,
+      "item": "mekanism:ultimate_fluid_tank"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:superheating_element"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekmm:large_heat_generator"
+  }
+}

@@ -129,6 +129,7 @@ dependencies {
     implementation "curse.maven:mekanism-tools-268567:7904062"
     
     implementation "curse.maven:mekanism-addon-library-1607060:8485425"
+    implementation "curse.maven:mekanism-water-generator-rebuild-1396471:8492800"
 
     implementation "curse.maven:mekanism-empowered-1256390:8064666"
     implementation "curse.maven:mekanism-empowered-core-1256399:8064667"
@@ -150,7 +151,7 @@ dependencies {
     implementation "curse.maven:glodium-957920:5821676"
 
     //Mekanism:Utilities itself & Other Mekanism Addons
-    implementation "curse.maven:mekanism-utilities-1547038:8485806"
+    implementation "curse.maven:mekanism-utilities-1547038:8505638"
     implementation "curse.maven:mekanism-extras-1026040:7921191"
     implementation "curse.maven:evolved-mekanism-1230085:7599592"
     implementation "curse.maven:iglee-library-541199:7000755"

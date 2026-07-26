@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 2560,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 16,
+      "item": "mekanism:alloy_atomic"
+    },
+    {
+      "count": 4,
+      "tag": "c:gems/diamond"
+    },
+    {
+      "count": 64,
+      "item": "minecraft:ender_pearl"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:teleportation_core"
+  }
+}

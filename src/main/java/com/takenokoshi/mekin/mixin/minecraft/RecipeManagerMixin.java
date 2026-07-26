@@ -8,13 +8,16 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import com.extendedae_plus.ExtendedAEPlus;
+import com.github.misosouptgit.mwgr.MekanismWaterGeneratorRebuild;
 import com.google.gson.JsonElement;
 import com.jerry.mekextras.MekanismExtras;
+import com.jerry.mekmm.Mekmm;
 import com.takenokoshi.mekut.core.MekUtConstants;
 
 import fr.iglee42.evolvedmekanism.EvolvedMekanism;
 import io.github.masyumero.emextras.EMExtras;
 import mekanism.common.Mekanism;
+import mekanism.generators.common.MekanismGenerators;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.RecipeManager;
 import net.pedroksl.advanced_ae.AdvancedAE;
@@ -127,6 +130,46 @@ public class RecipeManagerMixin {
         result.remove(ExtendedAEPlus.id("core/compat/infinity_core_3"));
         result.remove(ExtendedAEPlus.id("transform/oblivion_singularity"));
         result.remove(AdvancedAE.makeId("oblivion_singularity"));
+
+        // remove other Recipes
+        result.remove(Mekanism.rl("crusher"));
+        result.remove(Mekanism.rl("purification_chamber"));
+        result.remove(Mekanism.rl("chemical_injection_chamber"));
+        result.remove(Mekanism.rl("osmium_compressor"));
+        result.remove(Mekanism.rl("chemical_oxidizer"));
+        result.remove(Mekanism.rl("rotary_condensentrator"));
+        result.remove(Mekanism.rl("chemical_infuser"));
+        result.remove(Mekanism.rl("chemical_dissolution_chamber"));
+        result.remove(Mekanism.rl("chemical_washer"));
+        result.remove(Mekanism.rl("chemical_crystallizer"));
+        result.remove(Mekanism.rl("isotopic_centrifuge"));
+        result.remove(Mekanism.rl("precision_sawmill"));
+        result.remove(Mekanism.rl("nutritional_liquifier"));
+        result.remove(Mekanism.rl("solar_neutron_activator"));
+        result.remove(Mekmm.rl("large_rotary_condensentrator"));
+        result.remove(Mekmm.rl("large_chemical_infuser"));
+        result.remove(Mekmm.rl("large_electrolytic_separator"));
+        result.remove(Mekmm.rl("large_solar_neutron_activator"));
+        result.remove(Mekmm.rl("large_antiprotonic_nucleosynthesizer"));
+        result.remove(Mekmm.rl("large_heat_generator"));
+        result.remove(Mekmm.rl("large_gas_burning_generator"));
+
+        result.remove(Mekanism.rl("sps_casing"));
+        result.remove(Mekanism.rl("boiler_casing"));
+        result.remove(Mekanism.rl("thermal_evaporation/block"));
+        result.remove(MekanismGenerators.rl("fission_reactor/casing"));
+        result.remove(MekanismGenerators.rl("fission_reactor/control_rod_assembly"));
+        result.remove(MekanismGenerators.rl("fission_reactor/fuel_assembly"));
+        result.remove(MekanismGenerators.rl("reactor/frame"));
+        result.remove(Mekanism.rl("electrolytic_core"));
+        result.remove(Mekanism.rl("teleportation_core"));
+        result.remove(Mekanism.rl("robit"));
+        result.remove(Mekmm.rl("advanced_electrolysis_core"));
+
+        result.remove(ResourceLocation.fromNamespaceAndPath(MekanismWaterGeneratorRebuild.MODID, "lava_generator"));
+        result.remove(
+                ResourceLocation.fromNamespaceAndPath(MekanismWaterGeneratorRebuild.MODID, "heavywater_generator"));
+
         return result;
     }
 }

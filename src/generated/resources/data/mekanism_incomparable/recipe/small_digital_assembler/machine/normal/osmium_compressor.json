@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 1000,
+    "chemical": "mekanism:hydrogen"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:advanced_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:alloy_infused"
+    },
+    {
+      "count": 64,
+      "item": "mekanism:dynamic_tank"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:osmium_compressor"
+  }
+}

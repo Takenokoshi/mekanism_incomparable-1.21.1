@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 10000,
+    "chemical": "mekanism:ethene"
+  },
+  "fluid_input": {
+    "amount": 4000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:pellet_polonium"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:pellet_plutonium"
+    },
+    {
+      "count": 64,
+      "item": "mekanism:hdpe_sheet"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:sps_casing"
+  }
+}

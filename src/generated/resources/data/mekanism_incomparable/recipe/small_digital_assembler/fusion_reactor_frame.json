@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 8,
+      "tag": "c:pellets/polonium"
+    },
+    {
+      "count": 16,
+      "tag": "mekanism:alloys/atomic"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "mekanismgenerators:fusion_reactor_frame"
+  }
+}

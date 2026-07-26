@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "mekanism:dynamic_tank"
+    },
+    {
+      "count": 4,
+      "tag": "c:ingots/lead"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanismgenerators:fission_fuel_assembly"
+  }
+}

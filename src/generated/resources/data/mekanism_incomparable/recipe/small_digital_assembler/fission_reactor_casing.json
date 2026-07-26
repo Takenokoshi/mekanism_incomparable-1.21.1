@@ -1,0 +1,25 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism:tin"
+  },
+  "fluid_input": {
+    "amount": 100,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:steel_casing"
+    },
+    {
+      "count": 4,
+      "tag": "c:ingots/lead"
+    }
+  ],
+  "output": {
+    "count": 4,
+    "id": "mekanismgenerators:fission_reactor_casing"
+  }
+}

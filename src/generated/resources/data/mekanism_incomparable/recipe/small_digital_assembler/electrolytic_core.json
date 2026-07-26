@@ -1,0 +1,33 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80,
+    "chemical": "mekanism_utilities:fluix"
+  },
+  "fluid_input": {
+    "amount": 1000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 32,
+      "item": "mekanism:alloy_infused"
+    },
+    {
+      "count": 16,
+      "tag": "c:dusts/osmium"
+    },
+    {
+      "count": 8,
+      "tag": "c:dusts/iron"
+    },
+    {
+      "count": 8,
+      "tag": "c:dusts/gold"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:electrolytic_core"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 320,
+    "chemical": "mekanism:gold"
+  },
+  "fluid_input": {
+    "amount": 2000,
+    "tag": "c:water"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism:purification_chamber"
+    },
+    {
+      "count": 4,
+      "item": "mekanism:elite_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism:alloy_reinforced"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism:chemical_injection_chamber"
+  }
+}
