@@ -1,0 +1,45 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 100,
+    "chemical": "mekanism_incomparable:null"
+  },
+  "fluid_input": {
+    "amount": 10,
+    "fluid": "mekanism_incomparable:flux"
+  },
+  "list_item_input": [
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:absolute_overclocked_chemical_injection_chamber"
+    },
+    {
+      "count": 8,
+      "item": "emextras:infinite_multiversal_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "evolvedmekanism:alloy_exoversal"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_extras:alloy_spectrum"
+    },
+    {
+      "count": 512,
+      "tag": "c:pellets/plutonium"
+    },
+    {
+      "count": 512,
+      "tag": "c:pellets/polonium"
+    },
+    {
+      "count": 1024,
+      "tag": "c:ingots/netherite"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:infinite_multiversal_chemical_injection_chamber"
+  }
+}

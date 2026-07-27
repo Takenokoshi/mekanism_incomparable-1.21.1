@@ -2,8 +2,11 @@ package com.takenokoshi.mekin.loottable;
 
 import java.util.List;
 
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInMachines;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 
 import mekanism.common.registration.impl.BlockRegistryObject;
 import net.minecraft.core.HolderLookup;
@@ -30,6 +33,9 @@ public class MekInBlockLootProvider extends BaseBlockLootTables {
     protected void generate() {
 
         dropSelfWithContents(MekInMachines.MACHINES.blockRegister.getPrimaryEntries());
+        dropSelfWithContents(MekInAbsoluteMachines.MACHINES.blockRegister.getPrimaryEntries());
+        dropSelfWithContents(MekInSupremeMachines.MACHINES.blockRegister.getPrimaryEntries());
+        dropSelfWithContents(MekInInfiniteMachines.MACHINES.blockRegister.getPrimaryEntries());
         List.of(new BlockRegistryObject[] {
                 MekInBlocks.ABSOLUTE_CONTROL_MATRIX,
                 MekInBlocks.ADVANCED_CONTROL_MATRIX,

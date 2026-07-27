@@ -5,11 +5,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import com.takenokoshi.mekin.core.MekInConstants;
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
 import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInFluids;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekin.registries.MekInMachines;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 import com.takenokoshi.mekut.registries.MekUtFluids;
 
 import mekanism.api.text.IHasTranslationKey;
@@ -45,7 +48,32 @@ public class MekInEnglishLangProvider extends LanguageProvider {
             add("container.mekanism_incomparable." + machine.getBlock().getId().getPath(),
                     format(machine.getBlock().getId().getPath()));
         });
-        add("creative_tab.mekanism_incomparable.main", "Mekanism: Incomparable - Prototype");
+        MekInAbsoluteMachines.MACHINES.getMachines().forEach(machine -> {
+            add(machine.getBlock().get(), format(machine.getBlock().getId().getPath()));
+            add("container.mekanism_incomparable." + machine.getBlock().getId().getPath(),
+                    format(machine.getBlock().getId().getPath()));
+        });
+        MekInSupremeMachines.MACHINES.getMachines().forEach(machine -> {
+            add(machine.getBlock().get(), format(machine.getBlock().getId().getPath()));
+            add("container.mekanism_incomparable." + machine.getBlock().getId().getPath(),
+                    format(machine.getBlock().getId().getPath()));
+        });
+        MekInInfiniteMachines.MACHINES.getMachines().forEach(machine -> {
+            add(machine.getBlock().get(), format(machine.getBlock().getId().getPath()));
+            add("container.mekanism_incomparable." + machine.getBlock().getId().getPath(),
+                    format(machine.getBlock().getId().getPath()));
+        });
+
+        add("creative_tab.mekanism_incomparable.materials",
+                "Mekanism: Incomparable  Materials");
+        add("creative_tab.mekanism_incomparable.machines",
+                "Mekanism: Incomparable  Machines");
+        add("creative_tab.mekanism_incomparable.absolute_overclocked_machines",
+                "Mekanism: Incomparable  Absolute Overclocked Machines");
+        add("creative_tab.mekanism_incomparable.supreme_quantum_machines",
+                "Mekanism: Incomparable  Supreme Quantum Machines");
+        add("creative_tab.mekanism_incomparable.infinite_multiversal_machines",
+                "Mekanism: Incomparable  Infinite Multiversal Machines");
         List.of(new DeferredChemical[] {
                 MekInChemicals.NULL,
                 MekInChemicals.AMETHYST_PLASMA,

@@ -16,10 +16,14 @@ import com.jerry.meklm.common.registries.LargeMachineBlocks;
 import com.jerry.mekmm.common.registries.MoreMachineChemicals;
 import com.jerry.mekmm.common.registries.MoreMachineItems;
 import com.takenokoshi.mekin.core.MekInConstants;
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
+import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInFluids;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekin.registries.MekInMachines;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 import com.takenokoshi.mekut.recipe.builder.ItemStackListFluidChemicalToItemRecipeBuilder;
 import com.takenokoshi.mekut.registries.MekUtChemicals;
 import com.takenokoshi.mekut.registries.MekUtItems;
@@ -53,6 +57,7 @@ public class SDARecipes {
 
     private static final List<MachineData> ABSOLUTE_MACHINES;
     private static final List<MachineData> SUPREME_MACHINES;
+    private static final List<MachineData> INFINITE_MACHINES;
 
     public static void buildRecipes(RecipeOutput output) {
         ItemStackListFluidChemicalToItemRecipeBuilder
@@ -516,7 +521,22 @@ public class SDARecipes {
                     .setFluidInput(Tags.Fluids.LAVA, 1000)
                     .setChemicalInput(MSGases.AMERICIUM.asStack(10000))
                     .build(output,
-                            MekInConstants.rl("small_digital_assembler/machine/absolute_overclocked/" + data.name));
+                            MekInConstants.rl("small_digital_assembler/machine/supreme_quantum/" + data.name));
+        });
+        INFINITE_MACHINES.forEach(data->{
+            ItemStackListFluidChemicalToItemRecipeBuilder
+                    .smallDigitalAssembler(new ItemStack(data.afterMachine))
+                    .addItemInput(data.beforeMachine, 1)
+                    .addItemInput(EMExtraItems.INFINITE_MULTIVERSAL_CONTROL_CIRCUIT, 8)
+                    .addItemInput(EMItems.EXOVERSAL_ALLOY, 16)
+                    .addItemInput(ExtraItems.SPECTRUM_ALLOY, 16)
+                    .addItemInput(MekanismTags.Items.PELLETS_PLUTONIUM, 512)
+                    .addItemInput(MekanismTags.Items.PELLETS_POLONIUM, 512)
+                    .addItemInput(Tags.Items.INGOTS_NETHERITE, 1024)
+                    .setFluidInput(MekInFluids.FLUX.asStack(10))
+                    .setChemicalInput(MekInChemicals.NULL.asStack(100))
+                    .build(output,
+                            MekInConstants.rl("small_digital_assembler/machine/infinite_multiversal/" + data.name));
         });
     }
 
@@ -527,101 +547,208 @@ public class SDARecipes {
         ABSOLUTE_MACHINES = new ArrayList<>();
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.COMPACT_BOILER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
                 "boiler"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.CHEMICAL_CUTTER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
                 "chemical_cutter"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.CHEMICAL_INJECTION_CHAMBER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
                 "chemical_injection_chamber"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.CHEMICAL_OXIDIZER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
                 "chemical_oxidizer"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.CRUSHER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
                 "crusher"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.ELECTROLYTIC_SEPARATOR,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
                 "electrolytic_separator"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.TWEAKED_ENERGIZED_SMELTER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
                 "energized_smelter"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.ENRICHMENT_CHAMBER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
                 "enrichment_chamber"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.COMPACT_FISSION_REACTOR,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
                 "fission_reactor"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.ICE_MAKER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
                 "ice_maker"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.COMPACT_INDUSTRIAL_TURBINE,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
                 "industrial_turbine"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.METALLURGIC_INFUSER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
                 "metallurgic_infuser"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.OSMIUM_COMPRESSOR,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
                 "osmium_compressor"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.PAINTING_MACHINE,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                 "painting_machine"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.PURIFICATION_CHAMBER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                 "purification_chamber"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekanismBlocks.ROTARY_CONDENSENTRATOR,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
                 "rotary_condensentrator"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.SMALL_DIGITAL_ASSEMBLER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
                 "small_digital_assembler"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.SMALL_DIGITAL_REACTION_CHAMBER,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
                 "small_digital_reaction_chamber"));
         ABSOLUTE_MACHINES.add(new MachineData(
                 MekUtMachines.COMPACT_THERMAL_EVAPOLATION_PLANT,
-                MekInMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
                 "thermal_evapolation_plant"));
 
         SUPREME_MACHINES = new ArrayList<>();
         SUPREME_MACHINES.add(new MachineData(
                 MekanismBlocks.CHEMICAL_CRYSTALLIZER,
-                MekInMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
+                MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
                 "chemical_crystallizer"));
         SUPREME_MACHINES.add(new MachineData(
                 MekanismBlocks.CHEMICAL_DISSOLUTION_CHAMBER,
-                MekInMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
+                MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
                 "chemical_dissolution_chamber"));
         SUPREME_MACHINES.add(new MachineData(
                 MekanismBlocks.CHEMICAL_WASHER,
-                MekInMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
+                MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
                 "chemical_washer"));
         SUPREME_MACHINES.add(new MachineData(
                 MekUtMachines.LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
-                MekInMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                MekInSupremeMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
                 "lazer_compress_nucleo_synthesizer"));
         SUPREME_MACHINES.add(new MachineData(
                 MekUtMachines.COMPACT_SUPERCRITICAL_PHASE_SHIFTER,
-                MekInMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
+                MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
                 "supercritical_phase_shifter"));
+
+        INFINITE_MACHINES = List.of(new MachineData[] {
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER,
+                        "boiler"),
+                new MachineData(
+                        MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CRYSTALLIZER,
+                        "chemical_crystallizer"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CUTTER,
+                        "chemical_cutter"),
+                new MachineData(
+                        MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_DISSOLUTION_CHAMBER,
+                        "chemical_dissolution_chamber"),
+                new MachineData(
+                        MekInMachines.CHEMICAL_EXTRACTOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_EXTRACTOR,
+                        "chemical_extractor"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER,
+                        "chemical_injection_chamber"),
+                new MachineData(
+                        MekInMachines.CHEMICAL_LEACHING_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_LEACHING_CHAMBER,
+                        "chemical_leaching_chamber"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER,
+                        "chemical_oxidizer"),
+                new MachineData(
+                        MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER,
+                        "chemical_washer"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CRUSHER,
+                        "crusher"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ELECTROLYTIC_SEPARATOR,
+                        "electrolytic_separator"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENERGIZED_SMELTER,
+                        "energized_smelter"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENRICHMENT_CHAMBER,
+                        "enrichment_chamber"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_FISSION_REACTOR,
+                        "fission_reactor"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ICE_MAKER,
+                        "ice_maker"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_INDUSTRIAL_TURBINE,
+                        "industrial_turbine"),
+                new MachineData(
+                       MekInSupremeMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                        "lazer_compress_nucleo_synthesizer"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER,
+                        "metallurgic_infuser"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_OSMIUM_COMPRESSOR,
+                        "osmium_compressor"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE,
+                        "painting_machine"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER,
+                        "purification_chamber"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR,
+                        "rotary_condensentrator"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER,
+                        "small_digital_assembler"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_REACTION_CHAMBER,
+                        "small_digital_reaction_chamber"),
+                new MachineData(
+                        MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SUPERCRITICAL_PHASE_SHIFTER,
+                        "supercritical_phase_shifter"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_THERMAL_EVAPORATION_PLANT,
+                        "thermal_evaporation_plant"),
+        });
     }
 }

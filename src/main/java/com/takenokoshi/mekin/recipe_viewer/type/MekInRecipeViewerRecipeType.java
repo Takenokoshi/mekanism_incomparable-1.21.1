@@ -9,6 +9,7 @@ import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalReci
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInMachines;
 import com.takenokoshi.mekin.registries.MekInRecipeTypes;
 import com.takenokoshi.mekut.recipe.inputcache.MekUtDoubleInputRecipeCache.MekUtItemChemical;
@@ -30,7 +31,7 @@ public class MekInRecipeViewerRecipeType {
             MekInConstants.rl(MekInRecipeConstants.CHEMICAL_EXTRACTION),
             FluidChemicalToBiChemicalRecipe.class,
             MekInRecipeTypes.CHEMICAL_EXTRACTION, -7, -13, 162, 60,
-            MekInMachines.CHEMICAL_EXTRACTOR);
+            MekInMachines.CHEMICAL_EXTRACTOR, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_EXTRACTOR);
 
     public static final RVMekALRecipeTypeWrapper<SingleItemChemicalRecipeInput, ItemStackChemicalToItemStackRecipe, MekUtItemChemical<ItemStackChemicalToItemStackRecipe>> REFINING = new RVMekALRecipeTypeWrapper<>(
             MekInConstants.rl(MekInRecipeConstants.REFINING),
@@ -42,7 +43,7 @@ public class MekInRecipeViewerRecipeType {
             MekInConstants.rl(MekInRecipeConstants.LEACHING),
             ItemStackFluidChemicalToItemStackRecipe.class,
             MekInRecipeTypes.LEACHING, -3, -15, 170, 60,
-            MekInMachines.CHEMICAL_LEACHING_CHAMBER);
+            MekInMachines.CHEMICAL_LEACHING_CHAMBER, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_LEACHING_CHAMBER);
 
     public static final FakeRVRecipeType<FluxCondenserRVRecipe> FLUX_CONDENSER = new FakeRVRecipeType<>(
             MekInConstants.rl("flux_condenser_rv"),

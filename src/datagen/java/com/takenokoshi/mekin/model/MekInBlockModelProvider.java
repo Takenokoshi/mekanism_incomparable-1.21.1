@@ -2,8 +2,11 @@ package com.takenokoshi.mekin.model;
 
 import com.takenokoshi.mekaddonlib.registration.MachineRegistryObject;
 import com.takenokoshi.mekin.core.MekInConstants;
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInMachines;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 import com.takenokoshi.mekut.core.MekUtConstants;
 
 import mekanism.common.Mekanism;
@@ -120,147 +123,306 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/machine_front_active/flux_condenser"));
 
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER, false,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER, false,
                 "block/machine/absolute_overclocked/boiler",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/boiler"),
                 MekUtConstants.rl("block/machine_front_active/boiler"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER, true,
                 "block/machine/absolute_overclocked/chemical_cutter",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/chemical_cutter"),
                 MekUtConstants.rl("block/machine_front_active/chemical_cutter"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER, true,
                 "block/machine/absolute_overclocked/chemical_injection_chamber",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/chemical_injection_chamber/front"),
                 Mekanism.rl("block/chemical_injection_chamber/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER, true,
                 "block/machine/absolute_overclocked/chemical_oxidizer",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekInConstants.rl("block/machine_front/chemical_oxidizer"),
                 MekInConstants.rl("block/machine_front_active/chemical_oxidizer"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_CRUSHER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CRUSHER, true,
                 "block/machine/absolute_overclocked/crusher",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/crusher/front"),
                 Mekanism.rl("block/crusher/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR, true,
                 "block/machine/absolute_overclocked/electrolytic_separator",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekInConstants.rl("block/machine_front/electrolytic_separator"),
                 MekInConstants.rl("block/machine_front_active/electrolytic_separator"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER, true,
                 "block/machine/absolute_overclocked/energized_smelter",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/energized_smelter/front"),
                 Mekanism.rl("block/energized_smelter/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER, true,
                 "block/machine/absolute_overclocked/enrichment_chamber",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/enrichment_chamber/front"),
                 Mekanism.rl("block/enrichment_chamber/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR, false,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR, false,
                 "block/machine/absolute_overclocked/fission_reactor",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/fission_reactor"),
                 MekUtConstants.rl("block/machine_front_active/fission_reactor"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER, true,
                 "block/machine/absolute_overclocked/ice_maker",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/ice_maker"),
                 MekUtConstants.rl("block/machine_front_active/ice_maker"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE, true,
                 "block/machine/absolute_overclocked/industrial_turbine",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/industrial_turbine"),
                 MekUtConstants.rl("block/machine_front_active/industrial_turbine"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER, true,
                 "block/machine/absolute_overclocked/metallurgic_infuser",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekInConstants.rl("block/machine_front/metallurgic_infuser"),
                 MekInConstants.rl("block/machine_front_active/metallurgic_infuser"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR, true,
                 "block/machine/absolute_overclocked/osmium_compressor",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/osmium_compressor/front"),
                 Mekanism.rl("block/osmium_compressor/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE, true,
                 "block/machine/absolute_overclocked/painting_machine",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/painting_machine/front"),
                 Mekanism.rl("block/painting_machine/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER, true,
                 "block/machine/absolute_overclocked/purification_chamber",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/purification_chamber/front"),
                 Mekanism.rl("block/purification_chamber/front_active"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR, true,
                 "block/machine/absolute_overclocked/rotary_condensentrator",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekInConstants.rl("block/machine_front/rotary_condensentrator"),
                 MekInConstants.rl("block/machine_front_active/rotary_condensentrator"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER, true,
                 "block/machine/absolute_overclocked/small_digital_assembler",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/small_digital_assembler"),
                 MekUtConstants.rl("block/machine_front_active/small_digital_assembler"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER, true,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER, true,
                 "block/machine/absolute_overclocked/small_digital_reaction_chamber",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/small_digital_reaction_chamber"),
                 MekUtConstants.rl("block/machine_front_active/small_digital_reaction_chamber"));
         simpleMachine(
-                MekInMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT, false,
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT, false,
                 "block/machine/absolute_overclocked/tep",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/tep"),
                 MekUtConstants.rl("block/machine_front_active/tep"));
 
-        simpleMachine(MekInMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER, true,
+        simpleMachine(
+                MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER, true,
                 "block/machine/supreme_quantum/chemical_crystallizer",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
                 MekInConstants.rl("block/machine_front/chemical_crystallizer"),
                 MekInConstants.rl("block/machine_front_active/chemical_crystallizer"));
-        simpleMachine(MekInMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER, true,
+        simpleMachine(MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER, true,
                 "block/machine/supreme_quantum/chemical_dissolution_chamber",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
                 MekInConstants.rl("block/machine_front/chemical_dissolution_chamber"),
                 MekInConstants.rl("block/machine_front_active/chemical_dissolution_chamber"));
-        simpleMachine(MekInMachines.SUPREME_QUANTUM_CHEMICAL_WASHER, true,
+        simpleMachine(
+                MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER, true,
                 "block/machine/supreme_quantum/chemical_washer",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
                 MekInConstants.rl("block/machine_front/chemical_washer"),
                 MekInConstants.rl("block/machine_front_active/chemical_washer"));
         simpleMachine(
-                MekInMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER, true,
+                MekInSupremeMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER, true,
                 "block/machine/supreme_quantum/lazer_compress_nucleo_synthesizer",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
                 MekUtConstants.rl("block/machine_front/lazer_compress_nucleo_synthesizer"),
                 MekUtConstants.rl("block/machine_front_active/lazer_compress_nucleo_synthesizer"));
         simpleMachine(
-                MekInMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER, true,
+                MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER, true,
                 "block/machine/supreme_quantum/sps",
                 MekInConstants.rl("block/tier_decoration/supreme_quantum"),
                 MekUtConstants.rl("block/machine_front/sps"),
                 MekUtConstants.rl("block/machine_front_active/sps"));
+
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER, false,
+                "block/machine/infinite_multiversal/boiler",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/boiler"),
+                MekUtConstants.rl("block/machine_front_active/boiler"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CRYSTALLIZER, true,
+                "block/machine/infinite_multiversal/chemical_crystallizer",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_crystallizer"),
+                MekInConstants.rl("block/machine_front_active/chemical_crystallizer"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CUTTER, true,
+                "block/machine/infinite_multiversal/chemical_cutter",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/chemical_cutter"),
+                MekUtConstants.rl("block/machine_front_active/chemical_cutter"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_DISSOLUTION_CHAMBER, true,
+                "block/machine/infinite_multiversal/chemical_dissolution_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_dissolution_chamber"),
+                MekInConstants.rl("block/machine_front_active/chemical_dissolution_chamber"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_EXTRACTOR, true,
+                "block/machine/infinite_multiversal/chemical_extractor",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_extractor"),
+                MekInConstants.rl("block/machine_front_active/chemical_extractor"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER, true,
+                "block/machine/infinite_multiversal/chemical_injection_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/chemical_injection_chamber/front"),
+                Mekanism.rl("block/chemical_injection_chamber/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_LEACHING_CHAMBER, true,
+                "block/machine/infinite_multiversal/chemical_leaching_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_leaching_chamber"),
+                MekInConstants.rl("block/machine_front_active/chemical_leaching_chamber"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER, true,
+                "block/machine/infinite_multiversal/chemical_oxidizer",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_oxidizer"),
+                MekInConstants.rl("block/machine_front_active/chemical_oxidizer"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER, true,
+                "block/machine/infinite_multiversal/chemical_washer",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_washer"),
+                MekInConstants.rl("block/machine_front_active/chemical_washer"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CRUSHER, true,
+                "block/machine/infinite_multiversal/crusher",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/crusher/front"),
+                Mekanism.rl("block/crusher/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ELECTROLYTIC_SEPARATOR, true,
+                "block/machine/infinite_multiversal/electrolytic_separator",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/electrolytic_separator"),
+                MekInConstants.rl("block/machine_front_active/electrolytic_separator"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENERGIZED_SMELTER, true,
+                "block/machine/infinite_multiversal/energized_smelter",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/energized_smelter/front"),
+                Mekanism.rl("block/energized_smelter/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENRICHMENT_CHAMBER, true,
+                "block/machine/infinite_multiversal/enrichment_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/enrichment_chamber/front"),
+                Mekanism.rl("block/enrichment_chamber/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_FISSION_REACTOR, false,
+                "block/machine/infinite_multiversal/fission_reactor",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/fission_reactor"),
+                MekUtConstants.rl("block/machine_front_active/fission_reactor"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ICE_MAKER, true,
+                "block/machine/infinite_multiversal/ice_maker",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/ice_maker"),
+                MekUtConstants.rl("block/machine_front_active/ice_maker"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_INDUSTRIAL_TURBINE, true,
+                "block/machine/infinite_multiversal/industrial_turbine",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/industrial_turbine"),
+                MekUtConstants.rl("block/machine_front_active/industrial_turbine"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER, true,
+                "block/machine/infinite_multiversal/lazer_compress_nucleo_synthesizer",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/lazer_compress_nucleo_synthesizer"),
+                MekUtConstants.rl("block/machine_front_active/lazer_compress_nucleo_synthesizer"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER, true,
+                "block/machine/infinite_multiversal/metallurgic_infuser",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/metallurgic_infuser"),
+                MekInConstants.rl("block/machine_front_active/metallurgic_infuser"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_OSMIUM_COMPRESSOR, true,
+                "block/machine/infinite_multiversal/osmium_compressor",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/osmium_compressor/front"),
+                Mekanism.rl("block/osmium_compressor/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE, true,
+                "block/machine/infinite_multiversal/painting_machine",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/painting_machine/front"),
+                Mekanism.rl("block/painting_machine/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER, true,
+                "block/machine/infinite_multiversal/purification_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/purification_chamber/front"),
+                Mekanism.rl("block/purification_chamber/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR, true,
+                "block/machine/infinite_multiversal/rotary_condensentrator",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/rotary_condensentrator"),
+                MekInConstants.rl("block/machine_front_active/rotary_condensentrator"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER, true,
+                "block/machine/infinite_multiversal/small_digital_assembler",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/small_digital_assembler"),
+                MekUtConstants.rl("block/machine_front_active/small_digital_assembler"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_REACTION_CHAMBER, true,
+                "block/machine/infinite_multiversal/small_digital_reaction_chamber",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/small_digital_reaction_chamber"),
+                MekUtConstants.rl("block/machine_front_active/small_digital_reaction_chamber"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_SUPERCRITICAL_PHASE_SHIFTER, true,
+                "block/machine/infinite_multiversal/sps",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/sps"),
+                MekUtConstants.rl("block/machine_front_active/sps"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_THERMAL_EVAPORATION_PLANT, false,
+                "block/machine/infinite_multiversal/tep",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekUtConstants.rl("block/machine_front/tep"),
+                MekUtConstants.rl("block/machine_front_active/tep"));
     }
 
     protected void simpleMachine(MachineRegistryObject<?, ?, ?, ?> registryObject,

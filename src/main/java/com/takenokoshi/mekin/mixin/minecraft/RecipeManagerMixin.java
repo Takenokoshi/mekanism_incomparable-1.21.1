@@ -125,6 +125,8 @@ public class RecipeManagerMixin {
         result.remove(MekanismExtras.rl("processing/" + "naquadah" + "/slurry/dirty/from_raw_block"));
         result.remove(MekanismExtras.rl("processing/" + "naquadah" + "/slurry/dirty/from_raw_ore"));
 
+        result.remove(Mekanism.rl("processing/netherite/dust_to_ancient_debris"));
+
         // remove EAEP Item Recipes
         result.remove(ExtendedAEPlus.id("basic_core"));
         result.remove(ExtendedAEPlus.id("core/compat/infinity_core_3"));

@@ -1,4 +1,4 @@
-package com.takenokoshi.mekin.blockentity.suprememachine;
+package com.takenokoshi.mekin.blockentity.infinitemachine;
 
 import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekut.blockentity.abs.BEAbstractLazerCompressNucleoSynthesizer;
@@ -9,17 +9,17 @@ import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class BESupremeLazerCopmpressNucleoSynthesizer extends BEAbstractLazerCompressNucleoSynthesizer {
+public class BEInfiniteLCNS extends BEAbstractLazerCompressNucleoSynthesizer {
 
     private int stackUpgrade;
 
-    public BESupremeLazerCopmpressNucleoSynthesizer(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 120);
+    public BEInfiniteLCNS(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
+        super(blockProvider, pos, state, 14_400);
     }
 
     @Override
     protected long initChemicalTankCapacity() {
-        return 8_000_000_000L;
+        return 1_920_000_000_000L;
     }
 
     @Override

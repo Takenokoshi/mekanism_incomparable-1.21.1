@@ -1,0 +1,45 @@
+package com.takenokoshi.mekin.blockentity.infinitemachine;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackChemicalToItemStackMachine;
+
+import mekanism.api.recipes.ItemStackChemicalToItemStackRecipe;
+import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
+import mekanism.client.recipe_viewer.type.RecipeViewerRecipeType;
+import mekanism.common.recipe.IMekanismRecipeTypeProvider;
+import mekanism.common.recipe.MekanismRecipeType;
+import mekanism.common.recipe.lookup.cache.InputRecipeCache.ItemChemical;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class BEInfiniteOsmiumCompressor extends BEAbstractItemStackChemicalToItemStackMachine {
+
+    public BEInfiniteOsmiumCompressor(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
+        super(blockProvider, pos, state, 200, 2400);
+    }
+
+    @Override
+    public @NotNull IMekanismRecipeTypeProvider<?, ItemStackChemicalToItemStackRecipe, ItemChemical<ItemStackChemicalToItemStackRecipe>> getRecipeType() {
+        return MekanismRecipeType.COMPRESSING;
+    }
+
+    @Override
+    protected long initChemicalTankCapacity() {
+        return 9_600_000L;
+    }
+
+    @Override
+    protected int initItemSlotCapacity() {
+        return 262_144;
+    }
+
+    @Override
+    public @Nullable IRecipeViewerRecipeType<ItemStackChemicalToItemStackRecipe> recipeViewerType() {
+        return RecipeViewerRecipeType.COMPRESSING;
+    }
+    
+}

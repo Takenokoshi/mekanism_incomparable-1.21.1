@@ -7,6 +7,7 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import com.jerry.mekextras.api.ExtraUpgrade;
+import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
 import com.takenokoshi.mekut.inventory.slot.InputOrSupplyingSlot;
 import com.takenokoshi.mekut.recipe.input.AdvancedItemInputHandler;
 
@@ -37,7 +38,9 @@ import mekanism.common.capabilities.holder.slot.InventorySlotHelper;
 import mekanism.common.integration.computer.SpecialComputerMethodWrapper.ComputerChemicalTankWrapper;
 import mekanism.common.integration.computer.SpecialComputerMethodWrapper.ComputerIInventorySlotWrapper;
 import mekanism.common.integration.computer.annotation.WrappingComputerMethod;
+import mekanism.common.inventory.container.MekanismContainer;
 import mekanism.common.inventory.container.slot.SlotOverlay;
+import mekanism.common.inventory.container.sync.SyncableLong;
 import mekanism.common.inventory.slot.EnergyInventorySlot;
 import mekanism.common.inventory.slot.chemical.ChemicalInventorySlot;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
@@ -57,7 +60,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class BEAbstractChemicalOxidizer
         extends TileEntityProgressMachine<ItemStackToChemicalRecipe>
-        implements ISingleRecipeLookupHandler.ItemRecipeLookupHandler<ItemStackToChemicalRecipe> {
+        implements ISingleRecipeLookupHandler.ItemRecipeLookupHandler<ItemStackToChemicalRecipe>,
+        IHasMachineEnergyContainer {
 
     protected static final List<RecipeError> TRACKED_ERROR_TYPES = List.of(
             RecipeError.NOT_ENOUGH_ENERGY,
@@ -87,6 +91,8 @@ public abstract class BEAbstractChemicalOxidizer
 
     protected final IOutputHandler<@NotNull ChemicalStack> outputHandler;
     protected final AdvancedItemInputHandler inputHandler;
+
+    protected long clientEnergyUsed;
 
     protected MachineEnergyContainer<?> energyContainer;
     @WrappingComputerMethod(wrapper = ComputerIInventorySlotWrapper.class, methodNames = "getInput", docPlaceholder = "input slot")
@@ -155,7 +161,7 @@ public abstract class BEAbstractChemicalOxidizer
         boolean sendUpdatePacket = super.onUpdateServer();
         energySlot.fillContainerOrConvert();
         outputSlot.drainTank();
-        recipeCacheLookupMonitor.updateAndProcess();
+        clientEnergyUsed = recipeCacheLookupMonitor.updateAndProcess(energyContainer);
         return sendUpdatePacket;
     }
 
@@ -206,6 +212,17 @@ public abstract class BEAbstractChemicalOxidizer
 
     public MachineEnergyContainer<?> getEnergyContainer() {
         return energyContainer;
+    }
+
+    @Override
+    public long getEnergyUsed() {
+        return clientEnergyUsed;
+    }
+
+    @Override
+    public void addContainerTrackers(MekanismContainer container) {
+        super.addContainerTrackers(container);
+        container.track(SyncableLong.create(this::getEnergyUsed, v -> clientEnergyUsed = v));
     }
 
 }

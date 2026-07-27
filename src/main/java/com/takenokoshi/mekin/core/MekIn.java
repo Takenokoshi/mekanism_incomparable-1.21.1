@@ -4,14 +4,17 @@ import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 import com.takenokoshi.mekin.config.MekInConfig;
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
 import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInCreativeTabs;
 import com.takenokoshi.mekin.registries.MekInFluids;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekin.registries.MekInMachines;
 import com.takenokoshi.mekin.registries.MekInRecipeSerializers;
 import com.takenokoshi.mekin.registries.MekInRecipeTypes;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -36,6 +39,9 @@ public class MekIn {
         MekInChemicals.CHEMICALS.register(modEventBus);
         MekInFluids.FLUIDS.register(modEventBus);
         MekInMachines.MACHINES.register(modEventBus);
+        MekInAbsoluteMachines.MACHINES.register(modEventBus);
+        MekInSupremeMachines.MACHINES.register(modEventBus);
+        MekInInfiniteMachines.MACHINES.register(modEventBus);
         MekInCreativeTabs.CREATIVE_TABS.register(modEventBus);
         MekInRecipeTypes.RECIPE_TYPES.register(modEventBus);
         MekInRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);

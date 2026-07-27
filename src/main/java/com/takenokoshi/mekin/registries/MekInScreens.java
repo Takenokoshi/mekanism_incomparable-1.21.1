@@ -3,6 +3,7 @@ package com.takenokoshi.mekin.registries;
 import com.takenokoshi.mekaddonlib.registration.MachineRegistryObject;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractTEPS;
 import com.takenokoshi.mekin.blockentity.absolutemachine.*;
+import com.takenokoshi.mekin.blockentity.infinitemachine.*;
 import com.takenokoshi.mekin.blockentity.machine.*;
 import com.takenokoshi.mekin.blockentity.suprememachine.*;
 import com.takenokoshi.mekin.gui.machine.*;
@@ -22,7 +23,7 @@ public class MekInScreens {
         registerMachineGui(event, MekInMachines.ANTINEUTRONIC_EXISTENCE_TRANSMUTATOR, GuiAET<BlockEntityAET>::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_EXTRACTOR, GuiChemicalExtractor<BEChemicalExtractor>::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_LEACHING_CHAMBER,
-                GuiChemicalLeacher<BEChemicalLeachingChamber>::new);
+                GuiChemicalLeachingChamber<BEChemicalLeachingChamber>::new);
         registerMachineGui(event, MekInMachines.CHEMICAL_REFINER, GuiChemicalCutter<BEChemicalRefiner>::new);
         registerMachineGui(event, MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
                 GuiCompactAPT<BECompactAPT>::new);
@@ -31,55 +32,108 @@ public class MekInScreens {
         registerMachineGui(event, MekInMachines.FLUX_CONDENSER, GuiFluxCondenser::new);
         registerMachineGui(event, MekInMachines.TEPS, GuiCompactAPT<BEAbstractTEPS>::new);
 
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
                 GuiCompactBoiler<BEAbsoluteBoiler>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
                 GuiChemicalCutter<BEAbsoluteChemicalCutter>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
                 GuiChemicalCutter<BEAbsoluteChemicalInjectionChamber>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
                 GuiAbsoluteChemicalOxidizer<BEAbsoluteChemicalOxidizer>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
                 GuiItemStackToItemStackMachine<BEAbsoluteCrusher>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
                 GuiAbsoluteElectrolyticSeparator<BEAbsoluteElectrolyticSeparator>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
                 GuiTweakedEnergizedSmelter<BEAbsoluteEnergizedSmelter>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
                 GuiItemStackToItemStackMachine<BEAbsoluteEnrichmentChamber>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
                 GuiCompactFissionReactor<BEAbsoluteFissionReactor>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
                 GuiFluidToObjectMachine<BEAbsoluteIceMaker>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_INDUSTRIAL_TURBINE,
                 GuiCompactIndustrialTurbine<BEAbsoluteIndustrialTurbine>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
                 GuiAbsoluteMetallurgicInfuser<BEAbsoluteMetallurgicInfuser>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
                 GuiChemicalCutter<BEAbsoluteOsmiumCompressor>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                 GuiAbsolutePaintingMachine<BEAbsolutePaintingMachine>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                 GuiChemicalCutter<BEAbsolutePurificationChamber>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
                 GuiAbsoluteRotaryCondensentrator<BEAbsoluteRotaryCondensentrator>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
                 GuiSmallDigitalAssembler<BEAbsoluteSmallDigitalAssembler>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
                 GuiSmallDigitalReactionChamber<BEAbsoluteSmallDigitalReactionChamber>::new);
-        registerMachineGui(event, MekInMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
                 GuiCompactThermalEvaporationPlant<BEAbsoluteTEP>::new);
 
-        registerMachineGui(event, MekInMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
+        registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
                 GuiSupremeChemicalCrystallizer<BESupremeChemicalCrystallizer>::new);
-        registerMachineGui(event, MekInMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
+        registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
                 GuiAET<BESupremeChemicalDissolutionChamber>::new);
-        registerMachineGui(event, MekInMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
+        registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
                 GuiSupremeChemicalWasher<BESupremeChemicalWasher>::new);
-        registerMachineGui(event, MekInMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
-                GuiBiChemicalToChemicalMachine<BESupremeLazerCopmpressNucleoSynthesizer>::new);
-        registerMachineGui(event, MekInMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
+        registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                GuiBiChemicalToChemicalMachine<BESupremeLCNS>::new);
+        registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
                 GuiCompactSPS<BESupremeSPS>::new);
+
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER,
+                GuiCompactBoiler<BEInfiniteBoiler>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CRYSTALLIZER,
+                GuiSupremeChemicalCrystallizer<BEInfiniteChemicalCrystallizer>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CUTTER,
+                GuiChemicalCutter<BEInfiniteChemicalCutter>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_DISSOLUTION_CHAMBER,
+                GuiAET<BEInfiniteChemicalDissolutionChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_EXTRACTOR,
+                GuiChemicalExtractor<BEInfiniteChemicalExtractor>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER,
+                GuiChemicalCutter<BEInfiniteChemicalInjectionChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_LEACHING_CHAMBER,
+                GuiChemicalLeachingChamber<BEInfiniteChemicalLeachingChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER,
+                GuiAbsoluteChemicalOxidizer<BEInfiniteChemicalOxidizer>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER,
+                GuiSupremeChemicalWasher<BEInfiniteChemicalWasher>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CRUSHER,
+                GuiItemStackToItemStackMachine<BEInfiniteCrusher>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ELECTROLYTIC_SEPARATOR,
+                GuiAbsoluteElectrolyticSeparator<BEInfiniteElectrolyticSeparator>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENERGIZED_SMELTER,
+                GuiTweakedEnergizedSmelter<BEInfiniteEnergizedSmelter>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENRICHMENT_CHAMBER,
+                GuiItemStackToItemStackMachine<BEInfiniteEnrichmentChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_FISSION_REACTOR,
+                GuiCompactFissionReactor<BEInfiniteFissionReactor>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ICE_MAKER,
+                GuiFluidToObjectMachine<BEInfiniteIceMaker>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_INDUSTRIAL_TURBINE,
+                GuiCompactIndustrialTurbine<BEInfiniteIndustrialTurbine>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                GuiBiChemicalToChemicalMachine<BEInfiniteLCNS>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER,
+                GuiAbsoluteMetallurgicInfuser<BEInfiniteMetallurgicInfuser>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_OSMIUM_COMPRESSOR,
+                GuiChemicalCutter<BEInfiniteOsmiumCompressor>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE,
+                GuiAbsolutePaintingMachine<BEInfinitePaintingMachine>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER,
+                GuiChemicalCutter<BEInfinitePurificationChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR,
+                GuiAbsoluteRotaryCondensentrator<BEInfiniteRotaryCondensentrator>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER,
+                GuiSmallDigitalAssembler<BEInfiniteSmallDigitalAssembler>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_REACTION_CHAMBER,
+                GuiSmallDigitalReactionChamber<BEInfiniteSmallDigitalReactionChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_SUPERCRITICAL_PHASE_SHIFTER,
+                GuiCompactSPS<BEInfiniteSPS>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_THERMAL_EVAPORATION_PLANT,
+                GuiCompactThermalEvaporationPlant<BEInfiniteTEP>::new);
     }
 
     public static <BE extends TileEntityMekanism, CONTAINER extends MekanismTileContainer<BE>, GUI extends Screen & MenuAccess<CONTAINER>> void registerMachineGui(

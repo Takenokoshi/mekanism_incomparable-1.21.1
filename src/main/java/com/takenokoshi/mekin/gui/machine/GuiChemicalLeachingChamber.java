@@ -24,10 +24,10 @@ import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GuiChemicalLeacher<BE extends BEAbstractChemicalLeachingChamber>
+public class GuiChemicalLeachingChamber<BE extends BEAbstractChemicalLeachingChamber>
         extends GuiConfigurableTile<BE, MekALDynamicSizedContainer<BE>> {
 
-    public GuiChemicalLeacher(MekALDynamicSizedContainer<BE> container, Inventory inv, Component title) {
+    public GuiChemicalLeachingChamber(MekALDynamicSizedContainer<BE> container, Inventory inv, Component title) {
         super(container, inv, title);
         dynamicSlots = true;
         imageHeight += tile.getExtraHeight();

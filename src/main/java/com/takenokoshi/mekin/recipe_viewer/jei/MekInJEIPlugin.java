@@ -11,10 +11,13 @@ import com.takenokoshi.mekin.recipe_viewer.jei.category.ItemStackChemicalToChemi
 import com.takenokoshi.mekin.recipe_viewer.jei.category.TPSRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
 import com.takenokoshi.mekin.recipe_viewer.type.MekInRecipeViewerRecipeType;
+import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
+import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekin.registries.MekInMachines;
 import com.takenokoshi.mekin.registries.MekInRecipeTypes;
+import com.takenokoshi.mekin.registries.MekInSupremeMachines;
 import com.takenokoshi.mekut.recipe_viewer.type.MekUtRecipeViewerRecipeType;
 
 import mekanism.client.recipe_viewer.jei.CatalystRegistryHelper;
@@ -108,79 +111,104 @@ public class MekInJEIPlugin implements IModPlugin {
         });
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.BOILER),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_BOILER));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.CHEMICAL_CUT),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CRYSTALLIZING),
-                List.of(MekInMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER));
+                List.of(MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CRYSTALLIZER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.CHEMICAL_CUT),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CUTTER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.DISSOLUTION),
-                List.of(MekInMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER));
+                List.of(MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_DISSOLUTION_CHAMBER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.INJECTING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.OXIDIZING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.WASHING),
-                List.of(MekInMachines.SUPREME_QUANTUM_CHEMICAL_WASHER));
+                List.of(MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CRUSHING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_CRUSHER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CRUSHER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CRUSHER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.SEPARATING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ELECTROLYTIC_SEPARATOR));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.TWEAKED_SMELLTING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENERGIZED_SMELTER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.ENRICHING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ENRICHMENT_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ENRICHMENT_CHAMBER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(GeneratorsRVRecipeType.FISSION),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_FISSION_REACTOR));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.FISSION_REACTOR),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_FISSION_REACTOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_FISSION_REACTOR));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.ICE_MAKING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.METALLURGIC_INFUSING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.COMPRESSING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PAINTING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PURIFYING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CONDENSENTRATING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR));
-        CatalystRegistryHelper.register(registration,
-                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.DECONDENSENTRATING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ICE_MAKER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ICE_MAKER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.LAZER_COMPRESS),
-                List.of(MekInMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER));
+                List.of(MekInSupremeMachines.SUPREME_QUANTUM_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.METALLURGIC_INFUSING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.COMPRESSING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_OSMIUM_COMPRESSOR));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PAINTING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PURIFYING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CONDENSENTRATING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.DECONDENSENTRATING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.SMALL_DIGITAL_ASSEMBLER),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.SMALL_DIGITAL_REACTION_CHAMBER),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_REACTION_CAHMBER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_REACTION_CHAMBER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(MekUtRecipeViewerRecipeType.SPS),
-                List.of(MekInMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER));
+                List.of(MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_SUPERCRITICAL_PHASE_SHIFTER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.EVAPORATING),
-                List.of(MekInMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT));
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_THERMAL_EVAPORATION_PLANT));
     }
 
 }

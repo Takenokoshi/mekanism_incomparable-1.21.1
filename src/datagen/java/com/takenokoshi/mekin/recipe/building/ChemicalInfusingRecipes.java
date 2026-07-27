@@ -14,7 +14,7 @@ public class ChemicalInfusingRecipes {
     public static void buildRecipes(RecipeOutput output) {
         ChemicalChemicalToChemicalRecipeBuilder
                 .chemicalInfusing(
-                        IngredientCreatorAccess.chemicalStack().fromHolder(MSGases.POTASSIUM_HYDROXIDE, 1),
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MSGases.POTASSIUM_HYDROXIDE, 2),
                         IngredientCreatorAccess.chemicalStack().fromHolder(MekanismChemicals.CHLORINE, 1),
                         MekInChemicals.POTASSIUM_HYPOCHLORITE.asStack(1))
                 .build(output, MekInConstants.rl("chemical_infusing/potassium_hypochlorite"));

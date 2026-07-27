@@ -15,4 +15,13 @@ public class MekInLang implements ILangEntry {
     public String getTranslationKey() {
         return key;
     }
+
+    public static final MekInLang CREATIVE_TAB_MATERIALS = new MekInLang("creative_tab", "materials");
+    public static final MekInLang CREATIVE_TAB_MACHINES = new MekInLang("creative_tab", "machines");
+    public static final MekInLang CREATIVE_TAB_ABSOLUTE_MACHINES = new MekInLang("creative_tab",
+            "absolute_overclocked_machines");
+    public static final MekInLang CREATIVE_TAB_SUPREME_MACHINES = new MekInLang("creative_tab",
+            "supreme_quantum_machines");
+    public static final MekInLang CREATIVE_TAB_INFINITE_MACHINES = new MekInLang("creative_tab",
+            "infinite_multiversal_machines");
 }
