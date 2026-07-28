@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteChemicalLeachingChamber extends BEAbstractChemicalLeachingChamber {
 
     public BEInfiniteChemicalLeachingChamber(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 120);
+        super(blockProvider, pos, state, 20);
     }
 
     @Override

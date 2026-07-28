@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteSPS extends BEAbstractCompactSPS {
 
     public BEInfiniteSPS(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 9600, 1.0d);
+        super(blockProvider, pos, state, 800, 1.0d);
     }
 
     @Override

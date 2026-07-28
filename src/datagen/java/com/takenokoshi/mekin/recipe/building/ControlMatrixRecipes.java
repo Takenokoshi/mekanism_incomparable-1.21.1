@@ -1,6 +1,7 @@
 package com.takenokoshi.mekin.recipe.building;
 
 import com.extendedae_plus.init.ModItems;
+import com.fxd927.mekanismelements.common.registries.MSGases;
 import com.fxd927.mekanismelements.common.registries.MSItems;
 import com.glodblock.github.appflux.common.AFSingletons;
 import com.jerry.mekextras.common.registries.ExtraItems;
@@ -11,6 +12,7 @@ import com.takenokoshi.mekut.recipe.builder.ItemStackListFluidChemicalToItemReci
 import com.takenokoshi.mekut.registries.MekUtItems;
 
 import appeng.core.definitions.AEItems;
+import fr.iglee42.evolvedmekanism.registries.EMChemicals;
 import fr.iglee42.evolvedmekanism.registries.EMItems;
 import gripe._90.megacells.definition.MEGAItems;
 import mekanism.common.registries.MekanismChemicals;
@@ -21,7 +23,6 @@ import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
-import net.pedroksl.advanced_ae.common.definitions.AAEBlocks;
 import net.pedroksl.advanced_ae.common.definitions.AAEFluids;
 import net.pedroksl.advanced_ae.common.definitions.AAEItems;
 
@@ -77,20 +78,20 @@ public class ControlMatrixRecipes {
                 .smallDigitalAssembler(new ItemStack(MekInBlocks.STANDARD_CONTROL_MATRIX.asItem(), 1))
                 .addItemInput(MekUtItems.STANDARD_CONTROL_CIRCUIT.asStack(4))
                 .addItemInput(MekInBlocks.DIGITAL_CONTROL_MATRIX, 4)
-                .addItemInput(AAEBlocks.QUANTUM_UNIT, 16)
+                .addItemInput(MekanismItems.PLUTONIUM_PELLET, 16)
                 .addItemInput(MEGAItems.CELL_COMPONENT_4M.stack(1))
                 .setFluidInput(MekanismFluids.HEAVY_WATER.asStack(400))
-                .setChemicalInput(MekanismChemicals.PLUTONIUM.asStack(2000))
+                .setChemicalInput(EMChemicals.URANIUM.asStack(1280))
                 .build(output, MekInConstants.rl("control_matrix/standard"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(new ItemStack(MekInBlocks.AUGMENT_CONTROL_MATRIX.asItem(), 1))
                 .addItemInput(MekUtItems.AUGMENT_CONTROL_CIRCUIT.asStack(4))
                 .addItemInput(MekInBlocks.STANDARD_CONTROL_MATRIX, 4)
-                .addItemInput(MekUtItems.IRIDIUM_DUST, 4)
+                .addItemInput(MekanismItems.POLONIUM_PELLET, 4)
                 .addItemInput(MEGAItems.CELL_COMPONENT_64M.stack(1))
                 .setFluidInput(MekanismFluids.HEAVY_WATER.asStack(1600))
-                .setChemicalInput(MekanismChemicals.POLONIUM.asStack(8000))
-                .build(output, MekInConstants.rl("control_matrix/knowledge"));
+                .setChemicalInput(MSGases.HYDROGEN_CYANIDE.asStack(2000))
+                .build(output, MekInConstants.rl("control_matrix/augment"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(new ItemStack(MekInBlocks.ABSOLUTE_CONTROL_MATRIX.asItem(), 1))
                 .addItemInput(ExtraItems.ABSOLUTE_CONTROL_CIRCUIT, 4)

@@ -20,6 +20,7 @@ public class MekInRecipeProvider extends RecipeProvider {
         AETRecipes.buildRecipes(output);
         APTRecipes.buildRecipes(output);
         ChemicalConvertionRecipes.buildRecipes(output);
+        ChemicalExtractionRecipes.buildRecipes(output);
         ChemicalInfusingRecipes.buildRecipes(output);
         ChemixerRecipes.buildRecipes(output);
         ControlCircuitRecipes.buildRecipes(output, RecipeProvider::has);

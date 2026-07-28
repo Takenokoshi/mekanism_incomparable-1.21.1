@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteTEP extends BEAbstractCompactThermalEvaporationPlant {
 
     public BEInfiniteTEP(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 7_200_000.0d);
+        super(blockProvider, pos, state, 1_200_000.0d);
     }
 
     @Override

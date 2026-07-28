@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteElectrolyticSeparator extends BEAbstractElectrolyticSeparator {
 
     public BEInfiniteElectrolyticSeparator(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 2400);
+        super(blockProvider, pos, state, 400);
     }
 
     @Override

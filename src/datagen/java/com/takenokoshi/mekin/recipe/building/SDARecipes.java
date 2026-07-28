@@ -534,7 +534,7 @@ public class SDARecipes {
                     .addItemInput(MekanismTags.Items.PELLETS_POLONIUM, 512)
                     .addItemInput(Tags.Items.INGOTS_NETHERITE, 1024)
                     .setFluidInput(MekInFluids.FLUX.asStack(10))
-                    .setChemicalInput(MekInChemicals.NULL.asStack(100))
+                    .setChemicalInput(MekInChemicals.NULL.asStack(1))
                     .build(output,
                             MekInConstants.rl("small_digital_assembler/machine/infinite_multiversal/" + data.name));
         });
@@ -646,6 +646,10 @@ public class SDARecipes {
 
         INFINITE_MACHINES = List.of(new MachineData[] {
                 new MachineData(
+                        MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
+                        "antimatter_protomolecular_transmutator"),
+                new MachineData(
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER,
                         "boiler"),
@@ -677,6 +681,10 @@ public class SDARecipes {
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER,
                         "chemical_oxidizer"),
+                new MachineData(
+                        MekInMachines.CHEMICAL_REFINER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_REFINER,
+                        "chemical_refiner"),
                 new MachineData(
                         MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_WASHER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER,

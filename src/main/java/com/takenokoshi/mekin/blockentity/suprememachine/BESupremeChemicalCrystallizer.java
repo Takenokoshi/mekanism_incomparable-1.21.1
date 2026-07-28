@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BESupremeChemicalCrystallizer extends BEAbstractChemicalCrystallizer {
 
     public BESupremeChemicalCrystallizer(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 40);
+        super(blockProvider, pos, state, 20);
     }
 
     @Override

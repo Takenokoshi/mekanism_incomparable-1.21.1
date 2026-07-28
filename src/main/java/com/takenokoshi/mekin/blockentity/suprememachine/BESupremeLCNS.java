@@ -14,7 +14,7 @@ public class BESupremeLCNS extends BEAbstractLazerCompressNucleoSynthesizer {
     private int stackUpgrade;
 
     public BESupremeLCNS(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 120);
+        super(blockProvider, pos, state, 60);
     }
 
     @Override

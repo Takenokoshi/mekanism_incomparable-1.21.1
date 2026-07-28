@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteBoiler extends BEAbstractCompactBoiler {
 
     public BEInfiniteBoiler(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 307_200);
+        super(blockProvider, pos, state, 51_200);
     }
 
     @Override

@@ -20,7 +20,7 @@ public class BEInfinitePaintingMachine extends BEAbstractItemStackChemicalToItem
     
 
     public BEInfinitePaintingMachine(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 200, 2400);
+        super(blockProvider, pos, state, 200, 400);
     }
 
     @Override

@@ -82,6 +82,8 @@ public class MekInScreens {
         registerMachineGui(event, MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
                 GuiCompactSPS<BESupremeSPS>::new);
 
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
+                GuiCompactAPT<BEInfiniteAPT>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER,
                 GuiCompactBoiler<BEInfiniteBoiler>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_CRYSTALLIZER,
@@ -98,6 +100,8 @@ public class MekInScreens {
                 GuiChemicalLeachingChamber<BEInfiniteChemicalLeachingChamber>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_OXIDIZER,
                 GuiAbsoluteChemicalOxidizer<BEInfiniteChemicalOxidizer>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_REFINER,
+                GuiChemicalCutter<BEInfiniteChemicalRefiner>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER,
                 GuiSupremeChemicalWasher<BEInfiniteChemicalWasher>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CRUSHER,

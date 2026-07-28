@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteMetallurgicInfuser extends BEAbstractItemStackChemicalToItemStackMachine {
 
     public BEInfiniteMetallurgicInfuser(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 200, 2400);
+        super(blockProvider, pos, state, 200, 400);
     }
 
     @Override

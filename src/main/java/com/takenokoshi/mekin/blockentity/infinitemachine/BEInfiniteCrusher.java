@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteCrusher extends BEAbstractItemStackToItemStackMachine {
 
     public BEInfiniteCrusher(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, BASE_TICKS_REQUIRED, 2400);
+        super(blockProvider, pos, state, BASE_TICKS_REQUIRED, 400);
     }
 
     @Override

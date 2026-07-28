@@ -9,10 +9,10 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
 public class BEInfiniteFissionReactor extends BEAbstractCompactFissionReactor {
-    public static final double avgSurfaceArea = 148_800.0d / 15.0d;
+    public static final double avgSurfaceArea = 24_600.0d / 15.0d;
 
     public BEInfiniteFissionReactor(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 4_608_000, 2_880_000.0d, Math.min(
+        super(blockProvider, pos, state, 768_000, 480_000.0d, Math.min(
                 avgSurfaceArea / MekanismGeneratorsConfig.generators.fissionSurfaceAreaTarget.getAsDouble(),
                 1.0d));
     }

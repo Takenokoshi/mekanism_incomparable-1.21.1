@@ -1,12 +1,9 @@
 package com.takenokoshi.mekin.recipe.building;
 
-import com.jerry.mekextras.common.registries.ExtraItems;
 import com.jerry.mekmm.common.registries.MoreMachineChemicals;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.recipe.builder.APTRecipeBuilder;
 import com.takenokoshi.mekin.registries.MekInItems;
-import com.takenokoshi.mekut.registries.MekUtChemicals;
-
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.registries.MekanismChemicals;
 import net.minecraft.data.recipes.RecipeOutput;
@@ -25,12 +22,6 @@ public class APTRecipes {
                 MekInItems.SCARLET_SILVER_DUST.asStack(1),
                 false)
                 .build(output, MekInConstants.rl("apt/scarlet_silver/dust"));
-        new APTRecipeBuilder(
-                IngredientCreatorAccess.item().from(ExtraItems.ENRICHED_THERMONUCLEAR),
-                IngredientCreatorAccess.chemicalStack().from(MekUtChemicals.SINGULARITY.asStack(400)),
-                ExtraItems.ENRICHED_SHINING.asStack(1),
-                false)
-                .build(output, MekInConstants.rl("apt/enriched_shining"));
         new APTRecipeBuilder(
                 IngredientCreatorAccess.item().from(MekInItems.AMETHYST_STARLIGHT),
                 IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.ANTIMATTER.asStack(1000)),

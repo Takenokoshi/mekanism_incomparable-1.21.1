@@ -11,7 +11,7 @@ public class BEInfiniteIndustrialTurbine extends BEAbstractCompactIndustrialTurb
     
 
     public BEInfiniteIndustrialTurbine(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 6_988_900L, 972_000L);
+        super(blockProvider, pos, state, 1_164_800, 162_000L);
     }
 
     @Override

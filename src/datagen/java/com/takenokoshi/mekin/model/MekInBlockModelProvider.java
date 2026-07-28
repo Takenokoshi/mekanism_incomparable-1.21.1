@@ -268,6 +268,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekUtConstants.rl("block/machine_front_active/sps"));
 
         simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR, true,
+                "block/machine/infinite_multiversal/apt",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/apt"),
+                MekInConstants.rl("block/machine_front_active/apt"));
+        simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_BOILER, false,
                 "block/machine/infinite_multiversal/boiler",
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
@@ -315,6 +321,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
                 MekInConstants.rl("block/machine_front/chemical_oxidizer"),
                 MekInConstants.rl("block/machine_front_active/chemical_oxidizer"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_REFINER, true,
+                "block/machine/infinite_multiversal/chemical_refiner",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_refiner"),
+                MekInConstants.rl("block/machine_front_active/chemical_refiner"));
         simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_WASHER, true,
                 "block/machine/infinite_multiversal/chemical_washer",

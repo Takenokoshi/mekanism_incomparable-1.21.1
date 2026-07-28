@@ -10,7 +10,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteChemicalCutter extends BEAbstractChemicalCutter {
 
     public BEInfiniteChemicalCutter(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, 4800);
+        super(blockProvider, pos, state, 800);
     }
 
     @Override

@@ -19,7 +19,7 @@ import net.minecraft.world.level.block.state.BlockState;
 public class BEInfiniteEnrichmentChamber extends BEAbstractItemStackToItemStackMachine {
 
     public BEInfiniteEnrichmentChamber(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
-        super(blockProvider, pos, state, BASE_TICKS_REQUIRED, 2400);
+        super(blockProvider, pos, state, BASE_TICKS_REQUIRED, 400);
     }
 
     @Override
