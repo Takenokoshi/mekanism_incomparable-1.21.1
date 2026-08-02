@@ -1,0 +1,19 @@
+{
+  "type": "mekanism_incomparable:chemical_extraction",
+  "chemical_input": {
+    "amount": 10,
+    "chemical": "mekanism_extras:polonium_containing_steam"
+  },
+  "fluid_input": {
+    "amount": 1,
+    "tag": "c:lava"
+  },
+  "main_output": {
+    "amount": 10,
+    "id": "mekanism:steam"
+  },
+  "secondary_output": {
+    "amount": 1,
+    "id": "mekanism_extras:polonium-208"
+  }
+}

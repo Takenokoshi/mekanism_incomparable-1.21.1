@@ -9,6 +9,8 @@ import com.takenokoshi.mekin.blockentity.abs.BEAbstractAET;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalExtractor;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalLeachingChamber;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractCompactAPT;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractLightningFabricator;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractLightningTransformer;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractTEPS;
 import com.takenokoshi.mekin.blockentity.machine.BEChemicalExtractor;
 import com.takenokoshi.mekin.blockentity.machine.BEChemicalLeachingChamber;
@@ -16,6 +18,10 @@ import com.takenokoshi.mekin.blockentity.machine.BEChemicalRefiner;
 import com.takenokoshi.mekin.blockentity.machine.BECompactAPT;
 import com.takenokoshi.mekin.blockentity.machine.BECompactNaquadahReactor;
 import com.takenokoshi.mekin.blockentity.machine.BEFluxCondenser;
+import com.takenokoshi.mekin.blockentity.machine.BELightningFabricator;
+import com.takenokoshi.mekin.blockentity.machine.BELightningMaterializer;
+import com.takenokoshi.mekin.blockentity.machine.BELightningRecollector;
+import com.takenokoshi.mekin.blockentity.machine.BELightningTransformer;
 import com.takenokoshi.mekin.blockentity.machine.BlockEntityAET;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.core.MekInMathUtils;
@@ -24,6 +30,7 @@ import com.takenokoshi.mekut.blockentity.interfaces.machine.IItemStackChemicalTo
 import fr.iglee42.evolvedmekanism.config.EMConfig;
 import mekanism.api.Upgrade;
 import mekanism.common.attachments.component.AttachedSideConfig;
+import mekanism.common.capabilities.Capabilities;
 import mekanism.common.config.MekanismConfig;
 import mekanism.common.lib.transmitter.TransmissionType;
 import mekanism.common.registries.MekanismSounds;
@@ -114,6 +121,8 @@ public class MekInMachines {
                     BECompactNaquadahReactor
                             .getContainerAdder(GeneratorsExtraConfig.extraGenerators.reactorFuelCapacity)::accept,
                     BECompactNaquadahReactor::new,
+                    builder -> builder
+                            .withSimple(Capabilities.LASER_RECEPTOR),
                     BECompactNaquadahReactor.class,
                     builder -> builder
                             .withSideConfig(TransmissionType.values())
@@ -130,6 +139,50 @@ public class MekInMachines {
                             .withSideConfig(TransmissionType.ENERGY, TransmissionType.FLUID, TransmissionType.ITEM)
                             .withSound(MekanismSounds.ROTARY_CONDENSENTRATOR)
                             .withSupportedUpgrades(Upgrade.MUFFLING));
+
+    public static final SimpleMachineRegistryObject<BELightningFabricator> LIGHTNING_FABRICATOR = MACHINES
+            .registerSimple("lightning_fabricator",
+                    AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
+                    BEAbstractLightningFabricator.getContainerAdder(96_000_000L)::accept,
+                    BELightningFabricator::new,
+                    BELightningFabricator.class,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.combiner,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.general.spsEnergyPerInput, 20))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING)
+                            .withSound(MekanismSounds.COMBINER));
+
+    public static final SimpleMachineRegistryObject<BELightningMaterializer> LIGHTNING_MATERIALIZER = MACHINES
+            .registerSimple("lightning_materializer",
+                    BELightningMaterializer.SIDE_CONFIG,
+                    BELightningMaterializer::addContainrsToItem,
+                    BELightningMaterializer::new,
+                    BELightningMaterializer.class,
+                    builder -> builder.withSideConfig(TransmissionType.CHEMICAL));
+
+    public static final SimpleMachineRegistryObject<BELightningRecollector> LIGHTNING_RECOLLECTOR = MACHINES
+            .registerSimple("lightning_recollector",
+                    BELightningRecollector.SIDE_CONFIG,
+                    BELightningRecollector::addContainrsToItem,
+                    BELightningRecollector::new,
+                    BELightningRecollector.class,
+                    builder -> builder.withSideConfig(TransmissionType.CHEMICAL));
+
+    public static final GuiSizedMachineRegistryObject<BELightningTransformer> LIGHTNING_TRANSFORMER = MACHINES
+            .registerGuiSized("lightning_transformer",
+                    AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
+                    BEAbstractLightningTransformer.getContainerAdder(64_000L)::accept,
+                    BELightningTransformer::new,
+                    BELightningTransformer.class,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.general.spsEnergyPerInput, 20),
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.general.spsEnergyPerInput, 400))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING)
+                            .withSound(MekanismSounds.SPS));
 
     public static final GuiSizedMachineRegistryObject<BEAbstractTEPS> TEPS = MACHINES
             .registerGuiSized("tachyonic_elementary_particle_synthesizer",

@@ -4,10 +4,13 @@ import java.util.List;
 
 import com.takenokoshi.mekaddonlib.recipe_viewer.jei.MekALRecipeRegistryHelper;
 import com.takenokoshi.mekin.core.MekInConstants;
+import com.takenokoshi.mekin.recipe.type.MekInWrappedRecipeTypes;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.ChemicalLeacherRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.FluidChemicalToBiChemicalRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.FluxCondenserRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.ItemStackChemicalToChemicalRecipeCategory;
+import com.takenokoshi.mekin.recipe_viewer.jei.category.LightningFabricationRecipeCategory;
+import com.takenokoshi.mekin.recipe_viewer.jei.category.LightningTransformRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.TPSRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
 import com.takenokoshi.mekin.recipe_viewer.type.MekInRecipeViewerRecipeType;
@@ -73,6 +76,8 @@ public class MekInJEIPlugin implements IModPlugin {
                 new FluidChemicalToBiChemicalRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.CHEMICAL_EXTRACTION),
                 new FluxCondenserRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.FLUX_CONDENSER),
                 new ChemicalLeacherRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LEACHING),
+                new LightningTransformRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM),
+                new LightningFabricationRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LIGHTNING_FABRICATION),
                 new ItemStackChemicalToItemStackRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.REFINING),
                 new TPSRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.TEPS),
         });
@@ -91,6 +96,10 @@ public class MekInJEIPlugin implements IModPlugin {
                 FluxCondenserRVRecipe.getFluxCondenserRecipes());
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.LEACHING,
                 MekInRecipeTypes.LEACHING);
+        MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.LIGHTNING_FABRICATION,
+                MekInRecipeTypes.LIGHTNING_FABRICATION);
+        MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM,
+                MekInWrappedRecipeTypes.LIGHTNING_TRANSFORM);
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.REFINING,
                 MekInRecipeTypes.REFINING);
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.TEPS, MekInRecipeTypes.TEPS);
@@ -106,6 +115,8 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekInRecipeViewerRecipeType.CHEMICAL_EXTRACTION,
                 MekInRecipeViewerRecipeType.FLUX_CONDENSER,
                 MekInRecipeViewerRecipeType.LEACHING,
+                MekInRecipeViewerRecipeType.LIGHTNING_FABRICATION,
+                MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM,
                 MekInRecipeViewerRecipeType.REFINING,
                 MekInRecipeViewerRecipeType.TEPS,
         });
@@ -125,6 +136,10 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.DISSOLUTION),
                 List.of(MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_DISSOLUTION_CHAMBER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_DISSOLUTION_CHAMBER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CHEMICAL_INFUSING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INFUSER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INFUSER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.INJECTING),
                 List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,

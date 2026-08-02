@@ -50,8 +50,6 @@ public class MekInItemModelProvider extends ItemModelProvider {
                 MekInConstants.rl("item/processor/photon"));
         simpleItem(MekInItems.GRAVITON_PROCESSOR.get()).texture("layer0",
                 MekInConstants.rl("item/processor/graviton"));
-        simpleItem(MekInItems.DIMENTIONAL_PROCESSOR.get()).texture("layer0",
-                MekInConstants.rl("item/processor/dimentional"));
         simpleItem(MekInItems.OBSERVATION_PROCESSOR.get()).texture("layer0",
                 MekInConstants.rl("item/processor/observation"));
         simpleItem(MekInItems.TRANSMISSION_PROCESSOR.get()).texture("layer0",
@@ -65,8 +63,6 @@ public class MekInItemModelProvider extends ItemModelProvider {
                 MekInConstants.rl("item/printed_processor/photon"));
         simpleItem(MekInItems.PRINTED_GRAVITON_PROCESSOR.get()).texture("layer0",
                 MekInConstants.rl("item/printed_processor/graviton"));
-        simpleItem(MekInItems.PRINTED_DIMENTIONAL_PROCESSOR.get()).texture("layer0",
-                MekInConstants.rl("item/printed_processor/dimentional"));
         simpleItem(MekInItems.PRINTED_OBSERVATION_PROCESSOR.get()).texture("layer0",
                 MekInConstants.rl("item/printed_processor/observation"));
         simpleItem(MekInItems.PRINTED_TRANSMISSION_PROCESSOR.get()).texture("layer0",
@@ -117,6 +113,15 @@ public class MekInItemModelProvider extends ItemModelProvider {
         simpleItem(MekInItems.CESIUM_133_SYNCHRONIZED_CERTUS_QUARTZ_CRYSTAL.get()).texture("layer0",
                 AppEng.makeId("item/certus_quartz_crystal"));
 
+        simpleItem(MekInItems.RAW_OVERLOAD.get())
+                .texture("layer0", MekInConstants.rl("item/raw/overload"));
+        simpleItem(MekInItems.OVERLOAD_CLUMP.get())
+                .texture("layer0", MekInConstants.rl("item/clump/overload"));
+        simpleItem(MekInItems.OVERLOAD_CRYSTAL.get())
+                .texture("layer0", MekInConstants.rl("item/crystal/overload"));
+        simpleItem(MekInItems.OVERLOAD_SHARD.get())
+                .texture("layer0", MekInConstants.rl("item/shard/overload"));
+
         simpleItem(MekInItems.DIRTY_AMETHYST_CRYSTAL.get())
                 .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/crystal/amethyst")))
                 .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
@@ -162,11 +167,17 @@ public class MekInItemModelProvider extends ItemModelProvider {
         simpleItem(MekInItems.DIRTY_OSMIUM_CRYSTAL.get())
                 .texture("layer0", uncheckedTexture(Mekanism.rl("item/crystal_osmium")))
                 .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
+        simpleItem(MekInItems.DIRTY_OVERLOAD_CRYSTAL.get())
+                .texture("layer0", MekInConstants.rl("item/crystal/overload"))
+                .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
         simpleItem(MekInItems.DIRTY_QUARTZ_CRYSTAL.get())
                 .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/crystal/quartz")))
                 .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
         simpleItem(MekInItems.DIRTY_REDSTONE_CRYSTAL.get())
                 .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/crystal/redstone")))
+                .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
+        simpleItem(MekInItems.DIRTY_SILICON_CRYSTAL.get())
+                .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/crystal/silicon")))
                 .texture("layer1", MekInConstants.rl("item/crystal/dirty"));
         simpleItem(MekInItems.DIRTY_TIN_CRYSTAL.get())
                 .texture("layer0", uncheckedTexture(Mekanism.rl("item/crystal_tin")))
@@ -220,11 +231,17 @@ public class MekInItemModelProvider extends ItemModelProvider {
         simpleItem(MekInItems.CHARGED_OSMIUM_SHARD.get())
                 .texture("layer0", uncheckedTexture(Mekanism.rl("item/shard_osmium")))
                 .texture("layer1", MekInConstants.rl("item/shard/charged"));
+        simpleItem(MekInItems.CHARGED_OVERLOAD_SHARD.get())
+                .texture("layer0", MekInConstants.rl("item/shard/overload"))
+                .texture("layer1", MekInConstants.rl("item/shard/charged"));
         simpleItem(MekInItems.CHARGED_QUARTZ_SHARD.get())
                 .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/shard/quartz")))
                 .texture("layer1", MekInConstants.rl("item/shard/charged"));
         simpleItem(MekInItems.CHARGED_REDSTONE_SHARD.get())
                 .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/shard/redstone")))
+                .texture("layer1", MekInConstants.rl("item/shard/charged"));
+        simpleItem(MekInItems.CHARGED_SILICON_SHARD.get())
+                .texture("layer0", uncheckedTexture(MekUtConstants.rl("item/shard/silicon")))
                 .texture("layer1", MekInConstants.rl("item/shard/charged"));
         simpleItem(MekInItems.CHARGED_TIN_SHARD.get())
                 .texture("layer0", uncheckedTexture(Mekanism.rl("item/shard_tin")))
@@ -251,8 +268,10 @@ public class MekInItemModelProvider extends ItemModelProvider {
         simpleItem(MekInItems.NETHERITE_STARLIGHT.get()).texture("layer0",
                 MekInConstants.rl("item/starlight/netherite"));
         simpleItem(MekInItems.OSMIUM_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/osmium"));
+        simpleItem(MekInItems.OVERLOAD_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/overload"));
         simpleItem(MekInItems.QUARTZ_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/quartz"));
         simpleItem(MekInItems.REDSTONE_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/redstone"));
+        simpleItem(MekInItems.SILICON_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/silicon"));
         simpleItem(MekInItems.TIN_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/tin"));
         simpleItem(MekInItems.URANIUM_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/uranium"));
 

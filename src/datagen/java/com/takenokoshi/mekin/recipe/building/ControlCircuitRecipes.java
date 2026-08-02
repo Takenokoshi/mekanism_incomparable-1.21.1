@@ -35,6 +35,8 @@ import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.pedroksl.advanced_ae.common.definitions.AAEItems;
 
+import static com.moakiee.ae2lt.registry.ModItems.OVERLOAD_PROCESSOR;
+
 public class ControlCircuitRecipes {
     public static void buildRecipes(RecipeOutput output,
             Function<ItemLike, Criterion<InventoryChangeTrigger.TriggerInstance>> has) {
@@ -237,7 +239,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(ExtraItems.SUPREME_CONTROL_CIRCUIT, 1)
                 .addItemInput(MekInBlocks.ELITE_CONTROL_MATRIX, 2)
                 .addItemInput(MekInBlocks.STANDARD_CONTROL_MATRIX, 2)
-                .addItemInput(MekInItems.GRAVITON_PROCESSOR, 4)
+                .addItemInput(OVERLOAD_PROCESSOR, 4)
                 .addItemInput(ExtraItems.SHINING_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
                 .setChemicalInput(MekanismChemicals.POLONIUM.asStack(500))
@@ -247,7 +249,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(EMItems.QUANTUM_CONTROL_CIRCUIT, 1)
                 .addItemInput(MekInBlocks.ELITE_CONTROL_MATRIX, 2)
                 .addItemInput(MekInBlocks.STANDARD_CONTROL_MATRIX, 2)
-                .addItemInput(MekInItems.GRAVITON_PROCESSOR, 4)
+                .addItemInput(OVERLOAD_PROCESSOR, 4)
                 .addItemInput(EMItems.SINGULAR_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
                 .setChemicalInput(MekanismChemicals.POLONIUM.asStack(500))
@@ -257,7 +259,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(ExtraItems.COSMIC_CONTROL_CIRCUIT, 1)
                 .addItemInput(MekInBlocks.ULTIMATE_CONTROL_MATRIX, 2)
                 .addItemInput(MekInBlocks.AUGMENT_CONTROL_MATRIX, 2)
-                .addItemInput(MekInItems.DIMENTIONAL_PROCESSOR, 4)
+                .addItemInput(MekInItems.GRAVITON_PROCESSOR, 4)
                 .addItemInput(ExtraItems.SPECTRUM_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(200))
@@ -267,7 +269,7 @@ public class ControlCircuitRecipes {
                 .addItemInput(EMItems.DENSE_CONTROL_CIRCUIT, 1)
                 .addItemInput(MekInBlocks.ULTIMATE_CONTROL_MATRIX, 2)
                 .addItemInput(MekInBlocks.AUGMENT_CONTROL_MATRIX, 2)
-                .addItemInput(MekInItems.DIMENTIONAL_PROCESSOR, 4)
+                .addItemInput(MekInItems.GRAVITON_PROCESSOR, 4)
                 .addItemInput(EMItems.EXOVERSAL_ALLOY, 4)
                 .setFluidInput(Tags.Fluids.LAVA, 1000)
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(200))

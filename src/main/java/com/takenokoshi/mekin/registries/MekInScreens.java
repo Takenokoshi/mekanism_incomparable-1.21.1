@@ -30,12 +30,20 @@ public class MekInScreens {
         registerMachineGui(event, MekInMachines.COMPACT_NAQUADAH_REACTOR,
                 GuiCompactFusionReactor<BECompactNaquadahReactor>::new);
         registerMachineGui(event, MekInMachines.FLUX_CONDENSER, GuiFluxCondenser::new);
+        registerMachineGui(event, MekInMachines.LIGHTNING_FABRICATOR,
+                GuiLightningFabricator<BELightningFabricator>::new);
+        registerMachineGui(event, MekInMachines.LIGHTNING_MATERIALIZER, GuiLightningMaterializer::new);
+        registerMachineGui(event, MekInMachines.LIGHTNING_RECOLLECTOR, GuiLightningRecollector::new);
+        registerMachineGui(event, MekInMachines.LIGHTNING_TRANSFORMER,
+                GuiLightningTransformer<BELightningTransformer>::new);
         registerMachineGui(event, MekInMachines.TEPS, GuiCompactAPT<BEAbstractTEPS>::new);
 
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
                 GuiCompactBoiler<BEAbsoluteBoiler>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_CUTTER,
                 GuiChemicalCutter<BEAbsoluteChemicalCutter>::new);
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INFUSER,
+                GuiAbsoluteChemicalInfuser<BEAbsoluteChemicalInfuser>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER,
                 GuiChemicalCutter<BEAbsoluteChemicalInjectionChamber>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER,
@@ -94,6 +102,8 @@ public class MekInScreens {
                 GuiAET<BEInfiniteChemicalDissolutionChamber>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_EXTRACTOR,
                 GuiChemicalExtractor<BEInfiniteChemicalExtractor>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INFUSER,
+                GuiAbsoluteChemicalInfuser<BEInfiniteChemicalInfuser>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER,
                 GuiChemicalCutter<BEInfiniteChemicalInjectionChamber>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_LEACHING_CHAMBER,

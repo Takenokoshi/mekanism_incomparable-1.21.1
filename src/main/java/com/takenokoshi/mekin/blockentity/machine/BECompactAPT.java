@@ -18,4 +18,9 @@ public class BECompactAPT extends BEAbstractCompactAPT {
         return 10000L;
     }
 
+    @Override
+    protected int initItemSlotCapacity() {
+        return 64;
+    }
+
 }

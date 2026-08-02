@@ -1,0 +1,34 @@
+{
+  "type": "ae2lt:lightning_transform",
+  "priority": 0,
+  "inputs": [
+    {
+      "ingredient": {
+        "item": "ae2lt:overload_processor"
+      },
+      "count": 32
+    },
+    {
+      "ingredient": {
+        "item": "ae2lt:overload_alloy"
+      },
+      "count": 32
+    },
+    {
+      "ingredient": {
+        "item": "ae2lt:overload_crystal"
+      },
+      "count": 64
+    },
+    {
+      "ingredient": {
+        "item": "mekanism:steel_casing"
+      },
+      "count": 16
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "ae2lt:lightning_simulation_room"
+  }
+}

@@ -196,5 +196,24 @@ public class MaterialProcessingRecipes {
                         MekInItems.TITANIUM_DUST.asStack(1))
                 .build(output, MekInConstants.rl("processing/titanium/dust"));
 
+        // overload
+        ItemStackToItemStackRecipeBuilder
+                .enriching(
+                        IngredientCreatorAccess.item().from(MekInMaterial.OVERLOAD.clumpTag()),
+                        new ItemStack(MekInMaterial.OVERLOAD.finalItem()))
+                .build(output, MekInConstants.rl("processing/overload/gem_from_clump"));
+        ItemStackChemicalToItemStackRecipeBuilder
+                .injecting(
+                        IngredientCreatorAccess.item().from(MekInMaterial.OVERLOAD.crystalTag()),
+                        IngredientCreatorAccess.chemicalStack().from(MekanismChemicals.HYDROGEN_CHLORIDE.asStack(1)),
+                        new ItemStack(MekInMaterial.OVERLOAD.shard(), 1),
+                        true)
+                .build(output, MekInConstants.rl("processing/overload/shard_from_crystal"));
+        ChemicalCrystallizerRecipeBuilder
+                .crystallizing(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekInMaterial.OVERLOAD.cleanSlurry(), 200),
+                        new ItemStack(MekInMaterial.OVERLOAD.crystal(), 1))
+                .build(output, MekInConstants.rl("processing/overload/crystal_from_clean_slurry"));
+
     }
 }

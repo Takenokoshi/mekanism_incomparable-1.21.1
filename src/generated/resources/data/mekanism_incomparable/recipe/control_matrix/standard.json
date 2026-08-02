@@ -1,8 +1,8 @@
 {
   "type": "mekanism_utilities:small_digital_assembler",
   "chemical_input": {
-    "amount": 2000,
-    "chemical": "mekanism:plutonium"
+    "amount": 1280,
+    "chemical": "evolvedmekanism:uranium"
   },
   "fluid_input": {
     "amount": 400,
@@ -19,7 +19,7 @@
     },
     {
       "count": 16,
-      "item": "advanced_ae:quantum_unit"
+      "item": "mekanism:pellet_plutonium"
     },
     {
       "count": 1,

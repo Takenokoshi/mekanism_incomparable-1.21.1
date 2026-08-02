@@ -72,10 +72,6 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 models().cubeAll("block/control_matrix/supreme", MekInConstants.rl("block/control_matrix/supreme")));
         simpleBlockWithItem(MekInBlocks.ULTIMATE_CONTROL_MATRIX.get(),
                 models().cubeAll("block/control_matrix/ultimate", MekInConstants.rl("block/control_matrix/ultimate")));
-        simpleBlockWithItem(MekInBlocks.SPECTRUM_ALLOY_CASING.get(),
-                models().cubeAll("block/casing/spectrum_alloy", MekInConstants.rl("block/casing/spectrum_alloy")));
-        simpleBlockWithItem(MekInBlocks.EXOVERSAL_ALLOY_CASING.get(),
-                models().cubeAll("block/casing/exoversal_alloy", MekInConstants.rl("block/casing/exoversal_alloy")));
         simpleBlockWithItem(MekInBlocks.TITANIUM_CASING.get(),
                 models().cubeAll("block/casing/titanium", MekInConstants.rl("block/casing/titanium")));
 
@@ -121,6 +117,30 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
                 MekInConstants.rl("block/machine_front/flux_condenser"),
                 MekInConstants.rl("block/machine_front_active/flux_condenser"));
+        simpleMachine(
+                MekInMachines.LIGHTNING_FABRICATOR, true,
+                "block/machine/lightning_fabricator",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekInConstants.rl("block/machine_front/lightning_fabricator"),
+                MekInConstants.rl("block/machine_front_active/lightning_fabricator"));
+        simpleMachine(
+                MekInMachines.LIGHTNING_MATERIALIZER, false,
+                "block/machine/lightning_materializer",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekInConstants.rl("block/machine_front/lightning_materializer"),
+                MekInConstants.rl("block/machine_front_active/lightning_materializer"));
+        simpleMachine(
+                MekInMachines.LIGHTNING_RECOLLECTOR, false,
+                "block/machine/lightning_recollector",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekInConstants.rl("block/machine_front/lightning_recollector"),
+                MekInConstants.rl("block/machine_front_active/lightning_recollector"));
+        simpleMachine(
+                MekInMachines.LIGHTNING_TRANSFORMER, true,
+                "block/machine/lightning_transformer",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekInConstants.rl("block/machine_front/lightning_transformer"),
+                MekInConstants.rl("block/machine_front_active/lightning_transformer"));
 
         simpleMachine(
                 MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER, false,
@@ -134,6 +154,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekUtConstants.rl("block/machine_front/chemical_cutter"),
                 MekUtConstants.rl("block/machine_front_active/chemical_cutter"));
+        simpleMachine(
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INFUSER, true,
+                "block/machine/absolute_overclocked/chemical_infuser",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                MekInConstants.rl("block/machine_front/chemical_infuser"),
+                MekInConstants.rl("block/machine_front_active/chemical_infuser"));
         simpleMachine(
                 MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER, true,
                 "block/machine/absolute_overclocked/chemical_injection_chamber",
@@ -303,6 +329,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
                 MekInConstants.rl("block/machine_front/chemical_extractor"),
                 MekInConstants.rl("block/machine_front_active/chemical_extractor"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INFUSER, true,
+                "block/machine/infinite_multiversal/chemical_infuser",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/chemical_infuser"),
+                MekInConstants.rl("block/machine_front_active/chemical_infuser"));
         simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER, true,
                 "block/machine/infinite_multiversal/chemical_injection_chamber",

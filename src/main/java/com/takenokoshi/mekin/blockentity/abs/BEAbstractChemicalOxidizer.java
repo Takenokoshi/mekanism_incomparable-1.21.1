@@ -89,7 +89,7 @@ public abstract class BEAbstractChemicalOxidizer
             "getOutputFilledPercentage" }, docPlaceholder = "output tank")
     public IChemicalTank gasTank;
 
-    protected final IOutputHandler<@NotNull ChemicalStack> outputHandler;
+    protected final IOutputHandler< ChemicalStack> outputHandler;
     protected final AdvancedItemInputHandler inputHandler;
 
     protected long clientEnergyUsed;

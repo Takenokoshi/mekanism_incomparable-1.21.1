@@ -37,13 +37,6 @@ public class ProcessorRecipes {
                 .build(output, MekInConstants.rl("printed_processor/graviton/chemical_cut"));
         MekUtItemChemicalToItemRecipeBuilder
                 .chemicalCut(
-                        IngredientCreatorAccess.item().from(MekInItems.METASTABLE_ALLOY_INGOT, 1),
-                        IngredientCreatorAccess.chemicalStack().from(MSGases.NITRIC_ACID.asStack(1)),
-                        MekInItems.PRINTED_DIMENTIONAL_PROCESSOR.asStack(1),
-                        true)
-                .build(output, MekInConstants.rl("printed_processor/dimentional/chemical_cut"));
-        MekUtItemChemicalToItemRecipeBuilder
-                .chemicalCut(
                         IngredientCreatorAccess.item().from(MekInItems.ANTIMATTER_SYNCHRONIZED_AMETHYST_SHARD, 1),
                         IngredientCreatorAccess.chemicalStack().from(MSGases.NITRIC_ACID.asStack(1)),
                         MekInItems.PRINTED_OBSERVATION_PROCESSOR.asStack(1),
@@ -84,13 +77,6 @@ public class ProcessorRecipes {
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(100))
                 .setChemicalInput(MekInChemicals.SCARLET_SILVER.asStack(160))
                 .build(output, MekInConstants.rl("processor/graviton"));
-        ItemStackListFluidChemicalToItemRecipeBuilder
-                .smallDigitalAssembler(MekInItems.DIMENTIONAL_PROCESSOR.asStack(1))
-                .addItemInput(MekInItems.PRINTED_DIMENTIONAL_PROCESSOR, 1)
-                .addItemInput(MekInItems.SEMICONDUCTIVE_ALLOY_CIRCUIT_BOARD, 1)
-                .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(100))
-                .setChemicalInput(MekInChemicals.SCARLET_SILVER.asStack(160))
-                .build(output, MekInConstants.rl("processor/dimentional"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.OBSERVATION_PROCESSOR.asStack(1))
                 .addItemInput(MekInItems.PRINTED_OBSERVATION_PROCESSOR, 1)

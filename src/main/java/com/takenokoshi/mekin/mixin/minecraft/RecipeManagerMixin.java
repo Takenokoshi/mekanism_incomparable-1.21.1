@@ -96,7 +96,7 @@ public class RecipeManagerMixin {
             result.remove(Mekanism.rl("processing/" + name + "/slurry/dirty/from_raw_ore"));
         }
         for (String name : new String[] { "amethyst", "certus_quartz", "coal", "diamond", "emerald", "entro",
-                "fluorite", "lapis_lazuli", "quartz", "redstone", "netherite" }) {
+                "fluorite", "lapis_lazuli", "quartz", "redstone", "netherite", "silicon", }) {
             result.remove(MekUtConstants.rl("processing/" + name + "/clump/from_raw"));
             result.remove(MekUtConstants.rl("processing/" + name + "/clump/from_raw_block"));
             result.remove(MekUtConstants.rl("processing/" + name + "/clump/from_shard"));

@@ -40,8 +40,6 @@ public class MekInItems {
             .register("photon_processor");
     public static final ItemRegistryObject<Item> GRAVITON_PROCESSOR = ITEMS
             .register("graviton_processor");
-    public static final ItemRegistryObject<Item> DIMENTIONAL_PROCESSOR = ITEMS
-            .register("dimentional_processor");
     public static final ItemRegistryObject<Item> OBSERVATION_PROCESSOR = ITEMS
             .register("observation_processor");
     public static final ItemRegistryObject<Item> TRANSMISSION_PROCESSOR = ITEMS
@@ -56,8 +54,6 @@ public class MekInItems {
             .register("printed_photon_processor");
     public static final ItemRegistryObject<Item> PRINTED_GRAVITON_PROCESSOR = ITEMS
             .register("printed_graviton_processor");
-    public static final ItemRegistryObject<Item> PRINTED_DIMENTIONAL_PROCESSOR = ITEMS
-            .register("printed_dimentional_processor");
     public static final ItemRegistryObject<Item> PRINTED_OBSERVATION_PROCESSOR = ITEMS
             .register("printed_observation_processor");
     public static final ItemRegistryObject<Item> PRINTED_TRANSMISSION_PROCESSOR = ITEMS
@@ -111,28 +107,11 @@ public class MekInItems {
     public static final ItemRegistryObject<Item> CESIUM_133_SYNCHRONIZED_CERTUS_QUARTZ_CRYSTAL = registerFoiling(
             "cesium_133_synchronized_certus_quartz_crystal");
 
-    // charged shard
-    public static final ItemRegistryObject<Item> CHARGED_AMETHYST_SHARD = ITEMS.register("charged_amethyst_shard");
-    public static final ItemRegistryObject<Item> CHARGED_CERTYS_QUARTZ_SHARD = ITEMS
-            .register("charged_certus_quartz_shard");
-    public static final ItemRegistryObject<Item> CHARGED_COAL_SHARD = ITEMS.register("charged_coal_shard");
-    public static final ItemRegistryObject<Item> CHARGED_COPPER_SHARD = ITEMS.register("charged_copper_shard");
-    public static final ItemRegistryObject<Item> CHARGED_DIAMOND_SHARD = ITEMS.register("charged_diamond_shard");
-    public static final ItemRegistryObject<Item> CHARGED_EMERALD_SHARD = ITEMS.register("charged_emerald_shard");
-    public static final ItemRegistryObject<Item> CHARGED_ENTRO_SHARD = ITEMS.register("charged_entro_shard");
-    public static final ItemRegistryObject<Item> CHARGED_FLUORITE_SHARD = ITEMS.register("charged_fluorite_shard");
-    public static final ItemRegistryObject<Item> CHARGED_GOLD_SHARD = ITEMS.register("charged_gold_shard");
-    public static final ItemRegistryObject<Item> CHARGED_IRON_SHARD = ITEMS.register("charged_iron_shard");
-    public static final ItemRegistryObject<Item> CHARGED_LAPIS_LAZULI_SHARD = ITEMS
-            .register("charged_lapis_lazuli_shard");
-    public static final ItemRegistryObject<Item> CHARGED_LEAD_SHARD = ITEMS.register("charged_lead_shard");
-    public static final ItemRegistryObject<Item> CHARGED_NAQUADAH_SHARD = ITEMS.register("charged_naquadah_shard");
-    public static final ItemRegistryObject<Item> CHARGED_NETHERITE_SHARD = ITEMS.register("charged_netherite_shard");
-    public static final ItemRegistryObject<Item> CHARGED_OSMIUM_SHARD = ITEMS.register("charged_osmium_shard");
-    public static final ItemRegistryObject<Item> CHARGED_QUARTZ_SHARD = ITEMS.register("charged_quartz_shard");
-    public static final ItemRegistryObject<Item> CHARGED_REDSTONE_SHARD = ITEMS.register("charged_redstone_shard");
-    public static final ItemRegistryObject<Item> CHARGED_TIN_SHARD = ITEMS.register("charged_tin_shard");
-    public static final ItemRegistryObject<Item> CHARGED_URANIUM_SHARD = ITEMS.register("charged_uranium_shard");
+    // overload processing
+    public static final ItemRegistryObject<Item> RAW_OVERLOAD = ITEMS.register("raw_overload");
+    public static final ItemRegistryObject<Item> OVERLOAD_CLUMP = ITEMS.register("overload_clump");
+    public static final ItemRegistryObject<Item> OVERLOAD_SHARD = ITEMS.register("overload_shard");
+    public static final ItemRegistryObject<Item> OVERLOAD_CRYSTAL = ITEMS.register("overload_crystal");
 
     // dirty crystal
     public static final ItemRegistryObject<Item> DIRTY_AMETHYST_CRYSTAL = ITEMS.register("dirty_amethyst_crystal");
@@ -152,10 +131,37 @@ public class MekInItems {
     public static final ItemRegistryObject<Item> DIRTY_NAQUADAH_CRYSTAL = ITEMS.register("dirty_naquadah_crystal");
     public static final ItemRegistryObject<Item> DIRTY_NETHERITE_CRYSTAL = ITEMS.register("dirty_netherite_crystal");
     public static final ItemRegistryObject<Item> DIRTY_OSMIUM_CRYSTAL = ITEMS.register("dirty_osmium_crystal");
+    public static final ItemRegistryObject<Item> DIRTY_OVERLOAD_CRYSTAL = ITEMS.register("dirty_overload_crystal");
     public static final ItemRegistryObject<Item> DIRTY_QUARTZ_CRYSTAL = ITEMS.register("dirty_quartz_crystal");
     public static final ItemRegistryObject<Item> DIRTY_REDSTONE_CRYSTAL = ITEMS.register("dirty_redstone_crystal");
+    public static final ItemRegistryObject<Item> DIRTY_SILICON_CRYSTAL = ITEMS.register("dirty_silicon_crystal");
     public static final ItemRegistryObject<Item> DIRTY_TIN_CRYSTAL = ITEMS.register("dirty_tin_crystal");
     public static final ItemRegistryObject<Item> DIRTY_URANIUM_CRYSTAL = ITEMS.register("dirty_uranium_crystal");
+
+    // charged shard
+    public static final ItemRegistryObject<Item> CHARGED_AMETHYST_SHARD = ITEMS.register("charged_amethyst_shard");
+    public static final ItemRegistryObject<Item> CHARGED_CERTYS_QUARTZ_SHARD = ITEMS
+            .register("charged_certus_quartz_shard");
+    public static final ItemRegistryObject<Item> CHARGED_COAL_SHARD = ITEMS.register("charged_coal_shard");
+    public static final ItemRegistryObject<Item> CHARGED_COPPER_SHARD = ITEMS.register("charged_copper_shard");
+    public static final ItemRegistryObject<Item> CHARGED_DIAMOND_SHARD = ITEMS.register("charged_diamond_shard");
+    public static final ItemRegistryObject<Item> CHARGED_EMERALD_SHARD = ITEMS.register("charged_emerald_shard");
+    public static final ItemRegistryObject<Item> CHARGED_ENTRO_SHARD = ITEMS.register("charged_entro_shard");
+    public static final ItemRegistryObject<Item> CHARGED_FLUORITE_SHARD = ITEMS.register("charged_fluorite_shard");
+    public static final ItemRegistryObject<Item> CHARGED_GOLD_SHARD = ITEMS.register("charged_gold_shard");
+    public static final ItemRegistryObject<Item> CHARGED_IRON_SHARD = ITEMS.register("charged_iron_shard");
+    public static final ItemRegistryObject<Item> CHARGED_LAPIS_LAZULI_SHARD = ITEMS
+            .register("charged_lapis_lazuli_shard");
+    public static final ItemRegistryObject<Item> CHARGED_LEAD_SHARD = ITEMS.register("charged_lead_shard");
+    public static final ItemRegistryObject<Item> CHARGED_NAQUADAH_SHARD = ITEMS.register("charged_naquadah_shard");
+    public static final ItemRegistryObject<Item> CHARGED_NETHERITE_SHARD = ITEMS.register("charged_netherite_shard");
+    public static final ItemRegistryObject<Item> CHARGED_OSMIUM_SHARD = ITEMS.register("charged_osmium_shard");
+    public static final ItemRegistryObject<Item> CHARGED_OVERLOAD_SHARD = ITEMS.register("charged_overload_shard");
+    public static final ItemRegistryObject<Item> CHARGED_QUARTZ_SHARD = ITEMS.register("charged_quartz_shard");
+    public static final ItemRegistryObject<Item> CHARGED_REDSTONE_SHARD = ITEMS.register("charged_redstone_shard");
+    public static final ItemRegistryObject<Item> CHARGED_SILICON_SHARD = ITEMS.register("charged_silicon_shard");
+    public static final ItemRegistryObject<Item> CHARGED_TIN_SHARD = ITEMS.register("charged_tin_shard");
+    public static final ItemRegistryObject<Item> CHARGED_URANIUM_SHARD = ITEMS.register("charged_uranium_shard");
 
     // starlight
     public static final ItemRegistryObject<Item> AMETHYST_STARLIGHT = registerFoiling("amethyst_starlight");
@@ -173,13 +179,15 @@ public class MekInItems {
     public static final ItemRegistryObject<Item> NAQUADAH_STARLIGHT = registerFoiling("naquadah_starlight");
     public static final ItemRegistryObject<Item> NETHERITE_STARLIGHT = registerFoiling("netherite_starlight");
     public static final ItemRegistryObject<Item> OSMIUM_STARLIGHT = registerFoiling("osmium_starlight");
+    public static final ItemRegistryObject<Item> OVERLOAD_STARLIGHT = registerFoiling("overload_starlight");
     public static final ItemRegistryObject<Item> QUARTZ_STARLIGHT = registerFoiling("quartz_starlight");
     public static final ItemRegistryObject<Item> REDSTONE_STARLIGHT = registerFoiling("redstone_starlight");
+    public static final ItemRegistryObject<Item> SILICON_STARLIGHT = registerFoiling("silicon_starlight");
     public static final ItemRegistryObject<Item> TIN_STARLIGHT = registerFoiling("tin_starlight");
     public static final ItemRegistryObject<Item> URANIUM_STARLIGHT = registerFoiling("uranium_starlight");
 
-    public static final ItemRegistryObject<Item> ETERNAL_STARLIGHT = ITEMS.register("eternal_starlight",
-            EnumColor.DARK_BLUE);
+    public static final ItemRegistryObject<Item> ETERNAL_STARLIGHT = ITEMS
+            .register("eternal_starlight", EnumColor.INDIGO);
 
     // misc
     public static final ItemRegistryObject<Item> SEMICONDUCTIVE_ALLOY_CIRCUIT_BOARD = ITEMS

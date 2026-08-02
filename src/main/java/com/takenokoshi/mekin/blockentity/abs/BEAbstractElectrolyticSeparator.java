@@ -6,7 +6,6 @@ import java.util.function.Consumer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.upgrade.AdditionalUpgradeUtils;
 import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
 import com.takenokoshi.mekut.inventory.slot.FluidFillOrSupplierSlot;
@@ -169,7 +168,7 @@ public abstract class BEAbstractElectrolyticSeparator extends TileEntityRecipeMa
     @WrappingComputerMethod(wrapper = ComputerIInventorySlotWrapper.class, methodNames = "getEnergyItem", docPlaceholder = "energy slot")
     EnergyInventorySlot energySlot;
 
-    protected final IOutputHandler<@NotNull ElectrolysisRecipeOutput> outputHandler;
+    protected final IOutputHandler<ElectrolysisRecipeOutput> outputHandler;
     protected final AdvancedFluidInputHandler inputHandler;
 
     protected BEAbstractElectrolyticSeparator(Holder<Block> blockProvider, BlockPos pos, BlockState state,
@@ -194,7 +193,7 @@ public abstract class BEAbstractElectrolyticSeparator extends TileEntityRecipeMa
         configComponent.setupInputConfig(TransmissionType.FLUID, fluidTank);
         configComponent.setupInputConfig(TransmissionType.ENERGY, energyContainer);
 
-        ejectorComponent = new TileComponentEjector(this);
+        ejectorComponent = new TileComponentEjector(this, () -> Long.MAX_VALUE);
         ejectorComponent.setOutputData(configComponent, TransmissionType.ITEM, TransmissionType.CHEMICAL)
                 .setCanTankEject(tank -> {
                     if (tank == leftTank) {
@@ -364,15 +363,13 @@ public abstract class BEAbstractElectrolyticSeparator extends TileEntityRecipeMa
     public void recalculateUpgrades(Upgrade upgrade) {
         super.recalculateUpgrades(upgrade);
         if (upgrade == Upgrade.SPEED
-                || upgrade == ExtraUpgrade.STACK
                 || upgrade.name().equals("EMPOWERED_SPEED")
                 || AdditionalUpgradeUtils.isSpeedModifier(upgrade)) {
             int multiplier = AdditionalUpgradeUtils.modifyOperations(this,
                     ModList.get().isLoaded("mekanism_empowered")
                             ? (1 << upgradeComponent.getUpgrades(Upgrade.SPEED))
-                                    + 2 << upgradeComponent.getUpgrades(Upgrade.valueOf("EMPOWERED_SPEED"))
-                            : 1 << upgradeComponent.getUpgrades(Upgrade.SPEED)) << upgradeComponent
-                                    .getUpgrades(ExtraUpgrade.STACK);
+                                    + (2 << upgradeComponent.getUpgrades(Upgrade.valueOf("EMPOWERED_SPEED")))
+                            : 1 << upgradeComponent.getUpgrades(Upgrade.SPEED));
             operationsPerTick = MathUtils.clampToInt(1L * multiplier * baselineMaxOperations);
             dumpRate = BASE_DUMP_RATE * multiplier;
         }

@@ -1,5 +1,8 @@
 package com.takenokoshi.mekin.recipe.serializer;
 
+import java.util.List;
+import java.util.Optional;
+
 import com.mojang.datafixers.util.Function3;
 import com.mojang.datafixers.util.Function4;
 import com.mojang.datafixers.util.Function6;
@@ -8,6 +11,8 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
+import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
+import com.takenokoshi.mekut.recipe.serializer.MekUtCodecConstants;
 
 import mekanism.api.SerializationConstants;
 import mekanism.api.chemical.ChemicalStack;
@@ -91,6 +96,40 @@ public class MekInRecipeSerializerBuilder {
                         IngredientCreatorAccess.chemicalStack().streamCodec(),
                         ItemStackChemicalToChemicalRecipe::getChemicalInput,
                         ChemicalStack.STREAM_CODEC, ItemStackChemicalToChemicalRecipe::getOutputRaw,
+                        factory));
+    }
+
+    public static <RECIPE extends LightningFabricationRecipe> MekanismRecipeSerializer<RECIPE> lightningFabrication(
+            Function6<ItemStackIngredient, List<ItemStackIngredient>, Optional<ChemicalStackIngredient>, ItemStack, Long, Integer, RECIPE> factory) {
+        return new MekanismRecipeSerializer<>(RecordCodecBuilder
+                .mapCodec(instance -> instance.group(
+                        IngredientCreatorAccess.item().codec().fieldOf(SerializationConstants.MAIN_INPUT)
+                                .forGetter(LightningFabricationRecipe::getMainInput),
+                        IngredientCreatorAccess.item().codec().listOf().fieldOf(SerializationConstants.EXTRA_INPUT)
+                                .forGetter(LightningFabricationRecipe::getExtraInputs),
+                        IngredientCreatorAccess.chemicalStack().codec()
+                                .optionalFieldOf(SerializationConstants.CHEMICAL_INPUT)
+                                .forGetter(LightningFabricationRecipe::getChemicalInputAsOptional),
+                        ItemStack.CODEC.fieldOf(SerializationConstants.OUTPUT)
+                                .forGetter(LightningFabricationRecipe::getOutput),
+                        Codec.LONG.fieldOf(SerializationConstants.ENERGY_REQUIRED)
+                                .forGetter(LightningFabricationRecipe::getEnergyRequired),
+                        Codec.INT.fieldOf(SerializationConstants.DURATION)
+                                .forGetter(LightningFabricationRecipe::getDuration))
+                        .apply(instance, factory)),
+                StreamCodec.composite(
+                        IngredientCreatorAccess.item().streamCodec(),
+                        LightningFabricationRecipe::getMainInput,
+                        MekUtCodecConstants.ITEMSTACK_INGREDIENT_LIST_STREAM_CODEC,
+                        LightningFabricationRecipe::getExtraInputs,
+                        MekUtCodecConstants.CHEMICALSTACK_INGREDIENT_OPTIONAL_STREAM_CODEC,
+                        LightningFabricationRecipe::getChemicalInputAsOptional,
+                        ItemStack.STREAM_CODEC,
+                        LightningFabricationRecipe::getOutput,
+                        ByteBufCodecs.VAR_LONG,
+                        LightningFabricationRecipe::getEnergyRequired,
+                        ByteBufCodecs.VAR_INT,
+                        LightningFabricationRecipe::getDuration,
                         factory));
     }
 }

@@ -76,6 +76,11 @@ public class MekInEnglishLangProvider extends LanguageProvider {
                 "Mekanism: Incomparable  Infinite Multiversal Machines");
         List.of(new DeferredChemical[] {
                 MekInChemicals.NULL,
+                MekInChemicals.THUNDERCLOUD,
+                MekInChemicals.EXTREME_HIGH_VOLTAGE_LIGHTNING,
+                MekInChemicals.HIGH_VOLTAGE_LIGHTNING,
+                MekInChemicals.CLEAN_OVERLOAD_SLURRY,
+                MekInChemicals.DIRTY_OVERLOAD_SLURRY,
                 MekInChemicals.AMETHYST_PLASMA,
                 MekInChemicals.CERTUS_QUARTZ_PLASMA,
                 MekInChemicals.COAL_PLASMA,
@@ -91,6 +96,8 @@ public class MekInEnglishLangProvider extends LanguageProvider {
                 MekInChemicals.NAQUADAH_PLASMA,
                 MekInChemicals.NETHERITE_PLASMA,
                 MekInChemicals.OSMIUM_PLASMA,
+                MekInChemicals.OVERLOAD_PLASMA,
+                MekInChemicals.SILICON_PLASMA,
                 MekInChemicals.QUARTZ_PLASMA,
                 MekInChemicals.REDSTONE_PLASMA,
                 MekInChemicals.TIN_PLASMA,
@@ -104,6 +111,8 @@ public class MekInEnglishLangProvider extends LanguageProvider {
                 MekInChemicals.EMERALD,
                 MekInChemicals.ENTRO,
                 MekInChemicals.FLUORITE,
+                MekInChemicals.OVERLOAD,
+                MekInChemicals.SILICON,
                 MekInChemicals.IRON,
                 MekInChemicals.LAPIS_LAZULI,
                 MekInChemicals.NAQUADAH,
@@ -125,6 +134,13 @@ public class MekInEnglishLangProvider extends LanguageProvider {
                 "Antimatter Protomolecular Transmutator in a single block size");
         addLang(MekInMachines.FLUX_CONDENSER.descriptionEntry,
                 "Condense Energy To Flux");
+        addLang(MekInMachines.LIGHTNING_FABRICATOR.descriptionEntry,
+                "A versatile fabrication machine capable of performing Lightning Simulation, Combining, Alloying, and other custom fabrication processes.");
+        addLang(MekInMachines.LIGHTNING_MATERIALIZER.descriptionEntry,
+                "Converts stored lightning from the ME Network into Chemical Lightning for use in advanced fabrication processes.");
+        addLang(MekInMachines.LIGHTNING_RECOLLECTOR.descriptionEntry,
+                "Converts Chemical Lightning into stored lightning within the ME Network.");
+        addLang(MekInMachines.LIGHTNING_TRANSFORMER.descriptionEntry, "Look JEI.");
         addLang(MekInMachines.TEPS.descriptionEntry,
                 "WIP");
     }

@@ -113,6 +113,18 @@ public class StellerGenesisRecipes {
                 .build(output, MekInConstants.rl("steller_genesis/starlight/osmium"));
         BiChemicalToItemRecipeBuilder
                 .stellarGenesis(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.OVERLOAD, 400_000_000_000L),
+                        IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
+                        MekInItems.OVERLOAD_STARLIGHT.asStack(1))
+                .build(output, MekInConstants.rl("steller_genesis/starlight/overload"));
+        BiChemicalToItemRecipeBuilder
+                .stellarGenesis(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.SILICON, 400_000_000_000L),
+                        IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
+                        MekInItems.SILICON_STARLIGHT.asStack(1))
+                .build(output, MekInConstants.rl("steller_genesis/starlight/silicon"));
+        BiChemicalToItemRecipeBuilder
+                .stellarGenesis(
                         IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.QUARTZ, 400_000_000_000L),
                         IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
                         MekInItems.QUARTZ_STARLIGHT.asStack(1))

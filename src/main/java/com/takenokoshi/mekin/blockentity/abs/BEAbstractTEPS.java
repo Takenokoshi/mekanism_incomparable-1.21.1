@@ -69,9 +69,9 @@ public abstract class BEAbstractTEPS extends BEMultiScaledProgressMachine<ItemSt
     private IChemicalTank chemicalTank;
     private MachineEnergyContainer<?> energyContainer;
 
-    protected final IOutputHandler<@NotNull ItemStack> outputHandler;
-    protected final IInputHandler<@NotNull ItemStack> itemInputHandler;
-    protected final IInputHandler<@NotNull ChemicalStack> chemicalInputHandler;
+    protected final IOutputHandler<ItemStack> outputHandler;
+    protected final IInputHandler<ItemStack> itemInputHandler;
+    protected final IInputHandler<ChemicalStack> chemicalInputHandler;
 
     protected BEAbstractTEPS(Holder<Block> blockProvider, BlockPos pos, BlockState state,
             int baselineMaxOperations) {
@@ -109,6 +109,7 @@ public abstract class BEAbstractTEPS extends BEMultiScaledProgressMachine<ItemSt
         };
     }
 
+    @SuppressWarnings("removal")
     @NotNull
     @Override
     public IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener,

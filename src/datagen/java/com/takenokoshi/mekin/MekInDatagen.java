@@ -18,11 +18,14 @@ import com.takenokoshi.mekin.loottable.MekInLootTableProvider;
 import com.takenokoshi.mekin.model.MekInBlockModelProvider;
 import com.takenokoshi.mekin.model.MekInItemModelProvider;
 import com.takenokoshi.mekin.recipe.MekInRecipeProvider;
+import com.takenokoshi.mekin.tag.MekInBlockTagProvider;
+import com.takenokoshi.mekin.tag.MekInItemTagProvider;
 
 import mekanism.common.lib.FieldReflectionHelper;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
+import net.minecraft.data.tags.TagsProvider.TagLookup;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -32,6 +35,7 @@ import net.neoforged.fml.event.config.ModConfigEvent;
 import net.neoforged.fml.util.ObfuscationReflectionHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
+@SuppressWarnings("removal")
 @EventBusSubscriber(modid = MekInConstants.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class MekInDatagen {
 
@@ -69,6 +73,12 @@ public class MekInDatagen {
 
         System.out.println("Mekanism loaded: " +
                 ModList.get().isLoaded("mekanism"));
+
+        var blockTag = generator.addProvider(true,
+                new MekInBlockTagProvider(output, lookupProvider, event.getExistingFileHelper()));
+        generator.addProvider(true,
+                new MekInItemTagProvider(output, lookupProvider, CompletableFuture.completedFuture(TagLookup.empty()),
+                        blockTag.contentsGetter(), event.getExistingFileHelper()));
 
         generator.addProvider(true, new MekInRecipeProvider(output, lookupProvider));
         generator.addProvider(true, MekInLootTableProvider.createBlockLoot(output, lookupProvider));

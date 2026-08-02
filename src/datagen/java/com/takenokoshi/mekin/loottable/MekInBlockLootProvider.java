@@ -52,6 +52,7 @@ public class MekInBlockLootProvider extends BaseBlockLootTables {
                 MekInBlocks.STANDARD_CONTROL_MATRIX,
                 MekInBlocks.SUPREME_CONTROL_MATRIX,
                 MekInBlocks.ULTIMATE_CONTROL_MATRIX,
+                MekInBlocks.TITANIUM_CASING,
         }).forEach(this::dropSelf);
 
     }

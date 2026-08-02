@@ -4,6 +4,7 @@ import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.registration.GuiSizedMachineRegistryObject;
 import com.takenokoshi.mekaddonlib.registration.MachineDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.SimpleMachineRegistryObject;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalInfuser;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalOxidizer;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractElectrolyticSeparator;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackChemicalToItemStackMachine;
@@ -34,7 +35,7 @@ import mekanism.common.util.ChemicalUtil;
 import mekanism.generators.common.registries.GeneratorsSounds;
 
 public class MekInAbsoluteMachines {
-    
+
     public static final MachineDeferredRegister MACHINES = new MachineDeferredRegister(MekInConstants.MODID);
 
     public static final GuiSizedMachineRegistryObject<BEAbsoluteBoiler> ABSOLUTE_OVERCLOCKED_BOILER = MACHINES
@@ -63,6 +64,22 @@ public class MekInAbsoluteMachines {
                                     MekanismConfig.usage.chemicalCrystallizer,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalCrystallizer, 20))
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.CHEMICAL));
+
+    public static final SimpleMachineRegistryObject<BEAbsoluteChemicalInfuser> ABSOLUTE_OVERCLOCKED_CHEMICAL_INFUSER = MACHINES
+            .registerSimple("absolute_overclocked_chemical_infuser",
+                    AttachedSideConfig.CHEMICAL_INFUSING,
+                    BEAbstractChemicalInfuser.getContainerAdder(4_000_000L)::accept,
+                    BEAbsoluteChemicalInfuser::new,
+                    BEAbsoluteChemicalInfuser.class,
+                    MekanismLang.DESCRIPTION_CHEMICAL_INFUSER,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.chemicalInfuser,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalInfuser, 20))
+                            .withSound(MekanismSounds.CHEMICAL_INFUSER)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY,
+                                    Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteChemicalInjectionChamber> ABSOLUTE_OVERCLOCKED_CHEMICAL_INJECTION_CHAMBER = MACHINES
             .registerSimple("absolute_overclocked_chemical_injection_chamber",
@@ -123,8 +140,7 @@ public class MekInAbsoluteMachines {
                                     () -> MathUtils.multiplyClamped(2, ChemicalUtil.hydrogenEnergyDensity()),
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.electrolyticSeparator, 20))
                             .withSound(MekanismSounds.ELECTROLYTIC_SEPARATOR)
-                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteEnergizedSmelter> ABSOLUTE_OVERCLOCKED_ENERIZED_SMELTER = MACHINES
             .registerSimple("absolute_overclocked_energized_smelter",
@@ -273,8 +289,7 @@ public class MekInAbsoluteMachines {
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.rotaryCondensentrator, 20))
                             .withSideConfig(TransmissionType.CHEMICAL, TransmissionType.FLUID, TransmissionType.ITEM,
                                     TransmissionType.ENERGY)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final GuiSizedMachineRegistryObject<BEAbsoluteSmallDigitalAssembler> ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER = MACHINES
             .registerGuiSized("absolute_overclocked_small_digital_assembler",

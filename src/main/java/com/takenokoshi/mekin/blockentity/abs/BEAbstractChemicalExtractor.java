@@ -8,7 +8,6 @@ import java.util.function.Consumer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.blockentity.base.BEExpScaledRecipeMachine;
 import com.takenokoshi.mekaddonlib.blockentity.component.EjectorComponentUtils;
 import com.takenokoshi.mekaddonlib.recipe.cached.ICachedRecipe;
@@ -27,7 +26,6 @@ import com.takenokoshi.mekut.recipe.input.AdvancedFluidInputHandler;
 
 import mekanism.api.IContentsListener;
 import mekanism.api.RelativeSide;
-import mekanism.api.Upgrade;
 import mekanism.api.chemical.BasicChemicalTank;
 import mekanism.api.chemical.ChemicalStack;
 import mekanism.api.chemical.IChemicalTank;
@@ -256,20 +254,6 @@ public abstract class BEAbstractChemicalExtractor extends BEExpScaledRecipeMachi
 
     public IChemicalTank getSubOutputTank() {
         return subOutputTank;
-    }
-
-    @Override
-    public void recalculateUpgrades(Upgrade upgrade) {
-        if (upgrade == ExtraUpgrade.STACK) {
-            recaluculateProcessingSpeed();
-        }
-        super.recalculateUpgrades(upgrade);
-    }
-
-    @Override
-    protected void recaluculateProcessingSpeed() {
-        super.recaluculateProcessingSpeed();
-        operationsPerTick = operationsPerTick << upgradeComponent.getUpgrades(ExtraUpgrade.STACK);
     }
 
     @Override

@@ -10,6 +10,7 @@ import com.jerry.mekextras.common.registries.ExtraChemicals;
 import com.jerry.mekextras.common.registries.ExtraItems;
 import com.jerry.mekextras.common.resource.ExtraResource;
 import com.jerry.mekmm.common.registries.MoreMachineChemicals;
+import com.moakiee.ae2lt.registry.ModItems;
 import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekut.enums.MUMaterial;
@@ -380,8 +381,41 @@ public record MekInMaterial(String name, ItemLike raw, Holder<Chemical> plasma, 
             3,
             Items.REDSTONE);
 
+    public static final MekInMaterial OVERLOAD = new MekInMaterial("overload",
+            MekInItems.RAW_OVERLOAD,
+            MekInChemicals.OVERLOAD_PLASMA,
+            MekInItems.CHARGED_OVERLOAD_SHARD,
+            MekInItems.DIRTY_OVERLOAD_CRYSTAL,
+            MekInChemicals.DIRTY_OVERLOAD_SLURRY,
+            MekInChemicals.CLEAN_OVERLOAD_SLURRY,
+            MoreMachineChemicals.UNSTABLE_DIMENSIONAL_GAS,
+            MekInItems.OVERLOAD_CRYSTAL,
+            MekInItems.OVERLOAD_SHARD,
+            MekInItems.OVERLOAD_CLUMP,
+            null,
+            ModItems.OVERLOAD_CRYSTAL_DUST,
+            2,
+            ModItems.OVERLOAD_CRYSTAL);
+
+    public static final MekInMaterial SILICON = new MekInMaterial(
+            "silicon",
+            MekUtItems.RAW_MU_MATERIALS.get(MUMaterial.SILICON),
+            MekInChemicals.SILICON_PLASMA,
+            MekInItems.CHARGED_SILICON_SHARD,
+            MekInItems.DIRTY_SILICON_CRYSTAL,
+            MekUtChemicals.MU_MATERIALS_DIRTY_SLURRY.get(MUMaterial.SILICON),
+            MekUtChemicals.MU_MATERIALS_CLEAN_SLURRY.get(MUMaterial.SILICON),
+            MekUtChemicals.MU_MATERIALS_CLEAN_SLURRY.get(MUMaterial.CERTUS_QUARTZ),
+            MekUtItems.MU_MATERIALS_CRYSTAL.get(MUMaterial.SILICON),
+            MekUtItems.MU_MATERIALS_SHARD.get(MUMaterial.SILICON),
+            MekUtItems.MU_MATERIALS_CLUMP.get(MUMaterial.SILICON),
+            null,
+            null,
+            2,
+            AEItems.SILICON);
+
     public static final List<MekInMaterial> MATERIALS = List.of(new MekInMaterial[] {
             IRON, GOLD, COPPER, OSMIUM, LEAD, TIN, URANIUM, NAQUADAH, NETHERITE, COAL, DIAMOND, EMERALD, FLOURITE,
-            CERTUS_QUARTZ, AMETHYST, LAPIS_LAZULI, QUARTZ, REDSTONE, ENTRO,
+            CERTUS_QUARTZ, AMETHYST, LAPIS_LAZULI, QUARTZ, REDSTONE, ENTRO, OVERLOAD, SILICON,
     });
 }

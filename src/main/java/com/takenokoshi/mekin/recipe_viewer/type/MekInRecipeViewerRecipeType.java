@@ -1,13 +1,19 @@
 package com.takenokoshi.mekin.recipe_viewer.type;
 
+import com.moakiee.ae2lt.lightning.LightningTransformRecipe;
+import com.moakiee.ae2lt.lightning.LightningTransformRecipeInput;
 import com.takenokoshi.mekaddonlib.recipe_viewer.type.RVMekALRecipeTypeWrapper;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.recipe.MekInRecipeConstants;
+import com.takenokoshi.mekin.recipe.inputcache.LightningFabricationInputRecipeCache;
+import com.takenokoshi.mekin.recipe.inputcache.LightningTransformInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInDoubleInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInTripleInputRecipeCache;
 import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
+import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
+import com.takenokoshi.mekin.recipe.type.MekInWrappedRecipeTypes;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
 import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInMachines;
@@ -18,6 +24,7 @@ import mekanism.api.recipes.vanilla_input.ReactionRecipeInput;
 import mekanism.api.recipes.vanilla_input.SingleFluidChemicalRecipeInput;
 import mekanism.api.recipes.vanilla_input.SingleItemChemicalRecipeInput;
 import mekanism.client.recipe_viewer.type.FakeRVRecipeType;
+import net.minecraft.world.item.crafting.RecipeInput;
 
 public class MekInRecipeViewerRecipeType {
 
@@ -40,6 +47,18 @@ public class MekInRecipeViewerRecipeType {
             MekInRecipeTypes.REFINING, -28, -16, 144, 54,
             MekInMachines.CHEMICAL_REFINER,
             MekInInfiniteMachines.INFINITE_MULTIVERSAL_CHEMICAL_REFINER);
+
+    public static final RVMekALRecipeTypeWrapper<RecipeInput, LightningFabricationRecipe, LightningFabricationInputRecipeCache> LIGHTNING_FABRICATION = new RVMekALRecipeTypeWrapper<>(
+            MekInConstants.rl(MekInRecipeConstants.LIGHTNING_FABRICATION),
+            LightningFabricationRecipe.class,
+            MekInRecipeTypes.LIGHTNING_FABRICATION, -28, -13, 144, 60,
+            MekInMachines.LIGHTNING_FABRICATOR);
+
+    public static final RVMekALRecipeTypeWrapper<LightningTransformRecipeInput, LightningTransformRecipe, LightningTransformInputRecipeCache> LIGHTNING_TRANSFORM = new RVMekALRecipeTypeWrapper<>(
+            MekInConstants.rl("lightning_transform"),
+            LightningTransformRecipe.class,
+            MekInWrappedRecipeTypes.LIGHTNING_TRANSFORM, 0, -16, 185, 59,
+            MekInMachines.LIGHTNING_TRANSFORMER);
 
     public static final RVMekALRecipeTypeWrapper<ReactionRecipeInput, ItemStackFluidChemicalToItemStackRecipe, MekInTripleInputRecipeCache.MekInItemFluidChemical<ItemStackFluidChemicalToItemStackRecipe>> LEACHING = new RVMekALRecipeTypeWrapper<>(
             MekInConstants.rl(MekInRecipeConstants.LEACHING),

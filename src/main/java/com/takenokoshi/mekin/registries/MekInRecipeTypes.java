@@ -5,17 +5,21 @@ import com.takenokoshi.mekaddonlib.registration.MekALRecipeTypeDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.MekALRecipeTypeRegistryObject;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.recipe.MekInRecipeConstants;
+import com.takenokoshi.mekin.recipe.inputcache.LightningFabricationInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInDoubleInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInTripleInputRecipeCache;
 import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
+import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
+import com.takenokoshi.mekin.recipe.type.LightningFabricationRecipeType;
 import com.takenokoshi.mekut.recipe.inputcache.MekUtDoubleInputRecipeCache;
 
 import mekanism.api.recipes.ItemStackChemicalToItemStackRecipe;
 import mekanism.api.recipes.vanilla_input.ReactionRecipeInput;
 import mekanism.api.recipes.vanilla_input.SingleFluidChemicalRecipeInput;
 import mekanism.api.recipes.vanilla_input.SingleItemChemicalRecipeInput;
+import net.minecraft.world.item.crafting.RecipeInput;
 
 public class MekInRecipeTypes {
     public static final MekALRecipeTypeDeferredRegister RECIPE_TYPES = new MekALRecipeTypeDeferredRegister(
@@ -36,6 +40,9 @@ public class MekInRecipeTypes {
     public static final MekALRecipeTypeRegistryObject<ReactionRecipeInput, ItemStackFluidChemicalToItemStackRecipe, MekInTripleInputRecipeCache.MekInItemFluidChemical<ItemStackFluidChemicalToItemStackRecipe>> LEACHING = RECIPE_TYPES
             .registerMekAL(MekInRecipeConstants.LEACHING,
                     id -> new MekALRecipeType<>(id, MekInTripleInputRecipeCache.MekInItemFluidChemical::toItem));
+
+    public static final MekALRecipeTypeRegistryObject<RecipeInput, LightningFabricationRecipe, LightningFabricationInputRecipeCache> LIGHTNING_FABRICATION = RECIPE_TYPES
+            .registerMekAL(MekInRecipeConstants.LIGHTNING_FABRICATION, LightningFabricationRecipeType::new);
 
     public static final MekALRecipeTypeRegistryObject<SingleItemChemicalRecipeInput, ItemStackChemicalToItemStackRecipe, MekUtDoubleInputRecipeCache.MekUtItemChemical<ItemStackChemicalToItemStackRecipe>> TEPS = RECIPE_TYPES
             .registerMekAL(MekInRecipeConstants.TEPS,

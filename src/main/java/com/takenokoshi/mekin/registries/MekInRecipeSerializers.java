@@ -5,6 +5,7 @@ import com.takenokoshi.mekin.recipe.MekInRecipeConstants;
 import com.takenokoshi.mekin.recipe.recipes.basic.BasicAETRecipe;
 import com.takenokoshi.mekin.recipe.recipes.basic.BasicChemicalExtractionRecipe;
 import com.takenokoshi.mekin.recipe.recipes.basic.BasicLeachingRecipe;
+import com.takenokoshi.mekin.recipe.recipes.basic.BasicLightningFabricationRecipe;
 import com.takenokoshi.mekin.recipe.recipes.basic.BasicRefiningRecipe;
 import com.takenokoshi.mekin.recipe.recipes.basic.BasicTEPSRecipe;
 import com.takenokoshi.mekin.recipe.serializer.MekInRecipeSerializerBuilder;
@@ -34,6 +35,10 @@ public class MekInRecipeSerializers {
     public static final DeferredHolder<RecipeSerializer<?>, MekanismRecipeSerializer<BasicLeachingRecipe>> LEACHING = RECIPE_SERIALIZERS
             .register(MekInRecipeConstants.LEACHING,
                     () -> MekInRecipeSerializerBuilder.itemStackFluidChemicalToItemStack(BasicLeachingRecipe::new));
+
+    public static final DeferredHolder<RecipeSerializer<?>, MekanismRecipeSerializer<BasicLightningFabricationRecipe>> LIGHTNING_FABRICATION = RECIPE_SERIALIZERS
+            .register(MekInRecipeConstants.LIGHTNING_FABRICATION,
+                    () -> MekInRecipeSerializerBuilder.lightningFabrication(BasicLightningFabricationRecipe::new));
 
     public static final DeferredHolder<RecipeSerializer<?>, MekanismRecipeSerializer<BasicTEPSRecipe>> TEPS = RECIPE_SERIALIZERS
             .register(MekInRecipeConstants.TEPS,

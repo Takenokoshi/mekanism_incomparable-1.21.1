@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 160,
+    "chemical": "mekanism_incomparable:overload"
+  },
+  "output": {
+    "amount": 1000,
+    "id": "mekanism_incomparable:high_voltage_lightning"
+  }
+}

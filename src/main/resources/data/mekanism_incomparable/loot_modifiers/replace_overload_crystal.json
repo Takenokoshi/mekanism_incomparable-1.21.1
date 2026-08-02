@@ -1,0 +1,9 @@
+{
+  "type": "mekanism_incomparable:replace_overload",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table": "ae2lt:blocks/overload_crystal_cluster"
+    }
+  ]
+}

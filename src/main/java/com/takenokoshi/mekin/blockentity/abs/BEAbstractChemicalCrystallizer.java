@@ -11,6 +11,7 @@ import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedOutputInventorySlo
 import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
 import com.takenokoshi.mekut.inventory.slot.ChemicalFillConvertOrSupplyingSlot;
 import com.takenokoshi.mekut.recipe.input.AdvancedChemicalInputHandler;
+import com.takenokoshi.mekut.recipe.output.ItemOutputHandler;
 
 import mekanism.api.IContentsListener;
 import mekanism.api.Upgrade;
@@ -21,8 +22,6 @@ import mekanism.api.recipes.ChemicalCrystallizerRecipe;
 import mekanism.api.recipes.cache.CachedRecipe;
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.api.recipes.cache.OneInputCachedRecipe;
-import mekanism.api.recipes.outputs.IOutputHandler;
-import mekanism.api.recipes.outputs.OutputHelper;
 import mekanism.api.recipes.vanilla_input.SingleChemicalRecipeInput;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.client.recipe_viewer.type.RecipeViewerRecipeType;
@@ -56,7 +55,6 @@ import mekanism.common.tile.component.TileComponentEjector;
 import mekanism.common.tile.prefab.TileEntityProgressMachine;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -87,7 +85,7 @@ public abstract class BEAbstractChemicalCrystallizer extends TileEntityProgressM
             "getInputFilledPercentage" }, docPlaceholder = "input tank")
     public IChemicalTank inputTank;
 
-    private final IOutputHandler<@NotNull ItemStack> outputHandler;
+    private final ItemOutputHandler outputHandler;
     private final AdvancedChemicalInputHandler inputHandler;
 
     private MachineEnergyContainer<?> energyContainer;
@@ -113,7 +111,7 @@ public abstract class BEAbstractChemicalCrystallizer extends TileEntityProgressM
         ejectorComponent = new TileComponentEjector(this);
         ejectorComponent.setOutputData(configComponent, TransmissionType.ITEM);
         inputHandler = AdvancedChemicalInputHandler.create(inputTank, RecipeError.NOT_ENOUGH_INPUT);
-        outputHandler = OutputHelper.getOutputHandler(outputSlot, RecipeError.NOT_ENOUGH_OUTPUT_SPACE);
+        outputHandler = new ItemOutputHandler(outputSlot, RecipeError.NOT_ENOUGH_OUTPUT_SPACE);
         this.baselineMaxOperations = 0x7fffffff;
     }
 
@@ -127,7 +125,7 @@ public abstract class BEAbstractChemicalCrystallizer extends TileEntityProgressM
         ejectorComponent = new TileComponentEjector(this);
         ejectorComponent.setOutputData(configComponent, TransmissionType.ITEM);
         inputHandler = AdvancedChemicalInputHandler.create(inputTank, RecipeError.NOT_ENOUGH_INPUT);
-        outputHandler = OutputHelper.getOutputHandler(outputSlot, RecipeError.NOT_ENOUGH_OUTPUT_SPACE);
+        outputHandler = new ItemOutputHandler(outputSlot, RecipeError.NOT_ENOUGH_OUTPUT_SPACE);
         this.baselineMaxOperations = baselineMaxOperations;
     }
 

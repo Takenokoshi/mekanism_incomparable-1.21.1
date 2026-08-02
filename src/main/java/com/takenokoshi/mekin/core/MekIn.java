@@ -11,6 +11,7 @@ import com.takenokoshi.mekin.registries.MekInCreativeTabs;
 import com.takenokoshi.mekin.registries.MekInFluids;
 import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInItems;
+import com.takenokoshi.mekin.registries.MekInLootModifiers;
 import com.takenokoshi.mekin.registries.MekInMachines;
 import com.takenokoshi.mekin.registries.MekInRecipeSerializers;
 import com.takenokoshi.mekin.registries.MekInRecipeTypes;
@@ -45,6 +46,7 @@ public class MekIn {
         MekInCreativeTabs.CREATIVE_TABS.register(modEventBus);
         MekInRecipeTypes.RECIPE_TYPES.register(modEventBus);
         MekInRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
+        MekInLootModifiers.LOOT_MODIFIERS.register(modEventBus);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

@@ -83,7 +83,6 @@ import java.util.function.Consumer;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.upgrade.AdditionalUpgradeUtils;
 
 public abstract class BEAbstractRotaryCondensentrator extends TileEntityRecipeMachine<RotaryRecipe>
@@ -128,10 +127,10 @@ public abstract class BEAbstractRotaryCondensentrator extends TileEntityRecipeMa
      */
     private boolean mode;
 
-    private final IOutputHandler<@NotNull ChemicalStack> gasOutputHandler;
-    private final IOutputHandler<@NotNull FluidStack> fluidOutputHandler;
-    private final IInputHandler<@NotNull FluidStack> fluidInputHandler;
-    private final IInputHandler<@NotNull ChemicalStack> gasInputHandler;
+    private final IOutputHandler<ChemicalStack> gasOutputHandler;
+    private final IOutputHandler<FluidStack> fluidOutputHandler;
+    private final IInputHandler<FluidStack> fluidInputHandler;
+    private final IInputHandler<ChemicalStack> gasInputHandler;
 
     private long clientEnergyUsed = 0;
     private int operationsPerTick;
@@ -159,7 +158,7 @@ public abstract class BEAbstractRotaryCondensentrator extends TileEntityRecipeMa
         configComponent.setupIOConfig(TransmissionType.FLUID, fluidTank, RelativeSide.RIGHT, true);
         configComponent.setupInputConfig(TransmissionType.ENERGY, energyContainer);
 
-        ejectorComponent = new TileComponentEjector(this);
+        ejectorComponent = new TileComponentEjector(this, () -> Long.MAX_VALUE, () -> 0x7fffffff);
         ejectorComponent
                 .setOutputData(configComponent, TransmissionType.ITEM, TransmissionType.CHEMICAL,
                         TransmissionType.FLUID)
@@ -353,15 +352,13 @@ public abstract class BEAbstractRotaryCondensentrator extends TileEntityRecipeMa
     public void recalculateUpgrades(Upgrade upgrade) {
         super.recalculateUpgrades(upgrade);
         if (upgrade == Upgrade.SPEED
-                || upgrade == ExtraUpgrade.STACK
                 || upgrade.name().equals("EMPOWERED_SPEED")
                 || AdditionalUpgradeUtils.isSpeedModifier(upgrade)) {
             int multiplier = AdditionalUpgradeUtils.modifyOperations(this,
                     ModList.get().isLoaded("mekanism_empowered")
                             ? (1 << upgradeComponent.getUpgrades(Upgrade.SPEED))
-                                    + 2 << upgradeComponent.getUpgrades(Upgrade.valueOf("EMPOWERED_SPEED"))
-                            : 1 << upgradeComponent.getUpgrades(Upgrade.SPEED)) << upgradeComponent
-                                    .getUpgrades(ExtraUpgrade.STACK);
+                                    + (2 << upgradeComponent.getUpgrades(Upgrade.valueOf("EMPOWERED_SPEED")))
+                            : 1 << upgradeComponent.getUpgrades(Upgrade.SPEED));
             operationsPerTick = MathUtils.clampToInt(1L * multiplier * baselineMaxOperations);
         }
     }

@@ -6,6 +6,7 @@ import com.takenokoshi.mekaddonlib.registration.MachineDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.SimpleMachineRegistryObject;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractAET;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalExtractor;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalInfuser;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalLeachingChamber;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalOxidizer;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalWasher;
@@ -140,6 +141,21 @@ public class MekInInfiniteMachines {
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, ExtraUpgrade.STACK,
                                     Upgrade.MUFFLING));
 
+    public static final SimpleMachineRegistryObject<BEInfiniteChemicalInfuser> INFINITE_MULTIVERSAL_CHEMICAL_INFUSER = MACHINES
+            .registerSimple("infinite_multiversal_chemical_infuser",
+                    AttachedSideConfig.CHEMICAL_INFUSING,
+                    BEAbstractChemicalInfuser.getContainerAdder(1_600_000_000L)::accept,
+                    BEInfiniteChemicalInfuser::new,
+                    BEInfiniteChemicalInfuser.class,
+                    MekanismLang.DESCRIPTION_CHEMICAL_INFUSER,
+                    builder -> builder
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.chemicalInfuser,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalInfuser, 400))
+                            .withSound(MekanismSounds.CHEMICAL_INFUSER)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
+
     public static final SimpleMachineRegistryObject<BEInfiniteChemicalInjectionChamber> INFINITE_MULTIVERSAL_CHEMICAL_INJECTION_CHAMBER = MACHINES
             .registerSimple("infinite_multiversal_chemical_injection_chamber",
                     AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
@@ -220,8 +236,7 @@ public class MekInInfiniteMachines {
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.FLUID, TransmissionType.CHEMICAL,
                                     TransmissionType.ENERGY)
                             .withSound(MekanismSounds.CHEMICAL_WASHER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEInfiniteCrusher> INFINITE_MULTIVERSAL_CRUSHER = MACHINES
             .registerSimple("infinite_multiversal_crusher",
@@ -252,8 +267,7 @@ public class MekInInfiniteMachines {
                                     () -> MathUtils.multiplyClamped(2, ChemicalUtil.hydrogenEnergyDensity()),
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.electrolyticSeparator, 2400))
                             .withSound(MekanismSounds.ELECTROLYTIC_SEPARATOR)
-                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEInfiniteEnergizedSmelter> INFINITE_MULTIVERSAL_ENERGIZED_SMELTER = MACHINES
             .registerSimple("infinite_multiversal_energized_smelter",
@@ -341,8 +355,7 @@ public class MekInInfiniteMachines {
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.antiprotonicNucleosynthesizer,
                                             4800))
                             .withSound(MekanismSounds.ANTIPROTONIC_NUCLEOSYNTHESIZER)
-                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEInfiniteMetallurgicInfuser> INFINITE_MULTIVERSAL_METALLURGIC_INFUSER = MACHINES
             .registerSimple("infinite_multiversal_metallurgic_infuser",
@@ -416,8 +429,7 @@ public class MekInInfiniteMachines {
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.rotaryCondensentrator, 2400))
                             .withSideConfig(TransmissionType.CHEMICAL, TransmissionType.FLUID, TransmissionType.ITEM,
                                     TransmissionType.ENERGY)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final GuiSizedMachineRegistryObject<BEInfiniteSmallDigitalAssembler> INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER = MACHINES
             .registerGuiSized("infinite_multiversal_small_digital_assembler",

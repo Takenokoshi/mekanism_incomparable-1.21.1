@@ -107,8 +107,33 @@ public class SPSRecipes {
                 .build(output, MekInConstants.rl("sps/quartz"));
         MekUtChemicalToChemicalRecipeBuilder
                 .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekUtChemicals.MU_MATERIALS_CLEAN_SLURRY.get(MUMaterial.SILICON), 2000),
+                        MekInChemicals.SILICON.asStack(1600))
+                .build(output, MekInConstants.rl("sps/silicon"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
                         MekUtChemicals.MU_MATERIALS_CLEAN_SLURRY.get(MUMaterial.REDSTONE), 2000),
                         MekanismChemicals.REDSTONE.asStack(1600))
                 .build(output, MekInConstants.rl("sps/redstone"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekInChemicals.CLEAN_OVERLOAD_SLURRY, 2000),
+                        MekInChemicals.OVERLOAD.asStack(1600))
+                .build(output, MekInConstants.rl("sps/overload"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekInChemicals.HIGH_VOLTAGE_LIGHTNING, 1000),
+                        MekInChemicals.EXTREME_HIGH_VOLTAGE_LIGHTNING.asStack(125))
+                .build(output, MekInConstants.rl("sps/extreme_high_voltage_lightning"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekInChemicals.OVERLOAD, 160),
+                        MekInChemicals.HIGH_VOLTAGE_LIGHTNING.asStack(1000))
+                .build(output, MekInConstants.rl("sps/high_voltage_lightning"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekanismChemicals.STEAM, 2000),
+                        MekInChemicals.THUNDERCLOUD.asStack(1))
+                .build(output, MekInConstants.rl("sps/thundercloud"));
     }
 }
