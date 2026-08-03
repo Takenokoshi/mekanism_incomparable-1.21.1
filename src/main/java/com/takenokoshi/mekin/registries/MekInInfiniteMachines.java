@@ -1,6 +1,8 @@
 package com.takenokoshi.mekin.registries;
 
 import com.jerry.mekextras.api.ExtraUpgrade;
+import com.jerry.mekmm.common.MoreMachineLang;
+import com.jerry.mekmm.common.config.MoreMachineConfig;
 import com.takenokoshi.mekaddonlib.registration.GuiSizedMachineRegistryObject;
 import com.takenokoshi.mekaddonlib.registration.MachineDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.SimpleMachineRegistryObject;
@@ -14,6 +16,7 @@ import com.takenokoshi.mekin.blockentity.abs.BEAbstractCompactAPT;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractElectrolyticSeparator;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackChemicalToItemStackMachine;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackToItemStackMachine;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractLightningFabricator;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractRotaryCondensentrator;
 import com.takenokoshi.mekin.blockentity.infinitemachine.*;
 import com.takenokoshi.mekin.core.MekInConstants;
@@ -357,6 +360,21 @@ public class MekInInfiniteMachines {
                             .withSound(MekanismSounds.ANTIPROTONIC_NUCLEOSYNTHESIZER)
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING));
 
+    public static final SimpleMachineRegistryObject<BEInfiniteLightningFabricator> INFINITE_MULTIVERSAL_LIGHTNING_FABRICATOR = MACHINES
+            .registerSimple("infinite_multiversal_lightning_fabricator",
+                    AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
+                    BEAbstractLightningFabricator.getContainerAdder(38_400_000_000L)::accept,
+                    BEInfiniteLightningFabricator::new,
+                    BEInfiniteLightningFabricator.class,
+                    MekInMachines.LIGHTNING_FABRICATOR.descriptionEntry,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    MekanismConfig.usage.combiner,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.general.spsEnergyPerInput, 400))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING, ExtraUpgrade.STACK)
+                            .withSound(MekanismSounds.COMBINER));
+
     public static final SimpleMachineRegistryObject<BEInfiniteMetallurgicInfuser> INFINITE_MULTIVERSAL_METALLURGIC_INFUSER = MACHINES
             .registerSimple("infinite_multiversal_metallurgic_infuser",
                     AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
@@ -415,6 +433,20 @@ public class MekInInfiniteMachines {
                             .withSound(MekanismSounds.PURIFICATION_CHAMBER)
                             .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.CHEMICAL, Upgrade.MUFFLING,
                                     ExtraUpgrade.STACK));
+
+    public static final SimpleMachineRegistryObject<BEInfiniteRecycler> INFINITE_MULTIVERSAL_RECYCLER = MACHINES
+            .registerSimple("infinite_multiversal_recycler",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEAbstractItemStackToItemStackMachine::addContainersToItem,
+                    BEInfiniteRecycler::new,
+                    BEInfiniteRecycler.class,
+                    MoreMachineLang.DESCRIPTION_RECYCLER,
+                    builder -> builder
+                            .withSound(MekanismSounds.PRECISION_SAWMILL)
+                            .withEnergyConfig(MoreMachineConfig.usage.recycler,
+                                    MekInMathUtils.multiplyClamped(MoreMachineConfig.storage.recycler, 2400))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEInfiniteRotaryCondensentrator> INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR = MACHINES
             .registerSimple("infinite_multiversal_rotary_condensentrator",

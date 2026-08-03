@@ -6,8 +6,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import com.jerry.mekextras.api.ExtraUpgrade;
+import com.takenokoshi.mekaddonlib.blockentity.interfaces.IWarningSupporter;
 import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedOutputInventorySlot;
 import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
+import com.takenokoshi.mekut.blockentity.interfaces.IRecipeViewerTypeProvider;
+import com.takenokoshi.mekut.blockentity.interfaces.IScaledProgressProvider;
 import com.takenokoshi.mekut.inventory.slot.InputOrSupplyingSlot;
 import com.takenokoshi.mekut.recipe.input.AdvancedItemInputHandler;
 import com.takenokoshi.mekut.recipe.output.ItemOutputHandler;
@@ -19,6 +22,7 @@ import mekanism.api.recipes.ItemStackToItemStackRecipe;
 import mekanism.api.recipes.cache.CachedRecipe;
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.api.recipes.cache.OneInputCachedRecipe;
+import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.attachments.containers.ContainerType;
 import mekanism.common.attachments.containers.item.ItemSlotsBuilder;
 import mekanism.common.capabilities.energy.MachineEnergyContainer;
@@ -47,7 +51,8 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class BEAbstractItemStackToItemStackMachine
         extends TileEntityProgressMachine<ItemStackToItemStackRecipe>
-        implements ItemRecipeLookupHandler<ItemStackToItemStackRecipe>, IHasMachineEnergyContainer {
+        implements ItemRecipeLookupHandler<ItemStackToItemStackRecipe>, IHasMachineEnergyContainer,
+        IScaledProgressProvider, IRecipeViewerTypeProvider, IWarningSupporter {
 
     public static void addContainersToItem(ItemRegistryObject<?> value) {
         value.addAttachmentOnlyContainers(ContainerType.ITEM, () -> ItemSlotsBuilder.builder()
@@ -75,7 +80,7 @@ public abstract class BEAbstractItemStackToItemStackMachine
     @WrappingComputerMethod(wrapper = ComputerIInventorySlotWrapper.class, methodNames = "getEnergyItem", docPlaceholder = "energy slot")
     EnergyInventorySlot energySlot;
 
-    private long clientEnergyUsed = 0;
+    private long clientEnergyUsed = 0L;
 
     private final int baselineMaxOperations;
     private int stackUpgrade;
@@ -187,4 +192,7 @@ public abstract class BEAbstractItemStackToItemStackMachine
             stackUpgrade = upgradeComponent.getUpgrades(ExtraUpgrade.STACK);
         }
     }
+
+    @Override
+    public abstract IRecipeViewerRecipeType<ItemStackToItemStackRecipe> recipeViewerType();
 }

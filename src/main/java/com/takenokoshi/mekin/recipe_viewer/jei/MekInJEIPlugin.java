@@ -2,6 +2,7 @@ package com.takenokoshi.mekin.recipe_viewer.jei;
 
 import java.util.List;
 
+import com.jerry.mekmm.client.recipe_viewer.MMRecipeViewerRecipeType;
 import com.takenokoshi.mekaddonlib.recipe_viewer.jei.MekALRecipeRegistryHelper;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.recipe.type.MekInWrappedRecipeTypes;
@@ -200,6 +201,10 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PURIFYING),
                 List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(MMRecipeViewerRecipeType.RECYCLER),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_RECYCLER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_RECYCLER));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.CONDENSENTRATING),
                 List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,

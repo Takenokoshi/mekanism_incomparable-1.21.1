@@ -1,6 +1,5 @@
 package com.takenokoshi.mekin.recipe.building;
 
-import com.extendedae_plus.init.ModItems;
 import com.fxd927.mekanismelements.common.registries.MSGases;
 import com.fxd927.mekanismelements.common.registries.MSItems;
 import com.glodblock.github.appflux.common.AFSingletons;
@@ -15,16 +14,19 @@ import appeng.core.definitions.AEItems;
 import fr.iglee42.evolvedmekanism.registries.EMChemicals;
 import fr.iglee42.evolvedmekanism.registries.EMItems;
 import gripe._90.megacells.definition.MEGAItems;
+import jp.main.taikun.insaneae.crafting.InsaneCraftingUnitType;
 import mekanism.common.registries.MekanismChemicals;
 import mekanism.common.registries.MekanismFluids;
 import mekanism.common.registries.MekanismItems;
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
 import net.pedroksl.advanced_ae.common.definitions.AAEFluids;
 import net.pedroksl.advanced_ae.common.definitions.AAEItems;
+
+import static com.moakiee.ae2lt.registry.ModItems.LIGHTNING_CELL_COMPONENT_V;
+import static jp.main.taikun.insaneae.registries.ModItems.CELL_COMPONENTS;
 
 public class ControlMatrixRecipes {
 
@@ -69,7 +71,7 @@ public class ControlMatrixRecipes {
                 .smallDigitalAssembler(new ItemStack(MekInBlocks.DIGITAL_CONTROL_MATRIX.asItem(), 1))
                 .addItemInput(MekUtItems.DIGITAL_CONTROL_CIRCUIT.asStack(4))
                 .addItemInput(MekInBlocks.BASIC_CONTROL_MATRIX, 4)
-                .addItemInput(Items.AMETHYST_SHARD, 16)
+                .addItemInput(MekUtItems.REFINED_AMETHYST_INGOT, 16)
                 .addItemInput(AEItems.CELL_COMPONENT_256K.stack(1))
                 .setFluidInput(Tags.Fluids.WATER, 200)
                 .setChemicalInput(MekanismChemicals.TIN.asStack(1280))
@@ -117,7 +119,7 @@ public class ControlMatrixRecipes {
                 .addItemInput(ExtraItems.SUPREME_CONTROL_CIRCUIT, 4)
                 .addItemInput(MekInBlocks.ABSOLUTE_CONTROL_MATRIX, 4)
                 .addItemInput(MekInItems.SILVER_INGOT, 4)
-                .addItemInput(AAEItems.QUANTUM_STORAGE_COMPONENT, 1)
+                .addItemInput(LIGHTNING_CELL_COMPONENT_V, 1)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/supreme"));
@@ -135,8 +137,7 @@ public class ControlMatrixRecipes {
                 .addItemInput(ExtraItems.COSMIC_CONTROL_CIRCUIT, 4)
                 .addItemInput(MekInBlocks.SUPREME_CONTROL_MATRIX, 4)
                 .addItemInput(MekInItems.REDSTONE_STARLIGHT, 1)
-                .addItemInput(ModItems.ENERGY_STORAGE_CORE, 1)
-                .addItemInput(ModItems.SPATIAL_CORE, 1)
+                .addItemInput(CELL_COMPONENTS.get(InsaneCraftingUnitType.STORAGE_256G).value(), 1)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/cosmic"));
@@ -145,8 +146,7 @@ public class ControlMatrixRecipes {
                 .addItemInput(EMItems.DENSE_CONTROL_CIRCUIT, 4)
                 .addItemInput(MekInBlocks.QUANTUM_CONTROL_MATRIX, 4)
                 .addItemInput(MekInItems.REDSTONE_STARLIGHT, 1)
-                .addItemInput(ModItems.QUANTUM_STORAGE_CORE, 1)
-                .addItemInput(ModItems.STORAGE_CORE, 1)
+                .addItemInput(CELL_COMPONENTS.get(InsaneCraftingUnitType.STORAGE_256G).value(), 1)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/dense"));
@@ -158,7 +158,7 @@ public class ControlMatrixRecipes {
                 .addItemInput(MekInItems.GOLD_STARLIGHT, 1)
                 .addItemInput(MekInItems.NAQUADAH_STARLIGHT, 1)
                 .addItemInput(MekInItems.LAPIS_LAZULI_STARLIGHT, 1)
-                .addItemInput(ModItems.INFINITY_CORE, 1)
+                .addItemInput(CELL_COMPONENTS.get(InsaneCraftingUnitType.STORAGE_4T).value(), 1)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/infinite"));
@@ -170,7 +170,7 @@ public class ControlMatrixRecipes {
                 .addItemInput(MekInItems.GOLD_STARLIGHT, 1)
                 .addItemInput(MekInItems.NAQUADAH_STARLIGHT, 1)
                 .addItemInput(MekInItems.LAPIS_LAZULI_STARLIGHT, 1)
-                .addItemInput(ModItems.INFINITY_CORE, 1)
+                .addItemInput(CELL_COMPONENTS.get(InsaneCraftingUnitType.STORAGE_4T).value(), 1)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/multiversal"));

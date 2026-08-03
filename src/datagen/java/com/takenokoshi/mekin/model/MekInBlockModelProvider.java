@@ -239,6 +239,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 Mekanism.rl("block/purification_chamber/front"),
                 Mekanism.rl("block/purification_chamber/front_active"));
         simpleMachine(
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_RECYCLER, true,
+                "block/machine/absolute_overclocked/recycler",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                ResourceLocation.fromNamespaceAndPath("mekmm", "block/recycler/front"),
+                ResourceLocation.fromNamespaceAndPath("mekmm", "block/recycler/front_active"));
+        simpleMachine(
                 MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR, true,
                 "block/machine/absolute_overclocked/rotary_condensentrator",
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
@@ -414,6 +420,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekUtConstants.rl("block/machine_front/lazer_compress_nucleo_synthesizer"),
                 MekUtConstants.rl("block/machine_front_active/lazer_compress_nucleo_synthesizer"));
         simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_LIGHTNING_FABRICATOR, true,
+                "block/machine/infinite_multiversal/lightning_fabricator",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                MekInConstants.rl("block/machine_front/lightning_fabricator"),
+                MekInConstants.rl("block/machine_front_active/lightning_fabricator"));
+        simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER, true,
                 "block/machine/infinite_multiversal/metallurgic_infuser",
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
@@ -437,6 +449,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
                 Mekanism.rl("block/purification_chamber/front"),
                 Mekanism.rl("block/purification_chamber/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_RECYCLER, true,
+                "block/machine/infinite_multiversal/recycler",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                ResourceLocation.fromNamespaceAndPath("mekmm", "block/recycler/front"),
+                ResourceLocation.fromNamespaceAndPath("mekmm", "block/recycler/front_active"));
         simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR, true,
                 "block/machine/infinite_multiversal/rotary_condensentrator",

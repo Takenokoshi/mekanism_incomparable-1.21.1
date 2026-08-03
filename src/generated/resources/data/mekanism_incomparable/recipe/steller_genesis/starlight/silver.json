@@ -1,0 +1,15 @@
+{
+  "type": "mekanism_utilities:stellar_genesis",
+  "left_input": {
+    "amount": 5000000000000,
+    "chemical": "mekanism_incomparable:silver"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:silver_starlight"
+  },
+  "right_input": {
+    "amount": 320000,
+    "chemical": "mekmm:uu_matter"
+  }
+}

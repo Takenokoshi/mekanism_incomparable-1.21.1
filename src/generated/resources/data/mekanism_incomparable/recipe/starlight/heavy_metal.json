@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "mekanism_incomparable:osmium_starlight"
+    },
+    "b": {
+      "item": "mekanism_incomparable:lead_starlight"
+    },
+    "c": {
+      "item": "mekanism_incomparable:osmium_starlight"
+    },
+    "l": {
+      "item": "mekanism_incomparable:gold_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:netherite_starlight"
+    },
+    "t": {
+      "item": "mekanism_incomparable:iridium_starlight"
+    }
+  },
+  "pattern": [
+    "ata",
+    "lcr",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:heavy_metal_starlight"
+  }
+}

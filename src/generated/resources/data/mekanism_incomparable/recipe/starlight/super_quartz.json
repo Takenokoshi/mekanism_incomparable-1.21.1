@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "mekanism_incomparable:silicon_starlight"
+    },
+    "b": {
+      "item": "mekanism_incomparable:entro_starlight"
+    },
+    "c": {
+      "item": "mekanism_incomparable:certus_quartz_starlight"
+    },
+    "l": {
+      "item": "mekanism_incomparable:amethyst_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:quartz_starlight"
+    },
+    "t": {
+      "item": "mekanism_incomparable:overload_starlight"
+    }
+  },
+  "pattern": [
+    "ata",
+    "lcr",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:super_quartz_starlight"
+  }
+}

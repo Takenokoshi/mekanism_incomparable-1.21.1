@@ -2,7 +2,10 @@ package com.takenokoshi.mekin.gui.machine;
 
 import org.jetbrains.annotations.NotNull;
 
-import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackToItemStackMachine;
+import com.takenokoshi.mekaddonlib.blockentity.interfaces.IWarningSupporter;
+import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
+import com.takenokoshi.mekut.blockentity.interfaces.IRecipeViewerTypeProvider;
+import com.takenokoshi.mekut.blockentity.interfaces.IScaledProgressProvider;
 
 import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
 import mekanism.client.gui.GuiConfigurableTile;
@@ -14,11 +17,13 @@ import mekanism.client.gui.element.tab.GuiEnergyTab;
 import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.common.inventory.container.tile.MekanismTileContainer;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.tile.base.TileEntityMekanism;
+import mekanism.common.tile.interfaces.ISideConfiguration;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GuiItemStackToItemStackMachine<BE extends BEAbstractItemStackToItemStackMachine>
+public class GuiItemStackToItemStackMachine<BE extends TileEntityMekanism & ISideConfiguration & IHasMachineEnergyContainer & IScaledProgressProvider & IRecipeViewerTypeProvider & IWarningSupporter>
         extends GuiConfigurableTile<BE, MekanismTileContainer<BE>> {
 
     public GuiItemStackToItemStackMachine(MekanismTileContainer<BE> container, Inventory inv, Component title) {

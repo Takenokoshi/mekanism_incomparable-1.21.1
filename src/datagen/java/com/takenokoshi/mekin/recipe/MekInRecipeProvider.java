@@ -33,6 +33,7 @@ public class MekInRecipeProvider extends RecipeProvider {
         SDARecipes.buildRecipes(output);
         SDRCRecipes.buildRecipes(output);
         SPSRecipes.buildRecipes(output);
+        StarlightRecipes.buildRecipes(output, RecipeProvider::has);
         StellerGenesisRecipes.buildRecipes(output);
     }
 

@@ -1,6 +1,7 @@
 package com.takenokoshi.mekin.registries;
 
-import com.jerry.mekextras.api.ExtraUpgrade;
+import com.jerry.mekmm.common.MoreMachineLang;
+import com.jerry.mekmm.common.config.MoreMachineConfig;
 import com.takenokoshi.mekaddonlib.registration.GuiSizedMachineRegistryObject;
 import com.takenokoshi.mekaddonlib.registration.MachineDeferredRegister;
 import com.takenokoshi.mekaddonlib.registration.SimpleMachineRegistryObject;
@@ -93,8 +94,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.chemicalInjectionChamber,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalInjectionChamber, 20))
                             .withSound(MekanismSounds.CHEMICAL_INJECTION_CHAMBER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.CHEMICAL, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.CHEMICAL, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteChemicalOxidizer> ABSOLUTE_OVERCLOCKED_CHEMICAL_OXIDIZER = MACHINES
             .registerSimple("absolute_overclocked_chemical_oxidizer",
@@ -108,8 +108,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.chemicalOxidizer,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.chemicalOxidizer, 20))
                             .withSound(MekanismSounds.CHEMICAL_OXIDIZER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteCrusher> ABSOLUTE_OVERCLOCKED_CRUSHER = MACHINES
             .registerSimple("absolute_overclocked_crusher",
@@ -123,8 +122,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.crusher,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.crusher, 20))
                             .withSound(MekanismSounds.CRUSHER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteElectrolyticSeparator> ABSOLUTE_OVERCLOCKED_ELECTROLYTIC_SEPARATOR = MACHINES
             .registerSimple("absolute_overclocked_electrolytic_separator",
@@ -169,8 +167,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.enrichmentChamber,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.enrichmentChamber, 20))
                             .withSound(MekanismSounds.ENRICHMENT_CHAMBER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final GuiSizedMachineRegistryObject<BEAbsoluteFissionReactor> ABSOLUTE_OVERCLOCKED_FISSION_REACTOR = MACHINES
             .registerGuiSized("absolute_overclocked_fission_reactor",
@@ -227,8 +224,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.metallurgicInfuser,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.metallurgicInfuser, 20))
                             .withSound(MekanismSounds.METALLURGIC_INFUSER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteOsmiumCompressor> ABSOLUTE_OVERCLOCKED_OSMIUM_COMPRESSOR = MACHINES
             .registerSimple("absolute_overclocked_osmium_compressor",
@@ -242,8 +238,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.osmiumCompressor,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.osmiumCompressor, 20))
                             .withSound(MekanismSounds.OSMIUM_COMPRESSOR)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsolutePaintingMachine> ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE = MACHINES
             .registerSimple("absolute_overclocked_painting_machine",
@@ -257,8 +252,7 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.paintingMachine,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.paintingMachine, 20))
                             .withSound(MekanismSounds.PAINTING_MACHINE)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsolutePurificationChamber> ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER = MACHINES
             .registerSimple("absolute_overclocked_purification_chamber",
@@ -272,8 +266,21 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.purificationChamber,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.purificationChamber, 20))
                             .withSound(MekanismSounds.PURIFICATION_CHAMBER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.CHEMICAL, Upgrade.MUFFLING,
-                                    ExtraUpgrade.STACK));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.CHEMICAL, Upgrade.MUFFLING));
+
+    public static final SimpleMachineRegistryObject<BEAbsoluteRecycler> ABSOLUTE_OVERCLOCKED_RECYCLER = MACHINES
+            .registerSimple("absolute_overclocked_recycler",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEAbstractItemStackToItemStackMachine::addContainersToItem,
+                    BEAbsoluteRecycler::new,
+                    BEAbsoluteRecycler.class,
+                    MoreMachineLang.DESCRIPTION_RECYCLER,
+                    builder -> builder
+                            .withSound(MekanismSounds.PRECISION_SAWMILL)
+                            .withEnergyConfig(MoreMachineConfig.usage.recycler,
+                                    MekInMathUtils.multiplyClamped(MoreMachineConfig.storage.recycler, 20))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsoluteRotaryCondensentrator> ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR = MACHINES
             .registerSimple("absolute_overclocked_rotary_condensentrator",

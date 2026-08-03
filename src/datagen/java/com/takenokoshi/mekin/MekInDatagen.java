@@ -55,6 +55,7 @@ public class MekInDatagen {
         LOADED_CONFIG = ObfuscationReflectionHelper.findConstructor(loadedConfig, CommentedConfig.class, Path.class,
                 ModConfig.class);
         SET_CONFIG = ObfuscationReflectionHelper.findMethod(ModConfig.class, "setConfig", loadedConfig, Function.class);
+       
     }
 
     private MekInDatagen() {

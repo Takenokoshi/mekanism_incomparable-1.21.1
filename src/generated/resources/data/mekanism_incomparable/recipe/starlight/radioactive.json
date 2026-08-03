@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "mekanismelements:pellet_neutron_source"
+    },
+    "b": {
+      "item": "mekanism_incomparable:naquadah_starlight"
+    },
+    "c": {
+      "item": "mekanism_incomparable:fluorite_starlight"
+    },
+    "l": {
+      "item": "mekanism_incomparable:uranium_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:uranium_starlight"
+    },
+    "t": {
+      "item": "mekanism_incomparable:naquadah_starlight"
+    }
+  },
+  "pattern": [
+    "ata",
+    "lcr",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:radioactive_starlight"
+  }
+}

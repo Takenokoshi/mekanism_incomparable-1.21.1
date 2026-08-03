@@ -52,7 +52,8 @@ public class MekInRecipeViewerRecipeType {
             MekInConstants.rl(MekInRecipeConstants.LIGHTNING_FABRICATION),
             LightningFabricationRecipe.class,
             MekInRecipeTypes.LIGHTNING_FABRICATION, -28, -13, 144, 60,
-            MekInMachines.LIGHTNING_FABRICATOR);
+            MekInMachines.LIGHTNING_FABRICATOR,
+            MekInInfiniteMachines.INFINITE_MULTIVERSAL_LIGHTNING_FABRICATOR);
 
     public static final RVMekALRecipeTypeWrapper<LightningTransformRecipeInput, LightningTransformRecipe, LightningTransformInputRecipeCache> LIGHTNING_TRANSFORM = new RVMekALRecipeTypeWrapper<>(
             MekInConstants.rl("lightning_transform"),

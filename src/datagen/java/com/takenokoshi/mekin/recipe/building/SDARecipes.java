@@ -55,10 +55,6 @@ import net.pedroksl.advanced_ae.common.definitions.AAEFluids;
 
 public class SDARecipes {
 
-    private static final List<MachineData> ABSOLUTE_MACHINES;
-    private static final List<MachineData> SUPREME_MACHINES;
-    private static final List<MachineData> INFINITE_MACHINES;
-
     public static void buildRecipes(RecipeOutput output) {
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(new ItemStack(ModItems.BASIC_CORE.asItem(), 1))
@@ -537,7 +533,7 @@ public class SDARecipes {
                 .setChemicalInput(MekanismChemicals.LITHIUM.asStack(1000L))
                 .build(output, MekInConstants.rl("small_digital_assembler/machine/large/gas_burning_generator"));
 
-        ABSOLUTE_MACHINES.forEach(data -> {
+        getAboluteDatas().forEach(data -> {
             ItemStackListFluidChemicalToItemRecipeBuilder
                     .smallDigitalAssembler(new ItemStack(data.afterMachine))
                     .addItemInput(data.beforeMachine, 1)
@@ -552,7 +548,7 @@ public class SDARecipes {
                     .build(output,
                             MekInConstants.rl("small_digital_assembler/machine/absolute_overclocked/" + data.name));
         });
-        SUPREME_MACHINES.forEach(data -> {
+        getSupremeDatas().forEach(data -> {
             ItemStackListFluidChemicalToItemRecipeBuilder
                     .smallDigitalAssembler(new ItemStack(data.afterMachine))
                     .addItemInput(data.beforeMachine, 1)
@@ -567,7 +563,7 @@ public class SDARecipes {
                     .build(output,
                             MekInConstants.rl("small_digital_assembler/machine/supreme_quantum/" + data.name));
         });
-        INFINITE_MACHINES.forEach(data -> {
+        getInifiniteDatas().forEach(data -> {
             ItemStackListFluidChemicalToItemRecipeBuilder
                     .smallDigitalAssembler(new ItemStack(data.afterMachine))
                     .addItemInput(data.beforeMachine, 1)
@@ -587,8 +583,8 @@ public class SDARecipes {
     private record MachineData(ItemLike beforeMachine, ItemLike afterMachine, String name) {
     }
 
-    static {
-        ABSOLUTE_MACHINES = List.of(new MachineData[] {
+    private static List<MachineData> getAboluteDatas() {
+        return List.of(new MachineData[] {
                 new MachineData(
                         MekUtMachines.COMPACT_BOILER,
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
@@ -670,8 +666,10 @@ public class SDARecipes {
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_THERMAL_EVAPORATION_PLANT,
                         "thermal_evapolation_plant"),
         });
+    }
 
-        SUPREME_MACHINES = List.of(new MachineData[] {
+    private static List<MachineData> getSupremeDatas() {
+        return List.of(new MachineData[] {
                 new MachineData(
                         MekanismBlocks.CHEMICAL_CRYSTALLIZER,
                         MekInSupremeMachines.SUPREME_QUANTUM_CHEMICAL_CRYSTALLIZER,
@@ -693,8 +691,10 @@ public class SDARecipes {
                         MekInSupremeMachines.SUPREME_QUANTUM_SUPERCRITICAL_PHASE_SHIFTER,
                         "supercritical_phase_shifter"),
         });
+    }
 
-        INFINITE_MACHINES = List.of(new MachineData[] {
+    private static List<MachineData> getInifiniteDatas() {
+        return List.of(new MachineData[] {
                 new MachineData(
                         MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR,
@@ -776,6 +776,10 @@ public class SDARecipes {
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
                         "lazer_compress_nucleo_synthesizer"),
                 new MachineData(
+                        MekInMachines.LIGHTNING_FABRICATOR,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_LIGHTNING_FABRICATOR,
+                        "lightning_fabricator"),
+                new MachineData(
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_METALLURGIC_INFUSER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER,
                         "metallurgic_infuser"),
@@ -791,6 +795,10 @@ public class SDARecipes {
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER,
                         "purification_chamber"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_RECYCLER,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_RECYCLER,
+                        "recycler"),
                 new MachineData(
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR,

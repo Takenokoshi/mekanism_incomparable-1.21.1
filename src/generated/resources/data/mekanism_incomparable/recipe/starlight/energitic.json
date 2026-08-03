@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "c": {
+      "item": "mekanism_incomparable:coal_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:redstone_starlight"
+    }
+  },
+  "pattern": [
+    "rcr",
+    "crc",
+    "rcr"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:energitic_starlight"
+  }
+}

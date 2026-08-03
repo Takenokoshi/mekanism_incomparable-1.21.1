@@ -274,6 +274,21 @@ public class MekInItemModelProvider extends ItemModelProvider {
         simpleItem(MekInItems.SILICON_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/silicon"));
         simpleItem(MekInItems.TIN_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/tin"));
         simpleItem(MekInItems.URANIUM_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/uranium"));
+        simpleItem(MekInItems.TITANIUM_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/titanium"));
+        simpleItem(MekInItems.SILVER_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/silver"));
+        simpleItem(MekInItems.IRIDIUM_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/iridium"));
+
+        simpleItem(MekInItems.SUPER_QUARTZ_STARLIGHT.get()).texture("layer0",
+                MekInConstants.rl("item/starlight/super_quartz"));
+        simpleItem(MekInItems.RADIOACTIVE_STARLIGHT.get()).texture("layer0",
+                MekInConstants.rl("item/starlight/radioactive"));
+        simpleItem(MekInItems.HEAVY_METAL_STARLIGHT.get()).texture("layer0",
+                MekInConstants.rl("item/starlight/heavy_metal"));
+        simpleItem(MekInItems.INDUSTRIAL_STARLIGHT.get()).texture("layer0",
+                MekInConstants.rl("item/starlight/industrial"));
+        simpleItem(MekInItems.ENERGITIC_STARLIGHT.get()).texture("layer0",
+                MekInConstants.rl("item/starlight/energitic"));
+        simpleItem(MekInItems.JEWELRY_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/jewelry"));
 
         simpleItem(MekInItems.ETERNAL_STARLIGHT.get()).texture("layer0", MekInConstants.rl("item/starlight/eternal"));
 

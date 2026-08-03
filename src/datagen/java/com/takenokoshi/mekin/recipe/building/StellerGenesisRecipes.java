@@ -150,6 +150,27 @@ public class StellerGenesisRecipes {
                 .build(output, MekInConstants.rl("steller_genesis/starlight/uranium"));
         BiChemicalToItemRecipeBuilder
                 .stellarGenesis(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekUtChemicals.IRIDIUM,
+                                5_000_000_000_000L),
+                        IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
+                        MekInItems.IRIDIUM_STARLIGHT.asStack(1))
+                .build(output, MekInConstants.rl("steller_genesis/starlight/iridium"));
+        BiChemicalToItemRecipeBuilder
+                .stellarGenesis(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.TITANIUM,
+                                5_000_000_000_000L),
+                        IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
+                        MekInItems.TITANIUM_STARLIGHT.asStack(1))
+                .build(output, MekInConstants.rl("steller_genesis/starlight/titanium"));
+        BiChemicalToItemRecipeBuilder
+                .stellarGenesis(
+                        IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.SILVER,
+                                5_000_000_000_000L),
+                        IngredientCreatorAccess.chemicalStack().from(MoreMachineChemicals.UU_MATTER.asStack(320000)),
+                        MekInItems.SILVER_STARLIGHT.asStack(1))
+                .build(output, MekInConstants.rl("steller_genesis/starlight/silver"));
+        BiChemicalToItemRecipeBuilder
+                .stellarGenesis(
                         IngredientCreatorAccess.chemicalStack().fromHolder(
                                 MekanismChemicals.PROCESSED_RESOURCES.get(PrimaryResource.IRON).getDelegate(),
                                 50_000_000L),

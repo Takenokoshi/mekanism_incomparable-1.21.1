@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "mekanism_utilities:xp_crystal"
+    },
+    "b": {
+      "item": "mekanism_incomparable:emerald_starlight"
+    },
+    "c": {
+      "item": "mekanism_incomparable:lapis_lazuli_starlight"
+    },
+    "l": {
+      "item": "mekanism_incomparable:diamond_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:diamond_starlight"
+    },
+    "t": {
+      "item": "mekanism_incomparable:emerald_starlight"
+    }
+  },
+  "pattern": [
+    "ata",
+    "lcr",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:jewelry_starlight"
+  }
+}

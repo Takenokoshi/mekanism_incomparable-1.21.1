@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "a": {
+      "item": "mekanism_incomparable:iron_starlight"
+    },
+    "b": {
+      "item": "mekanism_incomparable:tin_starlight"
+    },
+    "c": {
+      "item": "mekanism_incomparable:iron_starlight"
+    },
+    "l": {
+      "item": "mekanism_incomparable:silver_starlight"
+    },
+    "r": {
+      "item": "mekanism_incomparable:titanium_starlight"
+    },
+    "t": {
+      "item": "mekanism_incomparable:copper_starlight"
+    }
+  },
+  "pattern": [
+    "ata",
+    "lcr",
+    "aba"
+  ],
+  "result": {
+    "count": 1,
+    "id": "mekanism_incomparable:industrial_starlight"
+  }
+}

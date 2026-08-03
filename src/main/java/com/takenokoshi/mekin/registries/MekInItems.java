@@ -186,6 +186,17 @@ public class MekInItems {
     public static final ItemRegistryObject<Item> TIN_STARLIGHT = registerFoiling("tin_starlight");
     public static final ItemRegistryObject<Item> URANIUM_STARLIGHT = registerFoiling("uranium_starlight");
 
+    public static final ItemRegistryObject<Item> TITANIUM_STARLIGHT = registerFoiling("titanium_starlight");
+    public static final ItemRegistryObject<Item> SILVER_STARLIGHT = registerFoiling("silver_starlight");
+    public static final ItemRegistryObject<Item> IRIDIUM_STARLIGHT = registerFoiling("iridium_starlight");
+
+    public static final ItemRegistryObject<Item> SUPER_QUARTZ_STARLIGHT = registerFoiling("super_quartz_starlight");
+    public static final ItemRegistryObject<Item> RADIOACTIVE_STARLIGHT = registerFoiling("radioactive_starlight");
+    public static final ItemRegistryObject<Item> HEAVY_METAL_STARLIGHT = registerFoiling("heavy_metal_starlight");
+    public static final ItemRegistryObject<Item> INDUSTRIAL_STARLIGHT = registerFoiling("industrial_starlight");
+    public static final ItemRegistryObject<Item> ENERGITIC_STARLIGHT = registerFoiling("energitic_starlight");
+    public static final ItemRegistryObject<Item> JEWELRY_STARLIGHT = registerFoiling("jewelry_starlight");
+
     public static final ItemRegistryObject<Item> ETERNAL_STARLIGHT = ITEMS
             .register("eternal_starlight", EnumColor.INDIGO);
 
