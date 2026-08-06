@@ -1,6 +1,5 @@
 package com.takenokoshi.mekin.recipe.building;
 
-import com.extendedae_plus.init.ModItems;
 import com.fxd927.mekanismelements.common.registries.MSItems;
 import com.glodblock.github.extendedae.common.EAESingletons;
 import com.jerry.mekmm.common.registries.MoreMachineChemicals;
@@ -16,11 +15,11 @@ import mekanism.common.registries.MekanismItems;
 import mekanism.common.tags.MekanismTags;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.fluids.FluidStack;
 import net.pedroksl.advanced_ae.common.definitions.AAEFluids;
-import net.pedroksl.advanced_ae.common.definitions.AAEItems;
+import static com.moakiee.ae2lt.registry.ModItems.OVERLOAD_SINGULARITY;
+import static com.extendedae_plus.init.ModItems.OBLIVION_SINGULARITY;
 
 public class SDRCRecipes {
     public static void buildRecipes(RecipeOutput output) {
@@ -42,17 +41,14 @@ public class SDRCRecipes {
                 .setChemicalInput(MekUtChemicals.ASTRAL_ETHER.asStack(200))
                 .build(output, MekInConstants.rl("small_digital_reaction_chamber/astral_glowstone_ingot"));
         ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
-                .smallDigitalReactionChamber(new ItemStack(ModItems.OBLIVION_SINGULARITY.asItem(), 1), FluidStack.EMPTY,
+                .smallDigitalReactionChamber(new ItemStack(OBLIVION_SINGULARITY.asItem(), 1), FluidStack.EMPTY,
                         ChemicalStack.EMPTY)
-                .addItemInput(AEItems.SINGULARITY, 512)
-                .addItemInput(MekUtItems.ARTIFICIAL_STAR, 8)
-                .addItemInput(AAEItems.SHATTERED_SINGULARITY, 16)
-                .addItemInput(EAESingletons.ENTRO_DUST, 16)
-                .addItemInput(Items.NETHERITE_INGOT, 32)
-                .addItemInput(MekanismItems.POLONIUM_PELLET, 32)
+                .addItemInput(OVERLOAD_SINGULARITY, 16)
+                .addItemInput(MekUtItems.ARTIFICIAL_STAR, 256)
+                .addItemInput(MekanismItems.POLONIUM_PELLET, 256)
                 .addItemInput(MekInItems.TITANIUM_INGOT, 32)
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(10000))
-                .setChemicalInput(MoreMachineChemicals.UU_MATTER.asStack(1000))
+                .setChemicalInput(MoreMachineChemicals.UU_MATTER.asStack(80000L))
                 .build(output, MekInConstants.rl("small_digital_reaction_chamber/oblivion_singularity"));
         ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
                 .smallDigitalReactionChamber(MekInItems.NEUTRONIUM_INGOT.asStack(1), FluidStack.EMPTY,

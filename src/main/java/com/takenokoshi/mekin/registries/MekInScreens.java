@@ -36,6 +36,8 @@ public class MekInScreens {
         registerMachineGui(event, MekInMachines.LIGHTNING_RECOLLECTOR, GuiLightningRecollector::new);
         registerMachineGui(event, MekInMachines.LIGHTNING_TRANSFORMER,
                 GuiLightningTransformer<BELightningTransformer>::new);
+        registerMachineGui(event, MekInMachines.METEOR_COLLECTOR, GuiMeteorCollector::new);
+        registerMachineGui(event, MekInMachines.ADVANCED_METEOR_COLLECTOR, GuiMeteorCollector::new);
         registerMachineGui(event, MekInMachines.TEPS, GuiCompactAPT<BEAbstractTEPS>::new);
 
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER,
@@ -68,8 +70,12 @@ public class MekInScreens {
                 GuiChemicalCutter<BEAbsoluteOsmiumCompressor>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                 GuiAbsolutePaintingMachine<BEAbsolutePaintingMachine>::new);
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL,
+                GuiItemStackToItemStackMachine<BEAbsolutePrecisionSawmill>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                 GuiChemicalCutter<BEAbsolutePurificationChamber>::new);
+        registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_RECYCLER,
+                GuiItemStackToItemStackMachine<BEAbsoluteRecycler>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
                 GuiAbsoluteRotaryCondensentrator<BEAbsoluteRotaryCondensentrator>::new);
         registerMachineGui(event, MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_SMALL_DIGITAL_ASSEMBLER,
@@ -130,14 +136,20 @@ public class MekInScreens {
                 GuiCompactIndustrialTurbine<BEInfiniteIndustrialTurbine>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_LAZER_COMPRESS_NUCLEO_SYNTHESIZER,
                 GuiBiChemicalToChemicalMachine<BEInfiniteLCNS>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_LIGHTNING_FABRICATOR,
+                GuiLightningFabricator<BEInfiniteLightningFabricator>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_METALLURGIC_INFUSER,
                 GuiAbsoluteMetallurgicInfuser<BEInfiniteMetallurgicInfuser>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_OSMIUM_COMPRESSOR,
                 GuiChemicalCutter<BEInfiniteOsmiumCompressor>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE,
                 GuiAbsolutePaintingMachine<BEInfinitePaintingMachine>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_PRECISION_SAWMILL,
+                GuiItemStackToItemStackMachine<BEInfinitePrecisionSawmill>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER,
                 GuiChemicalCutter<BEInfinitePurificationChamber>::new);
+        registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_RECYCLER,
+                GuiItemStackToItemStackMachine<BEInfiniteRecycler>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR,
                 GuiAbsoluteRotaryCondensentrator<BEInfiniteRotaryCondensentrator>::new);
         registerMachineGui(event, MekInInfiniteMachines.INFINITE_MULTIVERSAL_SMALL_DIGITAL_ASSEMBLER,

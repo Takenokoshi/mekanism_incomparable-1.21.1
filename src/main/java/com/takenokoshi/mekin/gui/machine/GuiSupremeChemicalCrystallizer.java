@@ -5,7 +5,7 @@ import java.lang.ref.WeakReference;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalCrystallizer;
+import com.takenokoshi.mekin.blockentity.interfaces.IChemicalCrystallizer;
 
 import mekanism.api.chemical.ChemicalStack;
 import mekanism.api.recipes.ChemicalCrystallizerRecipe;
@@ -24,11 +24,12 @@ import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
 import mekanism.client.recipe_viewer.type.RecipeViewerRecipeType;
 import mekanism.common.inventory.container.tile.MekanismTileContainer;
 import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.tile.prefab.TileEntityRecipeMachine;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.player.Inventory;
 
-public class GuiSupremeChemicalCrystallizer<BE extends BEAbstractChemicalCrystallizer>
+public class GuiSupremeChemicalCrystallizer<BE extends TileEntityRecipeMachine<?> & IChemicalCrystallizer>
         extends GuiConfigurableTile<BE, MekanismTileContainer<BE>> {
 
     private final IOreInfo oreInfo = new OreInfo();
@@ -46,7 +47,7 @@ public class GuiSupremeChemicalCrystallizer<BE extends BEAbstractChemicalCrystal
         addRenderableWidget(new GuiVerticalPowerBar(this, tile.getEnergyContainer(), 157, 23))
                 .warning(WarningType.NOT_ENOUGH_ENERGY, tile.getWarningCheck(RecipeError.NOT_ENOUGH_ENERGY));
         addRenderableWidget(new GuiEnergyTab(this, tile.getEnergyContainer(), tile::getEnergyUsed));
-        inputGauge = addRenderableWidget(new GuiChemicalGauge(() -> tile.inputTank, () -> tile.getChemicalTanks(null),
+        inputGauge = addRenderableWidget(new GuiChemicalGauge(tile::getInputTank, () -> tile.getChemicalTanks(null),
                 GaugeType.STANDARD, this, 7, 4))
                 .warning(WarningType.NO_MATCHING_RECIPE, tile.getWarningCheck(RecipeError.NOT_ENOUGH_INPUT));
         addRenderableWidget(new GuiProgress(tile::getScaledProgress, ProgressType.LARGE_RIGHT, this, 53, 61))
@@ -69,7 +70,7 @@ public class GuiSupremeChemicalCrystallizer<BE extends BEAbstractChemicalCrystal
         @NotNull
         @Override
         public ChemicalStack getInputChemical() {
-            return tile.inputTank.getStack();
+            return tile.getInputTank().getStack();
         }
 
         @Nullable
@@ -92,7 +93,7 @@ public class GuiSupremeChemicalCrystallizer<BE extends BEAbstractChemicalCrystal
         }
 
         private ChemicalCrystallizerRecipe getRecipeAndCache() {
-            ChemicalCrystallizerRecipe recipe = tile.getRecipe(0);
+            ChemicalCrystallizerRecipe recipe = (ChemicalCrystallizerRecipe) tile.getRecipe(0);
             if (recipe == null) {
                 cachedRecipe = null;
             } else {

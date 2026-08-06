@@ -28,6 +28,7 @@ public class MekInRecipeProvider extends RecipeProvider {
         EnrichingRecipes.buildRecipes(output);
         MaterialProcessingRecipes.buildRecipes(output, RecipeProvider::has);
         MekanismAlloyRecipes.buildRecipes(output);
+        MeteorCollectorRecipes.buildRecipes(output);
         PRCRecipes.buildRecipes(output);
         ProcessorRecipes.buildRecipes(output);
         SDARecipes.buildRecipes(output);

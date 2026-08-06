@@ -15,6 +15,9 @@ public class MekInChemicals {
     public static final DeferredChemical<?> NULL = CHEMICALS
             .register("null", MissingTextureAtlasSprite.getLocation(), 0xA464B3);
 
+    public static final DeferredChemical<?> COSMOS_ETHER = CHEMICALS
+            .register("cosmos_ether", 0x050816);
+
     public static final DeferredChemical<?> THUNDERCLOUD = CHEMICALS
             .registerInfuse("thundercloud", 0x40444C);
 

@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80000,
+    "chemical": "mekanism_utilities:astral_ether"
+  },
+  "fluid_input": {
+    "amount": 50000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 64,
+      "item": "mekanism_utilities:comet_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:ultimate_control_matrix"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:augment_control_matrix"
+    },
+    {
+      "count": 64,
+      "item": "mekanism_utilities:artificial_star"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:nexus_storage_component"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:comet_control_matrix"
+  }
+}

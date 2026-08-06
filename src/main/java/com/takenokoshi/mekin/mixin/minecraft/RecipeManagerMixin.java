@@ -168,6 +168,8 @@ public class RecipeManagerMixin {
         result.remove(Mekanism.rl("robit"));
         result.remove(Mekmm.rl("advanced_electrolysis_core"));
 
+        result.remove(MekanismExtras.rl("upgrade/stack"));
+
         result.remove(ResourceLocation.fromNamespaceAndPath(MekanismWaterGeneratorRebuild.MODID, "lava_generator"));
         result.remove(
                 ResourceLocation.fromNamespaceAndPath(MekanismWaterGeneratorRebuild.MODID, "heavywater_generator"));

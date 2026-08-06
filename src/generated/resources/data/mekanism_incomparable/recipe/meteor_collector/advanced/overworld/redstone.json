@@ -1,0 +1,32 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "minecraft:redstone"
+  },
+  "dimension": "minecraft:overworld",
+  "input": {
+    "count": 1,
+    "item": "extendedae_plus:oblivion_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 4096,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 16384,
+          "id": "mekanism_utilities:raw_redstone"
+        },
+        {
+          "count": 64,
+          "id": "minecraft:raw_iron"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": true
+}

@@ -1,0 +1,95 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "ae2:sky_dust"
+  },
+  "dimension": "minecraft:the_nether",
+  "input": {
+    "count": 16,
+    "item": "ae2lt:overload_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 512,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 512,
+          "id": "minecraft:glowstone_dust"
+        },
+        {
+          "count": 128,
+          "id": "mekanism_utilities:raw_quartz"
+        },
+        {
+          "count": 128,
+          "id": "mekanism_utilities:raw_fluorite"
+        }
+      ],
+      "weight": 5
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 128,
+          "id": "minecraft:raw_gold"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_osmium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_tin"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 128,
+          "id": "minecraft:raw_gold"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_uranium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_lead"
+        }
+      ],
+      "weight": 2
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 192,
+          "id": "minecraft:raw_gold"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_netherite"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": false
+}

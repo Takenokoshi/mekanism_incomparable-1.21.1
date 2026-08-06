@@ -1,0 +1,29 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 80000,
+    "chemical": "mekmm:uu_matter"
+  },
+  "fluid_input": {
+    "amount": 50000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 8,
+      "item": "mekanism_incomparable:astral_control_circuit"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:astral_alloy"
+    },
+    {
+      "count": 1,
+      "item": "mekanism_incomparable:meteor_collector"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:advanced_meteor_collector"
+  }
+}

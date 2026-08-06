@@ -8,7 +8,7 @@ import org.jetbrains.annotations.Nullable;
 
 import com.jerry.mekextras.api.ExtraUpgrade;
 import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedOutputInventorySlot;
-import com.takenokoshi.mekut.blockentity.interfaces.IHasMachineEnergyContainer;
+import com.takenokoshi.mekin.blockentity.interfaces.IChemicalCrystallizer;
 import com.takenokoshi.mekut.inventory.slot.ChemicalFillConvertOrSupplyingSlot;
 import com.takenokoshi.mekut.recipe.input.AdvancedChemicalInputHandler;
 import com.takenokoshi.mekut.recipe.output.ItemOutputHandler;
@@ -60,7 +60,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 public abstract class BEAbstractChemicalCrystallizer extends TileEntityProgressMachine<ChemicalCrystallizerRecipe>
         implements ISingleRecipeLookupHandler.ChemicalRecipeLookupHandler<ChemicalCrystallizerRecipe>,
-        IHasMachineEnergyContainer {
+        IChemicalCrystallizer {
 
     private static final List<RecipeError> TRACKED_ERROR_TYPES = List.of(
             RecipeError.NOT_ENOUGH_ENERGY,
@@ -244,5 +244,9 @@ public abstract class BEAbstractChemicalCrystallizer extends TileEntityProgressM
     public void addContainerTrackers(MekanismContainer container) {
         super.addContainerTrackers(container);
         container.track(SyncableLong.create(this::getEnergyUsed, v -> clientEnergyUsed = v));
+    }
+
+    public IChemicalTank getInputTank() {
+        return inputTank;
     }
 }

@@ -135,5 +135,10 @@ public class SPSRecipes {
                         MekanismChemicals.STEAM, 2000),
                         MekInChemicals.THUNDERCLOUD.asStack(1))
                 .build(output, MekInConstants.rl("sps/thundercloud"));
+        MekUtChemicalToChemicalRecipeBuilder
+                .sps(IngredientCreatorAccess.chemicalStack().fromHolder(
+                        MekUtChemicals.ASTRAL_ETHER, 2000),
+                        MekInChemicals.COSMOS_ETHER.asStack(1))
+                .build(output, MekInConstants.rl("sps/cosmos_ether"));
     }
 }

@@ -12,6 +12,8 @@ public class MekInItems {
     public static final ItemDeferredRegister ITEMS = new ItemDeferredRegister(MekInConstants.MODID);
 
     // alloy
+    public static final ItemRegistryObject<Item> ASTRAL_ALLOY = ITEMS
+            .register("astral_alloy", EnumColor.DARK_BLUE);
     public static final ItemRegistryObject<Item> EXOREFRACTIVE_PRISMATIC_ALLOY = ITEMS
             .register("exorefractive_prismatic_alloy", EnumColor.DARK_BLUE);
     public static final ItemRegistryObject<Item> TRAJECTORY_ALLOY = ITEMS
@@ -26,6 +28,8 @@ public class MekInItems {
             .register("control_circuit_component");
     public static final ItemRegistryObject<Item> CONTROL_CIRCUIT_CORE = ITEMS
             .register("control_circuit_core");
+    public static final ItemRegistryObject<Item> ASTRAL_CONTROL_CIRCUIT = ITEMS
+            .register("astral_control_circuit", EnumColor.DARK_BLUE);
     public static final ItemRegistryObject<Item> ANALYSIS_CONTROL_CIRCUIT = ITEMS
             .register("analysis_control_circuit", EnumColor.DARK_BLUE);
     public static final ItemRegistryObject<Item> MEMORY_CONTROL_CIRCUIT = ITEMS
@@ -62,6 +66,10 @@ public class MekInItems {
             .register("printed_random_processor");
     public static final ItemRegistryObject<Item> PRINTED_CLOCK_PROCESSOR = ITEMS
             .register("printed_clock_processor");
+
+    // storage component
+    public static final ItemRegistryObject<Item> NEXUS_STORAGE_COMPONENT = ITEMS
+            .register("nexus_storage_component");
 
     // ingot
     public static final ItemRegistryObject<Item> SILVER_INGOT = ITEMS

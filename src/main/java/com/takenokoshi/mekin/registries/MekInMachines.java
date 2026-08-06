@@ -22,6 +22,7 @@ import com.takenokoshi.mekin.blockentity.machine.BELightningFabricator;
 import com.takenokoshi.mekin.blockentity.machine.BELightningMaterializer;
 import com.takenokoshi.mekin.blockentity.machine.BELightningRecollector;
 import com.takenokoshi.mekin.blockentity.machine.BELightningTransformer;
+import com.takenokoshi.mekin.blockentity.machine.BEMeteorCollector;
 import com.takenokoshi.mekin.blockentity.machine.BlockEntityAET;
 import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.core.MekInMathUtils;
@@ -183,6 +184,35 @@ public class MekInMachines {
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
                             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY, Upgrade.MUFFLING)
                             .withSound(MekanismSounds.SPS));
+
+    public static final SimpleMachineRegistryObject<BEMeteorCollector> METEOR_COLLECTOR = MACHINES
+            .registerSimple("meteor_collector",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEMeteorCollector::addContainersToItem,
+                    BEMeteorCollector::basic,
+                    BEMeteorCollector.class,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.usage.digitalMiner, 100),
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.digitalMiner, 100))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.MUFFLING)
+                            .withSound(MekanismSounds.LASER));
+
+    public static final SimpleMachineRegistryObject<BEMeteorCollector> ADVANCED_METEOR_COLLECTOR = MACHINES
+            .registerSimple("advanced_meteor_collector",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEMeteorCollector::addContainersToItem,
+                    BEMeteorCollector::advanced,
+                    BEMeteorCollector.class,
+                    METEOR_COLLECTOR.descriptionEntry,
+                    builder -> builder
+                            .withEnergyConfig(
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.usage.digitalMiner, 100),
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.digitalMiner, 100))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.MUFFLING)
+                            .withSound(MekanismSounds.LASER));
 
     public static final GuiSizedMachineRegistryObject<BEAbstractTEPS> TEPS = MACHINES
             .registerGuiSized("tachyonic_elementary_particle_synthesizer",

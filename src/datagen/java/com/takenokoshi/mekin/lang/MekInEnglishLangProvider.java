@@ -74,8 +74,12 @@ public class MekInEnglishLangProvider extends LanguageProvider {
                 "Mekanism: Incomparable  Supreme Quantum Machines");
         add("creative_tab.mekanism_incomparable.infinite_multiversal_machines",
                 "Mekanism: Incomparable  Infinite Multiversal Machines");
+        add("dimension.minecraft.overworld", "Overworld");
+        add("dimension.minecraft.the_nether", "Nether");
+        add("dimension.minecraft.the_end", "The End");
         List.of(new DeferredChemical[] {
                 MekInChemicals.NULL,
+                MekInChemicals.COSMOS_ETHER,
                 MekInChemicals.THUNDERCLOUD,
                 MekInChemicals.EXTREME_HIGH_VOLTAGE_LIGHTNING,
                 MekInChemicals.HIGH_VOLTAGE_LIGHTNING,

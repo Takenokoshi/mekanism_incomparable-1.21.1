@@ -46,6 +46,8 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 models().cubeAll("block/control_matrix/advanced", MekInConstants.rl("block/control_matrix/advanced")));
         simpleBlockWithItem(MekInBlocks.BASIC_CONTROL_MATRIX.get(),
                 models().cubeAll("block/control_matrix/basic", MekInConstants.rl("block/control_matrix/basic")));
+        simpleBlockWithItem(MekInBlocks.COMET_CONTROL_MATRIX.get(),
+                models().cubeAll("block/control_matrix/comet", MekInConstants.rl("block/control_matrix/comet")));
         simpleBlockWithItem(MekInBlocks.COSMIC_CONTROL_MATRIX.get(),
                 models().cubeAll("block/control_matrix/cosmic", MekInConstants.rl("block/control_matrix/cosmic")));
         simpleBlockWithItem(MekInBlocks.DENSE_CONTROL_MATRIX.get(),
@@ -141,6 +143,18 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 MekInConstants.rl("block/machine_front/lightning_transformer"),
                 MekInConstants.rl("block/machine_front_active/lightning_transformer"));
+        simpleMachine(
+                MekInMachines.METEOR_COLLECTOR, true,
+                "block/machine/meteor_collector",
+                MekUtConstants.rl("block/tier_decoration/comet"),
+                MekInConstants.rl("block/machine_front/meteor_collector"),
+                MekInConstants.rl("block/machine_front_active/meteor_collector"));
+        simpleMachine(
+                MekInMachines.ADVANCED_METEOR_COLLECTOR, true,
+                "block/machine/advanced_meteor_collector",
+                MekInConstants.rl("block/tier_decoration/astral"),
+                MekInConstants.rl("block/machine_front/meteor_collector"),
+                MekInConstants.rl("block/machine_front_active/meteor_collector"));
 
         simpleMachine(
                 MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_BOILER, false,
@@ -232,6 +246,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
                 Mekanism.rl("block/painting_machine/front"),
                 Mekanism.rl("block/painting_machine/front_active"));
+        simpleMachine(
+                MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL, true,
+                "block/machine/absolute_overclocked/precision_sawmill",
+                MekInConstants.rl("block/tier_decoration/absolute_overclocked"),
+                Mekanism.rl("block/precision_sawmill/front"),
+                Mekanism.rl("block/precision_sawmill/front_active"));
         simpleMachine(
                 MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER, true,
                 "block/machine/absolute_overclocked/purification_chamber",
@@ -443,6 +463,12 @@ public class MekInBlockModelProvider extends BlockStateProvider {
                 MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
                 Mekanism.rl("block/painting_machine/front"),
                 Mekanism.rl("block/painting_machine/front_active"));
+        simpleMachine(
+                MekInInfiniteMachines.INFINITE_MULTIVERSAL_PRECISION_SAWMILL, true,
+                "block/machine/infinite_multiversal/precision_sawmill",
+                MekInConstants.rl("block/tier_decoration/infinite_multiversal"),
+                Mekanism.rl("block/precision_sawmill/front"),
+                Mekanism.rl("block/precision_sawmill/front_active"));
         simpleMachine(
                 MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER, true,
                 "block/machine/infinite_multiversal/purification_chamber",

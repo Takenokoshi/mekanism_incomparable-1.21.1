@@ -1,0 +1,11 @@
+{
+  "type": "mekanism_utilities:sps",
+  "input": {
+    "amount": 2000,
+    "chemical": "mekanism_utilities:astral_ether"
+  },
+  "output": {
+    "amount": 1,
+    "id": "mekanism_incomparable:cosmos_ether"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "mekanism:dust_netherite"
+  },
+  "dimension": "minecraft:the_nether",
+  "input": {
+    "count": 1,
+    "item": "extendedae_plus:oblivion_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 4096,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 16384,
+          "id": "mekanism_utilities:raw_netherite"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_lead"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_uranium"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": true
+}

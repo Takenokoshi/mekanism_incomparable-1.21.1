@@ -7,11 +7,13 @@ import com.fxd927.mekanismelements.common.registries.MSFluids;
 import com.fxd927.mekanismelements.common.registries.MSGases;
 import com.github.misosouptgit.mwgr.MekanismWaterGeneratorRebuild;
 import com.jerry.genextras.common.registries.GenExtraBlocks;
+import com.jerry.genextras.common.registries.GenExtraChemicals;
 import com.jerry.mekextras.common.registries.ExtraBlocks;
 import com.jerry.mekextras.common.registries.ExtraChemicals;
 import com.jerry.mekextras.common.registries.ExtraItems;
 import com.jerry.meklg.common.registries.LargeGeneratorBlocks;
 import com.jerry.meklm.common.registries.LargeMachineBlocks;
+import com.jerry.mekmm.common.registries.MoreMachineBlocks;
 import com.jerry.mekmm.common.registries.MoreMachineChemicals;
 import com.jerry.mekmm.common.registries.MoreMachineItems;
 import com.moakiee.ae2lt.registry.ModBlocks;
@@ -36,6 +38,7 @@ import fr.iglee42.evolvedmekanism.registries.EMBlocks;
 import fr.iglee42.evolvedmekanism.registries.EMItems;
 import gripe._90.megacells.definition.MEGAItems;
 import io.github.masyumero.emextras.common.registry.EMExtraItems;
+import jp.main.taikun.insaneae.crafting.InsaneCraftingUnitType;
 import mekanism.common.registries.MekanismBlocks;
 import mekanism.common.registries.MekanismChemicals;
 import mekanism.common.registries.MekanismFluids;
@@ -52,6 +55,11 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.ItemLike;
 import net.neoforged.neoforge.common.Tags;
 import net.pedroksl.advanced_ae.common.definitions.AAEFluids;
+import net.pedroksl.advanced_ae.common.definitions.AAEItems;
+
+import static com.moakiee.ae2lt.registry.ModItems.LIGHTNING_COLLAPSE_MATRIX;
+import static com.moakiee.ae2lt.registry.ModItems.LIGHTNING_CELL_COMPONENT_V;
+import static jp.main.taikun.insaneae.registries.ModItems.CELL_COMPONENTS;
 
 public class SDARecipes {
 
@@ -80,6 +88,28 @@ public class SDARecipes {
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(10000))
                 .setEnergyRequired(8000000)
                 .build(output, MekInConstants.rl("small_digital_assembler/infinity_core"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(MekInItems.NEXUS_STORAGE_COMPONENT.asStack(1))
+                .addItemInput(MEGAItems.BULK_CELL_COMPONENT.stack(4))
+                .addItemInput(LIGHTNING_CELL_COMPONENT_V, 4)
+                .addItemInput(AAEItems.QUANTUM_STORAGE_COMPONENT, 4)
+                .addItemInput(CELL_COMPONENTS.get(InsaneCraftingUnitType.STORAGE_4G).get(), 4)
+                .addItemInput(AEItems.SPATIAL_128_CELL_COMPONENT, 4)
+                .addItemInput(Tags.Items.DUSTS_GLOWSTONE, 256)
+                .addItemInput(MekInItems.PHOTON_PROCESSOR, 16)
+                .setFluidInput(MekanismFluids.HEAVY_WATER.asStack(5000))
+                .setChemicalInput(MekUtChemicals.FLUIX.asStack(64000L))
+                .build(output, MekInConstants.rl("small_digital_assembler/storage_componet/nexus"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(ExtraItems.STACK.asStack(1))
+                .addItemInput(LIGHTNING_COLLAPSE_MATRIX, 4)
+                .addItemInput(ExtraItems.SHINING_ALLOY, 8)
+                .addItemInput(EMItems.SINGULAR_ALLOY, 8)
+                .addItemInput(AEBlocks.QUARTZ_VIBRANT_GLASS, 16)
+                .addItemInput(MekanismItems.HDPE_SHEET, 64)
+                .setFluidInput(Tags.Fluids.LAVA, 1000)
+                .setChemicalInput(GenExtraChemicals.POLONIUM208.asStack(10000L))
+                .build(output, MekInConstants.rl("small_digital_assembler/stack_upgrade"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(new ItemStack(MekInBlocks.TITANIUM_CASING, 1))
                 .addItemInput(MekInItems.TITANIUM_INGOT, 16)
@@ -282,6 +312,24 @@ public class SDARecipes {
                 .setFluidInput(Tags.Fluids.LAVA, 2000)
                 .setChemicalInput(MekanismChemicals.LITHIUM.asStack(4000))
                 .build(output, MekInConstants.rl("small_digital_assembler/machine/normal/chamical_refiner"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(new ItemStack(MekInMachines.METEOR_COLLECTOR, 1))
+                .addItemInput(MekUtItems.COMET_CONTROL_CIRCUIT, 8)
+                .addItemInput(MekUtItems.STARDUST_ALLOY, 16)
+                .addItemInput(MekanismBlocks.LASER, 1)
+                .addItemInput(MekanismBlocks.LASER_TRACTOR_BEAM, 1)
+                .addItemInput(MekanismBlocks.STEEL_CASING, 64)
+                .setFluidInput(Tags.Fluids.LAVA, 2000)
+                .setChemicalInput(MekanismChemicals.LITHIUM.asStack(4000))
+                .build(output, MekInConstants.rl("small_digital_assembler/machine/normal/meteor_collector"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(new ItemStack(MekInMachines.ADVANCED_METEOR_COLLECTOR, 1))
+                .addItemInput(MekInItems.ASTRAL_CONTROL_CIRCUIT, 8)
+                .addItemInput(MekInItems.ASTRAL_ALLOY, 16)
+                .addItemInput(MekInMachines.METEOR_COLLECTOR, 1)
+                .setFluidInput(Tags.Fluids.LAVA, 50000)
+                .setChemicalInput(MoreMachineChemicals.UU_MATTER.asStack(80000L))
+                .build(output, MekInConstants.rl("small_digital_assembler/machine/normal/advanced_meteor_collector"));
         ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(new ItemStack(MekInMachines.COMPACT_ANTIMATTER_PROTOMOLECULAR_TRANSMUTATOR, 1))
                 .addItemInput(EMItems.QUANTUM_CONTROL_CIRCUIT, 4)
@@ -646,9 +694,17 @@ public class SDARecipes {
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                         "painting_machine"),
                 new MachineData(
+                        MekanismBlocks.PRECISION_SAWMILL,
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL,
+                        "precision_sawmill"),
+                new MachineData(
                         MekanismBlocks.PURIFICATION_CHAMBER,
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                         "purification_chamber"),
+                new MachineData(
+                        MoreMachineBlocks.RECYCLER,
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_RECYCLER,
+                        "recycler"),
                 new MachineData(
                         MekanismBlocks.ROTARY_CONDENSENTRATOR,
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_ROTARY_CONDENSENTRATOR,
@@ -791,6 +847,10 @@ public class SDARecipes {
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE,
                         "painting_machine"),
+                new MachineData(
+                        MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PRECISION_SAWMILL,
+                        "precision_sawmill"),
                 new MachineData(
                         MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER,

@@ -5,13 +5,16 @@ import java.util.Optional;
 
 import com.mojang.datafixers.util.Function3;
 import com.mojang.datafixers.util.Function4;
+import com.mojang.datafixers.util.Function5;
 import com.mojang.datafixers.util.Function6;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.takenokoshi.mekin.recipe.output.MeteorCollectorRecipeOutput;
 import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
+import com.takenokoshi.mekin.recipe.recipes.prefab.MeteorCollectorRecipe;
 import com.takenokoshi.mekut.recipe.serializer.MekUtCodecConstants;
 
 import mekanism.api.SerializationConstants;
@@ -21,9 +24,12 @@ import mekanism.api.recipes.ingredients.FluidStackIngredient;
 import mekanism.api.recipes.ingredients.ItemStackIngredient;
 import mekanism.api.recipes.ingredients.creator.IngredientCreatorAccess;
 import mekanism.common.recipe.serializer.MekanismRecipeSerializer;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.codec.ByteBufCodecs;
 import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.Level;
 
 public class MekInRecipeSerializerBuilder {
 
@@ -130,6 +136,34 @@ public class MekInRecipeSerializerBuilder {
                         LightningFabricationRecipe::getEnergyRequired,
                         ByteBufCodecs.VAR_INT,
                         LightningFabricationRecipe::getDuration,
+                        factory));
+    }
+
+    public static <RECIPE extends MeteorCollectorRecipe> MekanismRecipeSerializer<RECIPE> MeteorCollector(
+            Function5<ItemStackIngredient, ItemStackIngredient, ResourceKey<Level>, List<MeteorCollectorRecipeOutput>, Boolean, RECIPE> factory) {
+        return new MekanismRecipeSerializer<>(RecordCodecBuilder
+                .mapCodec(instance -> instance.group(
+                        IngredientCreatorAccess.item().codec().fieldOf(SerializationConstants.INPUT)
+                                .forGetter(MeteorCollectorRecipe::getInput),
+                        IngredientCreatorAccess.item().codec().fieldOf("catalyst")
+                                .forGetter(MeteorCollectorRecipe::getCatalyst),
+                        ResourceKey.codec(Registries.DIMENSION).fieldOf("dimension")
+                                .forGetter(MeteorCollectorRecipe::getDimension),
+                        MeteorCollectorRecipeOutput.MAP_CODEC.codec().listOf().fieldOf("outputs")
+                                .forGetter(MeteorCollectorRecipe::getOutputs),
+                        Codec.BOOL.fieldOf("require_advanced").forGetter(MeteorCollectorRecipe::getRequireAdvanced))
+                        .apply(instance, factory)),
+                StreamCodec.composite(
+                        IngredientCreatorAccess.item().streamCodec(),
+                        MeteorCollectorRecipe::getInput,
+                        IngredientCreatorAccess.item().streamCodec(),
+                        MeteorCollectorRecipe::getCatalyst,
+                        ResourceKey.streamCodec(Registries.DIMENSION),
+                        MeteorCollectorRecipe::getDimension,
+                        MeteorCollectorRecipeOutput.STREAM_CODEC.apply(ByteBufCodecs.list()),
+                        MeteorCollectorRecipe::getOutputs,
+                        ByteBufCodecs.BOOL,
+                        MeteorCollectorRecipe::getRequireAdvanced,
                         factory));
     }
 }

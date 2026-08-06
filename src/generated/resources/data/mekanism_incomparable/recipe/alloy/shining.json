@@ -1,5 +1,5 @@
 {
-  "type": "mekanism:metallurgic_infusing",
+  "type": "evolvedmekanism:apt",
   "chemical_input": {
     "amount": 640,
     "chemical": "mekanism_extras:shining"

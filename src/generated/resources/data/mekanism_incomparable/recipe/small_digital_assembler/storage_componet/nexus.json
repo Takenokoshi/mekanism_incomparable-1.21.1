@@ -1,0 +1,45 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 64000,
+    "chemical": "mekanism_utilities:fluix"
+  },
+  "fluid_input": {
+    "amount": 5000,
+    "fluid": "mekanism:heavy_water"
+  },
+  "list_item_input": [
+    {
+      "count": 4,
+      "item": "megacells:bulk_cell_component"
+    },
+    {
+      "count": 4,
+      "item": "ae2lt:lightning_cell_component_v"
+    },
+    {
+      "count": 4,
+      "item": "advanced_ae:quantum_storage_component"
+    },
+    {
+      "count": 4,
+      "item": "insaneae:cell_component_4g"
+    },
+    {
+      "count": 4,
+      "item": "ae2:spatial_cell_component_128"
+    },
+    {
+      "count": 256,
+      "tag": "c:dusts/glowstone"
+    },
+    {
+      "count": 16,
+      "item": "mekanism_incomparable:photon_processor"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:nexus_storage_component"
+  }
+}

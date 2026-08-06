@@ -10,6 +10,7 @@ import com.takenokoshi.mekin.blockentity.abs.BEAbstractChemicalOxidizer;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractElectrolyticSeparator;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackChemicalToItemStackMachine;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackToItemStackMachine;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractPrecisionSawmill;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractRotaryCondensentrator;
 import com.takenokoshi.mekin.blockentity.absolutemachine.*;
 import com.takenokoshi.mekin.core.MekInConstants;
@@ -252,6 +253,20 @@ public class MekInAbsoluteMachines {
                             .withEnergyConfig(MekanismConfig.usage.paintingMachine,
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.paintingMachine, 20))
                             .withSound(MekanismSounds.PAINTING_MACHINE)
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
+
+    public static final SimpleMachineRegistryObject<BEAbsolutePrecisionSawmill> ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL = MACHINES
+            .registerSimple("absolute_overclocked_precision_sawmill",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEAbstractPrecisionSawmill::addContainersToItem,
+                    BEAbsolutePrecisionSawmill::new,
+                    BEAbsolutePrecisionSawmill.class,
+                    MekanismLang.DESCRIPTION_PRECISION_SAWMILL,
+                    builder -> builder
+                            .withSound(MekanismSounds.PRECISION_SAWMILL)
+                            .withEnergyConfig(MekanismConfig.usage.precisionSawmill,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.precisionSawmill, 20))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
                             .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
 
     public static final SimpleMachineRegistryObject<BEAbsolutePurificationChamber> ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER = MACHINES

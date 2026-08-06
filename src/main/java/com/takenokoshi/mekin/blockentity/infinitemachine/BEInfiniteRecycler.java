@@ -26,7 +26,7 @@ public class BEInfiniteRecycler extends BEAbstractRecycler {
 
     @Override
     protected int initItemSlotCapacity() {
-        return 65_536;
+        return 1_048_576;
     }
 
 }

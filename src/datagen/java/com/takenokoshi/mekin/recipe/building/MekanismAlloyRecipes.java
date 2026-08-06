@@ -3,6 +3,8 @@ package com.takenokoshi.mekin.recipe.building;
 import com.jerry.mekextras.common.registries.ExtraChemicals;
 import com.jerry.mekextras.common.registries.ExtraItems;
 import com.takenokoshi.mekin.core.MekInConstants;
+import com.takenokoshi.mekin.recipe.builder.APTRecipeBuilder;
+import com.takenokoshi.mekin.recipe.builder.ChemixerRecipeBuilder;
 import com.takenokoshi.mekin.registries.MekInChemicals;
 import com.takenokoshi.mekin.registries.MekInFluids;
 import com.takenokoshi.mekin.registries.MekInItems;
@@ -26,6 +28,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.fluids.FluidStack;
+
+import static com.moakiee.ae2lt.registry.ModItems.FIRMAMENT_ALLOY_INGOT;
 
 public class MekanismAlloyRecipes {
     public static void buildRecipes(RecipeOutput output) {
@@ -124,19 +128,17 @@ public class MekanismAlloyRecipes {
                         ExtraItems.THERMONUCLEAR_ALLOY.asStack(1),
                         false)
                 .build(output, MekInConstants.rl("alloy/thermonuclear"));
-        ItemStackChemicalToItemStackRecipeBuilder
-                .metallurgicInfusing(
-                        IngredientCreatorAccess.item().from(ExtraItems.THERMONUCLEAR_ALLOY.asStack(4)),
-                        IngredientCreatorAccess.chemicalStack().from(ExtraChemicals.SHINING.asStack(640)),
-                        ExtraItems.SHINING_ALLOY.asStack(1),
-                        false)
+        new APTRecipeBuilder(
+                IngredientCreatorAccess.item().from(ExtraItems.THERMONUCLEAR_ALLOY.asStack(4)),
+                IngredientCreatorAccess.chemicalStack().from(ExtraChemicals.SHINING.asStack(640)),
+                ExtraItems.SHINING_ALLOY.asStack(1),
+                false)
                 .build(output, MekInConstants.rl("alloy/shining"));
-        ItemStackChemicalToItemStackRecipeBuilder
-                .metallurgicInfusing(
-                        IngredientCreatorAccess.item().from(ExtraItems.SHINING_ALLOY.asStack(4)),
-                        IngredientCreatorAccess.chemicalStack().from(ExtraChemicals.SPECTRUM.asStack(800)),
-                        ExtraItems.SPECTRUM_ALLOY.asStack(1),
-                        false)
+        new APTRecipeBuilder(
+                IngredientCreatorAccess.item().from(ExtraItems.SHINING_ALLOY.asStack(4)),
+                IngredientCreatorAccess.chemicalStack().from(ExtraChemicals.SPECTRUM.asStack(800)),
+                ExtraItems.SPECTRUM_ALLOY.asStack(1),
+                false)
                 .build(output, MekInConstants.rl("alloy/spectrum"));
         // evolved alloy
         ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
@@ -155,21 +157,25 @@ public class MekanismAlloyRecipes {
                         EMItems.SUBATOMIC_ALLOY.asStack(1),
                         1000, false)
                 .build(output, MekInConstants.rl("alloy/subatomic"));
-        ItemStackChemicalToItemStackRecipeBuilder
-                .metallurgicInfusing(
-                        IngredientCreatorAccess.item().from(EMTags.Items.ALLOYS_SUBATOMIC, 4),
-                        IngredientCreatorAccess.chemicalStack().from(EMTags.Gases.BETTER_GOLD, 160),
-                        EMItems.SINGULAR_ALLOY.asStack(1),
-                        false)
+        new APTRecipeBuilder(
+                IngredientCreatorAccess.item().from(EMTags.Items.ALLOYS_SUBATOMIC, 4),
+                IngredientCreatorAccess.chemicalStack().from(EMTags.Gases.BETTER_GOLD, 160),
+                EMItems.SINGULAR_ALLOY.asStack(1),
+                false)
                 .build(output, MekInConstants.rl("alloy/singular"));
-        ItemStackChemicalToItemStackRecipeBuilder
-                .metallurgicInfusing(
-                        IngredientCreatorAccess.item().from(EMTags.Items.ALLOYS_SINGULAR, 4),
-                        IngredientCreatorAccess.chemicalStack().from(EMTags.Gases.PLASLITHERITE, 160),
-                        EMItems.EXOVERSAL_ALLOY.asStack(1),
-                        false)
+        new APTRecipeBuilder(
+                IngredientCreatorAccess.item().from(EMTags.Items.ALLOYS_SINGULAR, 4),
+                IngredientCreatorAccess.chemicalStack().from(EMTags.Gases.PLASLITHERITE, 160),
+                EMItems.EXOVERSAL_ALLOY.asStack(1),
+                false)
                 .build(output, MekInConstants.rl("alloy/exoversal"));
         // mekin alloy
+        new ChemixerRecipeBuilder(
+                IngredientCreatorAccess.item().from(FIRMAMENT_ALLOY_INGOT, 4),
+                IngredientCreatorAccess.item().from(MekUtItems.STARDUST_ALLOY, 16),
+                IngredientCreatorAccess.chemicalStack().fromHolder(MekInChemicals.COSMOS_ETHER, 4000),
+                MekInItems.ASTRAL_ALLOY.asStack(1))
+                .build(output, MekInConstants.rl("alloy/atral"));
         ItemStackListFluidChemicalToItemFluidChemicalRecipeBuilder
                 .smallDigitalReactionChamber(MekInItems.EXOREFRACTIVE_PRISMATIC_ALLOY.asStack(1), FluidStack.EMPTY,
                         ChemicalStack.EMPTY)

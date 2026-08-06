@@ -17,6 +17,7 @@ import com.takenokoshi.mekin.blockentity.abs.BEAbstractElectrolyticSeparator;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackChemicalToItemStackMachine;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractItemStackToItemStackMachine;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractLightningFabricator;
+import com.takenokoshi.mekin.blockentity.abs.BEAbstractPrecisionSawmill;
 import com.takenokoshi.mekin.blockentity.abs.BEAbstractRotaryCondensentrator;
 import com.takenokoshi.mekin.blockentity.infinitemachine.*;
 import com.takenokoshi.mekin.core.MekInConstants;
@@ -285,7 +286,8 @@ public class MekInInfiniteMachines {
                                     MekInMathUtils.multiplyClamped(MekanismConfig.storage.energizedSmelter, 2400))
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.CHEMICAL, TransmissionType.ENERGY)
                             .withSound(MekanismSounds.ENERGIZED_SMELTER)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
+                                    ExtraUpgrade.STACK));
 
     public static final SimpleMachineRegistryObject<BEInfiniteEnrichmentChamber> INFINITE_MULTIVERSAL_ENRICHMENT_CHAMBER = MACHINES
             .registerSimple("infinite_multiversal_enrichment_chamber",
@@ -419,6 +421,20 @@ public class MekInInfiniteMachines {
                             .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
                                     ExtraUpgrade.STACK));
 
+    public static final SimpleMachineRegistryObject<BEInfinitePrecisionSawmill> INFINITE_MULTIVERSAL_PRECISION_SAWMILL = MACHINES
+            .registerSimple("infinite_multiversal_precision_sawmill",
+                    AttachedSideConfig.ELECTRIC_MACHINE,
+                    BEAbstractPrecisionSawmill::addContainersToItem,
+                    BEInfinitePrecisionSawmill::new,
+                    BEInfinitePrecisionSawmill.class,
+                    builder -> builder
+                            .withSound(MekanismSounds.PRECISION_SAWMILL)
+                            .withEnergyConfig(MekanismConfig.usage.precisionSawmill,
+                                    MekInMathUtils.multiplyClamped(MekanismConfig.storage.precisionSawmill, 2400))
+                            .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
+                                    ExtraUpgrade.STACK));
+
     public static final SimpleMachineRegistryObject<BEInfinitePurificationChamber> INFINITE_MULTIVERSAL_PURIFICATION_CHAMBER = MACHINES
             .registerSimple("infinite_multiversal_purification_chamber",
                     AttachedSideConfig.ADVANCED_MACHINE_INPUT_ONLY,
@@ -446,7 +462,8 @@ public class MekInInfiniteMachines {
                             .withEnergyConfig(MoreMachineConfig.usage.recycler,
                                     MekInMathUtils.multiplyClamped(MoreMachineConfig.storage.recycler, 2400))
                             .withSideConfig(TransmissionType.ITEM, TransmissionType.ENERGY)
-                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING));
+                            .withSupportedUpgrades(Upgrade.ENERGY, Upgrade.SPEED, Upgrade.MUFFLING,
+                                    ExtraUpgrade.STACK));
 
     public static final SimpleMachineRegistryObject<BEInfiniteRotaryCondensentrator> INFINITE_MULTIVERSAL_ROTARY_CONDENSENTRATOR = MACHINES
             .registerSimple("infinite_multiversal_rotary_condensentrator",

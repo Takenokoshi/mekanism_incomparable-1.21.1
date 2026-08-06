@@ -1,0 +1,37 @@
+{
+  "type": "mekanism_utilities:small_digital_assembler",
+  "chemical_input": {
+    "amount": 5000,
+    "chemical": "mekanism:antimatter"
+  },
+  "fluid_input": {
+    "amount": 80000,
+    "tag": "c:lava"
+  },
+  "list_item_input": [
+    {
+      "count": 8,
+      "item": "evolvedmekanism:dense_control_circuit"
+    },
+    {
+      "count": 8,
+      "item": "mekanism_extras:cosmic_control_circuit"
+    },
+    {
+      "count": 32,
+      "item": "mekanism_incomparable:comet_control_matrix"
+    },
+    {
+      "count": 64,
+      "item": "mekanism_incomparable:graviton_processor"
+    },
+    {
+      "count": 64,
+      "item": "mekanism_incomparable:astral_alloy"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:astral_control_circuit"
+  }
+}

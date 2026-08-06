@@ -24,6 +24,8 @@ public class MekInItemModelProvider extends ItemModelProvider {
 
     @Override
     protected void registerModels() {
+        simpleItem(MekInItems.ASTRAL_ALLOY.get()).texture("layer0",
+                MekInConstants.rl("item/alloy/astral"));
         simpleItem(MekInItems.EXOREFRACTIVE_PRISMATIC_ALLOY.get()).texture("layer0",
                 MekInConstants.rl("item/alloy/exorefractive_prismatic"));
         simpleItem(MekInItems.TRAJECTORY_ALLOY.get()).texture("layer0",
@@ -37,6 +39,8 @@ public class MekInItemModelProvider extends ItemModelProvider {
                 MekInConstants.rl("item/control_circuit/component"));
         simpleItem(MekInItems.CONTROL_CIRCUIT_CORE.get()).texture("layer0",
                 MekInConstants.rl("item/control_circuit/core"));
+        simpleItem(MekInItems.ASTRAL_CONTROL_CIRCUIT.get()).texture("layer0",
+                MekInConstants.rl("item/control_circuit/astral"));
         simpleItem(MekInItems.ANALYSIS_CONTROL_CIRCUIT.get()).texture("layer0",
                 MekInConstants.rl("item/control_circuit/analysis"));
         simpleItem(MekInItems.MEMORY_CONTROL_CIRCUIT.get()).texture("layer0",
@@ -71,6 +75,9 @@ public class MekInItemModelProvider extends ItemModelProvider {
                 MekInConstants.rl("item/printed_processor/random"));
         simpleItem(MekInItems.PRINTED_CLOCK_PROCESSOR.get()).texture("layer0",
                 MekInConstants.rl("item/printed_processor/clock"));
+
+        simpleItem(MekInItems.NEXUS_STORAGE_COMPONENT.get()).texture("layer0",
+                MekInConstants.rl("item/storage_component/nexus"));
 
         simpleItem(MekInItems.SILVER_INGOT.get()).texture("layer0",
                 MekInConstants.rl("item/ingot/silver"));

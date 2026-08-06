@@ -11,6 +11,7 @@ public class MekInRecipeConstants {
     public static final String REFINING = "refining";
     public static final String LEACHING = "leaching";
     public static final String LIGHTNING_FABRICATION = "lightning_fabrication";
+    public static final String METOR_COLLECTOR = "meteor_collector";
     public static final String TEPS = "teps";
 
     @SuppressWarnings("unchecked")

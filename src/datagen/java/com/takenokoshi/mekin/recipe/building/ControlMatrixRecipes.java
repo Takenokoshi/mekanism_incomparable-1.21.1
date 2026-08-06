@@ -8,6 +8,7 @@ import com.takenokoshi.mekin.core.MekInConstants;
 import com.takenokoshi.mekin.registries.MekInBlocks;
 import com.takenokoshi.mekin.registries.MekInItems;
 import com.takenokoshi.mekut.recipe.builder.ItemStackListFluidChemicalToItemRecipeBuilder;
+import com.takenokoshi.mekut.registries.MekUtChemicals;
 import com.takenokoshi.mekut.registries.MekUtItems;
 
 import appeng.core.definitions.AEItems;
@@ -174,5 +175,15 @@ public class ControlMatrixRecipes {
                 .setFluidInput(AAEFluids.QUANTUM_INFUSION.stack(2000))
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(8000))
                 .build(output, MekInConstants.rl("control_matrix/multiversal"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(new ItemStack(MekInBlocks.COMET_CONTROL_MATRIX.asItem(), 1))
+                .addItemInput(MekUtItems.COMET_CONTROL_CIRCUIT, 64)
+                .addItemInput(MekInBlocks.ULTIMATE_CONTROL_MATRIX, 16)
+                .addItemInput(MekInBlocks.AUGMENT_CONTROL_MATRIX, 16)
+                .addItemInput(MekUtItems.ARTIFICIAL_STAR, 64)
+                .addItemInput(MekInItems.NEXUS_STORAGE_COMPONENT, 1)
+                .setFluidInput(Tags.Fluids.LAVA, 50000)
+                .setChemicalInput(MekUtChemicals.ASTRAL_ETHER.asStack(80000L))
+                .build(output, MekInConstants.rl("control_matrix/comet"));
     }
 }

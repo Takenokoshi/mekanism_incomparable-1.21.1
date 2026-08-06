@@ -15,6 +15,7 @@ import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemS
 import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
 import com.takenokoshi.mekin.recipe.type.MekInWrappedRecipeTypes;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
+import com.takenokoshi.mekin.recipe_viewer.recipe.MeteorCollectorRVRecipe;
 import com.takenokoshi.mekin.registries.MekInInfiniteMachines;
 import com.takenokoshi.mekin.registries.MekInMachines;
 import com.takenokoshi.mekin.registries.MekInRecipeTypes;
@@ -74,6 +75,14 @@ public class MekInRecipeViewerRecipeType {
             MekInMachines.FLUX_CONDENSER,
             FluxCondenserRVRecipe.class, -3, -12, 170, 64,
             true);
+
+    public static final FakeRVRecipeType<MeteorCollectorRVRecipe> METEOR_COLLECTOR = new FakeRVRecipeType<>(
+            MekInConstants.rl(MekInRecipeConstants.METOR_COLLECTOR + "_rv"),
+            MekInMachines.METEOR_COLLECTOR,
+            MekInMachines.METEOR_COLLECTOR,
+            MeteorCollectorRVRecipe.class, -18, -16, 164, 54,
+            true,
+            MekInMachines.ADVANCED_METEOR_COLLECTOR);
 
     public static final RVMekALRecipeTypeWrapper<SingleItemChemicalRecipeInput, ItemStackChemicalToItemStackRecipe, MekUtItemChemical<ItemStackChemicalToItemStackRecipe>> TEPS = new RVMekALRecipeTypeWrapper<>(
             MekInConstants.rl(MekInRecipeConstants.TEPS),

@@ -275,6 +275,16 @@ public class ControlCircuitRecipes {
                 .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(200))
                 .build(output, MekInConstants.rl("control_circuit/multiversal_0"));
         ItemStackListFluidChemicalToItemRecipeBuilder
+                .smallDigitalAssembler(MekInItems.ASTRAL_CONTROL_CIRCUIT.asStack(1))
+                .addItemInput(EMItems.DENSE_CONTROL_CIRCUIT, 8)
+                .addItemInput(ExtraItems.COSMIC_CONTROL_CIRCUIT, 8)
+                .addItemInput(MekInBlocks.COMET_CONTROL_MATRIX, 32)
+                .addItemInput(MekInItems.GRAVITON_PROCESSOR, 64)
+                .addItemInput(MekInItems.ASTRAL_ALLOY.asStack(64))
+                .setFluidInput(Tags.Fluids.LAVA, 80000)
+                .setChemicalInput(MekanismChemicals.ANTIMATTER.asStack(5000))
+                .build(output, MekInConstants.rl("control_circuit/astral_0"));
+        ItemStackListFluidChemicalToItemRecipeBuilder
                 .smallDigitalAssembler(MekInItems.ANALYSIS_CONTROL_CIRCUIT.asStack(1))
                 .addItemInput(ExtraItems.INFINITE_CONTROL_CIRCUIT, 1)
                 .addItemInput(EMItems.MULTIVERSAL_CONTROL_CIRCUIT, 1)

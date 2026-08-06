@@ -12,8 +12,10 @@ import com.takenokoshi.mekin.recipe_viewer.jei.category.FluxCondenserRecipeCateg
 import com.takenokoshi.mekin.recipe_viewer.jei.category.ItemStackChemicalToChemicalRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.LightningFabricationRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.LightningTransformRecipeCategory;
+import com.takenokoshi.mekin.recipe_viewer.jei.category.MeteorCollectorRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.jei.category.TPSRecipeCategory;
 import com.takenokoshi.mekin.recipe_viewer.recipe.FluxCondenserRVRecipe;
+import com.takenokoshi.mekin.recipe_viewer.recipe.MeteorCollectorRVRecipe;
 import com.takenokoshi.mekin.recipe_viewer.type.MekInRecipeViewerRecipeType;
 import com.takenokoshi.mekin.registries.MekInAbsoluteMachines;
 import com.takenokoshi.mekin.registries.MekInBlocks;
@@ -39,6 +41,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import mezz.jei.api.registration.IRecipeCategoryRegistration;
 import mezz.jei.api.registration.IRecipeRegistration;
 import mezz.jei.api.registration.ISubtypeRegistration;
+import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 
 @JeiPlugin
@@ -79,6 +82,7 @@ public class MekInJEIPlugin implements IModPlugin {
                 new ChemicalLeacherRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LEACHING),
                 new LightningTransformRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM),
                 new LightningFabricationRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.LIGHTNING_FABRICATION),
+                new MeteorCollectorRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.METEOR_COLLECTOR),
                 new ItemStackChemicalToItemStackRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.REFINING),
                 new TPSRecipeCategory(guiHelper, MekInRecipeViewerRecipeType.TEPS),
         });
@@ -101,6 +105,9 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekInRecipeTypes.LIGHTNING_FABRICATION);
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM,
                 MekInWrappedRecipeTypes.LIGHTNING_TRANSFORM);
+        RecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.METEOR_COLLECTOR,
+                MekInRecipeTypes.METEOR_COLLECTOR.getRecipes(Minecraft.getInstance().level)
+                        .stream().map(MeteorCollectorRVRecipe::createRVRecipes).flatMap(List::stream).toList());
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.REFINING,
                 MekInRecipeTypes.REFINING);
         MekALRecipeRegistryHelper.register(registration, MekInRecipeViewerRecipeType.TEPS, MekInRecipeTypes.TEPS);
@@ -118,6 +125,7 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekInRecipeViewerRecipeType.LEACHING,
                 MekInRecipeViewerRecipeType.LIGHTNING_FABRICATION,
                 MekInRecipeViewerRecipeType.LIGHTNING_TRANSFORM,
+                MekInRecipeViewerRecipeType.METEOR_COLLECTOR,
                 MekInRecipeViewerRecipeType.REFINING,
                 MekInRecipeViewerRecipeType.TEPS,
         });
@@ -197,6 +205,10 @@ public class MekInJEIPlugin implements IModPlugin {
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PAINTING),
                 List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PAINTING_MACHINE,
                         MekInInfiniteMachines.INFINITE_MULTIVERSAL_PAINTING_MACHINE));
+        CatalystRegistryHelper.register(registration,
+                MekanismJEI.genericRecipeType(RecipeViewerRecipeType.SAWING),
+                List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PRECISION_SAWMILL,
+                        MekInInfiniteMachines.INFINITE_MULTIVERSAL_PRECISION_SAWMILL));
         CatalystRegistryHelper.register(registration,
                 MekanismJEI.genericRecipeType(RecipeViewerRecipeType.PURIFYING),
                 List.of(MekInAbsoluteMachines.ABSOLUTE_OVERCLOCKED_PURIFICATION_CHAMBER,

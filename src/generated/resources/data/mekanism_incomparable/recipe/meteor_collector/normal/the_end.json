@@ -1,0 +1,115 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "ae2:sky_dust"
+  },
+  "dimension": "minecraft:the_end",
+  "input": {
+    "count": 16,
+    "item": "ae2lt:overload_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 256,
+          "id": "ae2:ender_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_fluorite"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_uranium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_extras:raw_naquadah"
+        }
+      ],
+      "weight": 8
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_certus_quartz"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_entro"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_amethyst"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_incomparable:raw_overload"
+        }
+      ],
+      "weight": 6
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "minecraft:raw_iron"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_osmium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_tin"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_lead"
+        }
+      ],
+      "weight": 5
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "ae2:flawless_budding_quartz"
+        },
+        {
+          "count": 64,
+          "id": "extendedae:entro_budding_fully"
+        },
+        {
+          "count": 64,
+          "id": "ae2lt:flawless_budding_overload_crystal"
+        },
+        {
+          "count": 4,
+          "id": "ae2:mysterious_cube"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": false
+}

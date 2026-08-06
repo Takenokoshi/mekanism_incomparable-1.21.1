@@ -1,0 +1,180 @@
+package com.takenokoshi.mekin.blockentity.timespacemachine;
+
+import java.util.List;
+
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
+import com.takenokoshi.mekaddonlib.inventory.slot.LimitChangedOutputInventorySlot;
+import com.takenokoshi.mekin.blockentity.interfaces.IChemicalCrystallizer;
+import com.takenokoshi.mekut.inventory.slot.ChemicalFillConvertOrSupplyingSlot;
+import com.takenokoshi.mekut.recipe.input.AdvancedChemicalInputHandler;
+import com.takenokoshi.mekut.recipe.output.ItemOutputHandler;
+
+import mekanism.api.IContentsListener;
+import mekanism.api.chemical.BasicChemicalTank;
+import mekanism.api.chemical.IChemicalTank;
+import mekanism.api.recipes.ChemicalCrystallizerRecipe;
+import mekanism.api.recipes.cache.CachedRecipe;
+import mekanism.api.recipes.cache.CachedRecipe.OperationTracker.RecipeError;
+import mekanism.api.recipes.cache.OneInputCachedRecipe;
+import mekanism.api.recipes.vanilla_input.SingleChemicalRecipeInput;
+import mekanism.client.recipe_viewer.type.IRecipeViewerRecipeType;
+import mekanism.client.recipe_viewer.type.RecipeViewerRecipeType;
+import mekanism.common.capabilities.energy.MachineEnergyContainer;
+import mekanism.common.capabilities.holder.chemical.ChemicalTankHelper;
+import mekanism.common.capabilities.holder.chemical.IChemicalTankHolder;
+import mekanism.common.capabilities.holder.energy.EnergyContainerHelper;
+import mekanism.common.capabilities.holder.energy.IEnergyContainerHolder;
+import mekanism.common.capabilities.holder.slot.IInventorySlotHolder;
+import mekanism.common.capabilities.holder.slot.InventorySlotHelper;
+import mekanism.common.inventory.container.MekanismContainer;
+import mekanism.common.inventory.container.slot.SlotOverlay;
+import mekanism.common.inventory.container.sync.SyncableLong;
+import mekanism.common.inventory.slot.EnergyInventorySlot;
+import mekanism.common.inventory.warning.WarningTracker.WarningType;
+import mekanism.common.lib.transmitter.TransmissionType;
+import mekanism.common.recipe.IMekanismRecipeTypeProvider;
+import mekanism.common.recipe.MekanismRecipeType;
+import mekanism.common.recipe.lookup.ISingleRecipeLookupHandler;
+import mekanism.common.recipe.lookup.cache.InputRecipeCache.SingleChemical;
+import mekanism.common.tile.component.TileComponentEjector;
+import mekanism.common.tile.prefab.TileEntityRecipeMachine;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Holder;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+
+public class BETimeSpaceChemicalCrystallizer extends TileEntityRecipeMachine<ChemicalCrystallizerRecipe>
+        implements ISingleRecipeLookupHandler.ChemicalRecipeLookupHandler<ChemicalCrystallizerRecipe>,
+        IChemicalCrystallizer {
+
+    private static final List<RecipeError> TRACKED_ERROR_TYPES = List.of(
+            RecipeError.NOT_ENOUGH_ENERGY,
+            RecipeError.NOT_ENOUGH_INPUT,
+            RecipeError.NOT_ENOUGH_OUTPUT_SPACE,
+            RecipeError.INPUT_DOESNT_PRODUCE_OUTPUT);
+    public IChemicalTank inputTank;
+
+    private final ItemOutputHandler outputHandler;
+    private final AdvancedChemicalInputHandler inputHandler;
+
+    private MachineEnergyContainer<?> energyContainer;
+    ChemicalFillConvertOrSupplyingSlot inputSlot;
+    LimitChangedOutputInventorySlot outputSlot;
+    EnergyInventorySlot energySlot;
+    private long clientEnergyUsed = 0L;
+
+    public BETimeSpaceChemicalCrystallizer(Holder<Block> blockProvider, BlockPos pos, BlockState state) {
+        super(blockProvider, pos, state, TRACKED_ERROR_TYPES);
+        configComponent.setupItemIOConfig(inputSlot, outputSlot, energySlot);
+        configComponent.setupInputConfig(TransmissionType.ENERGY, energyContainer);
+        configComponent.setupInputConfig(TransmissionType.CHEMICAL, inputTank);
+
+        ejectorComponent = new TileComponentEjector(this);
+        ejectorComponent.setOutputData(configComponent, TransmissionType.ITEM);
+        inputHandler = AdvancedChemicalInputHandler.create(inputTank, RecipeError.NOT_ENOUGH_INPUT);
+        outputHandler = new ItemOutputHandler(outputSlot, RecipeError.NOT_ENOUGH_OUTPUT_SPACE);
+    }
+
+    @NotNull
+    @Override
+    public IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener,
+            IContentsListener recipeCacheListener, IContentsListener recipeCacheUnpauseListener) {
+        ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
+        builder.addTank(inputTank = BasicChemicalTank.inputModern(Long.MAX_VALUE, this::containsRecipe,
+                recipeCacheListener));
+        return builder.build();
+    }
+
+    @NotNull
+    @Override
+    protected IEnergyContainerHolder getInitialEnergyContainers(IContentsListener listener,
+            IContentsListener recipeCacheListener, IContentsListener recipeCacheUnpauseListener) {
+        EnergyContainerHelper builder = EnergyContainerHelper.forSideWithConfig(this);
+        builder.addContainer(energyContainer = MachineEnergyContainer.input(this, recipeCacheUnpauseListener));
+        return builder.build();
+    }
+
+    @NotNull
+    @Override
+    protected IInventorySlotHolder getInitialInventory(IContentsListener listener,
+            IContentsListener recipeCacheListener, IContentsListener recipeCacheUnpauseListener) {
+        InventorySlotHelper builder = InventorySlotHelper.forSideWithConfig(this);
+        builder.addSlot(
+                inputSlot = ChemicalFillConvertOrSupplyingSlot.create(inputTank, this::getLevel, listener, 8, 65));
+        builder.addSlot(outputSlot = LimitChangedOutputInventorySlot.at(recipeCacheUnpauseListener, 129, 57,
+                1_000_000_000))
+                .tracksWarnings(slot -> slot.warning(WarningType.NO_SPACE_IN_OUTPUT,
+                        getWarningCheck(RecipeError.NOT_ENOUGH_OUTPUT_SPACE)));
+        builder.addSlot(
+                energySlot = EnergyInventorySlot.fillOrConvert(energyContainer, this::getLevel, listener, 152, 5));
+        inputSlot.setSlotOverlay(SlotOverlay.PLUS);
+        return builder.build();
+    }
+
+    @Override
+    protected boolean onUpdateServer() {
+        boolean sendUpdatePacket = super.onUpdateServer();
+        energySlot.fillContainerOrConvert();
+        inputSlot.fillTankOrConvert();
+        clientEnergyUsed = recipeCacheLookupMonitor.updateAndProcess(energyContainer);
+        return sendUpdatePacket;
+    }
+
+    public int getEnergySlotX() {
+        return energySlot.getGuiX();
+    }
+
+    @Override
+    public @NotNull IMekanismRecipeTypeProvider<SingleChemicalRecipeInput, ChemicalCrystallizerRecipe, SingleChemical<ChemicalCrystallizerRecipe>> getRecipeType() {
+        return MekanismRecipeType.CRYSTALLIZING;
+    }
+
+    @Override
+    public @Nullable IRecipeViewerRecipeType<ChemicalCrystallizerRecipe> recipeViewerType() {
+        return RecipeViewerRecipeType.CRYSTALLIZING;
+    }
+
+    @Override
+    public @Nullable ChemicalCrystallizerRecipe getRecipe(int cacheIndex) {
+        return getRecipeType().getInputCache().findFirstRecipe(level, inputHandler.getInput());
+    }
+
+    @Override
+    public @NotNull CachedRecipe<ChemicalCrystallizerRecipe> createNewCachedRecipe(
+            @NotNull ChemicalCrystallizerRecipe recipe, int cacheIndex) {
+        return OneInputCachedRecipe.crystallizing(recipe, recheckAllRecipeErrors, inputHandler, outputHandler)
+                .setErrorsChanged(this::onErrorsChanged)
+                .setCanHolderFunction(this::canFunction)
+                .setActive(this::setActive)
+                .setEnergyRequirements(energyContainer::getEnergyPerTick, energyContainer)
+                .setOnFinish(this::markForSave)
+                .setBaselineMaxOperations(() -> 0x7fffffff);
+    }
+
+    public MachineEnergyContainer<?> getEnergyContainer() {
+        return energyContainer;
+    }
+
+    @Override
+    public long getEnergyUsed() {
+        return clientEnergyUsed;
+    }
+
+    @Override
+    public void addContainerTrackers(MekanismContainer container) {
+        super.addContainerTrackers(container);
+        container.track(SyncableLong.create(this::getEnergyUsed, v -> clientEnergyUsed = v));
+    }
+
+    public IChemicalTank getInputTank() {
+        return inputTank;
+    }
+
+    @Override
+    public double getScaledProgress() {
+        return getActive() ? 1.0d : 0.0d;
+    }
+
+}

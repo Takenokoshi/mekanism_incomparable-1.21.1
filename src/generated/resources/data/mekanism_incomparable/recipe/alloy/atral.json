@@ -1,0 +1,19 @@
+{
+  "type": "evolvedmekanism:chemixing",
+  "chemical_input": {
+    "amount": 4000,
+    "chemical": "mekanism_incomparable:cosmos_ether"
+  },
+  "extra_input": {
+    "count": 16,
+    "item": "mekanism_utilities:stardust_alloy"
+  },
+  "main_input": {
+    "count": 4,
+    "item": "ae2lt:firmament_alloy_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "mekanism_incomparable:astral_alloy"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "type": "mekanism:metallurgic_infusing",
+  "type": "evolvedmekanism:apt",
   "chemical_input": {
     "amount": 160,
     "tag": "evolvedmekanism:better_gold"

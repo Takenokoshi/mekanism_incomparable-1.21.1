@@ -57,6 +57,9 @@ public class MekInBlocks {
     public static final BlockRegistryObject<Block, BlockItem> MULTIVERSAL_CONTROL_MATRIX = BLOCKS
             .register("multiversal_control_matrix", BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK));
 
+    public static final BlockRegistryObject<Block, BlockItem> COMET_CONTROL_MATRIX = BLOCKS
+            .register("comet_control_matrix", BlockBehaviour.Properties.of().mapColor(MapColor.SAND));
+
     public static final BlockRegistryObject<Block, BlockItem> TITANIUM_CASING = BLOCKS
             .register("titanium_casing", BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_BLUE));
 

@@ -8,10 +8,12 @@ import com.takenokoshi.mekin.recipe.MekInRecipeConstants;
 import com.takenokoshi.mekin.recipe.inputcache.LightningFabricationInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInDoubleInputRecipeCache;
 import com.takenokoshi.mekin.recipe.inputcache.MekInTripleInputRecipeCache;
+import com.takenokoshi.mekin.recipe.inputcache.MeteorCollectorInputRecipeCache;
 import com.takenokoshi.mekin.recipe.recipes.prefab.FluidChemicalToBiChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackChemicalToChemicalRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.ItemStackFluidChemicalToItemStackRecipe;
 import com.takenokoshi.mekin.recipe.recipes.prefab.LightningFabricationRecipe;
+import com.takenokoshi.mekin.recipe.recipes.prefab.MeteorCollectorRecipe;
 import com.takenokoshi.mekin.recipe.type.LightningFabricationRecipeType;
 import com.takenokoshi.mekut.recipe.inputcache.MekUtDoubleInputRecipeCache;
 
@@ -43,6 +45,10 @@ public class MekInRecipeTypes {
 
     public static final MekALRecipeTypeRegistryObject<RecipeInput, LightningFabricationRecipe, LightningFabricationInputRecipeCache> LIGHTNING_FABRICATION = RECIPE_TYPES
             .registerMekAL(MekInRecipeConstants.LIGHTNING_FABRICATION, LightningFabricationRecipeType::new);
+
+    public static final MekALRecipeTypeRegistryObject<RecipeInput, MeteorCollectorRecipe, MeteorCollectorInputRecipeCache> METEOR_COLLECTOR = RECIPE_TYPES
+            .registerMekAL(MekInRecipeConstants.METOR_COLLECTOR,
+                    id -> new MekALRecipeType<>(id, MeteorCollectorInputRecipeCache::new));
 
     public static final MekALRecipeTypeRegistryObject<SingleItemChemicalRecipeInput, ItemStackChemicalToItemStackRecipe, MekUtDoubleInputRecipeCache.MekUtItemChemical<ItemStackChemicalToItemStackRecipe>> TEPS = RECIPE_TYPES
             .registerMekAL(MekInRecipeConstants.TEPS,

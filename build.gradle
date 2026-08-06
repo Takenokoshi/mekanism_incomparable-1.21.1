@@ -165,6 +165,9 @@ dependencies {
     implementation "curse.maven:ae2-mega-things-1150075:6203833"
     implementation "curse.maven:ae2-lightning-tech-1527395:8458199"
     implementation "curse.maven:insaneae-1627326:8554206"
+
+    //other
+    implementation "curse.maven:one-billion-stacks-1631508:8539899"
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.

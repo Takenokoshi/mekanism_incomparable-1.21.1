@@ -1,0 +1,159 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "ae2:sky_dust"
+  },
+  "dimension": "minecraft:overworld",
+  "input": {
+    "count": 16,
+    "item": "ae2lt:overload_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 2048,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 192,
+          "id": "mekanism_utilities:raw_certus_quartz"
+        }
+      ],
+      "weight": 20
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_amethyst"
+        },
+        {
+          "count": 256,
+          "id": "mekanism_utilities:raw_fluorite"
+        }
+      ],
+      "weight": 5
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_redstone"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_coal"
+        }
+      ],
+      "weight": 20
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_emerald"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_diamond"
+        },
+        {
+          "count": 128,
+          "id": "mekanism_utilities:raw_lapis_lazuli"
+        }
+      ],
+      "weight": 6
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 128,
+          "id": "minecraft:raw_iron"
+        },
+        {
+          "count": 64,
+          "id": "minecraft:raw_copper"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_tin"
+        }
+      ],
+      "weight": 20
+    },
+    {
+      "output": [
+        {
+          "count": 1024,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "minecraft:raw_gold"
+        },
+        {
+          "count": 128,
+          "id": "mekanism:raw_osmium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_lead"
+        }
+      ],
+      "weight": 20
+    },
+    {
+      "output": [
+        {
+          "count": 4096,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "mekanism:raw_uranium"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_extras:raw_naquadah"
+        }
+      ],
+      "weight": 8
+    },
+    {
+      "output": [
+        {
+          "count": 4096,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 64,
+          "id": "ae2:flawless_budding_quartz"
+        },
+        {
+          "count": 4,
+          "id": "ae2:mysterious_cube"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": false
+}

@@ -1,0 +1,44 @@
+{
+  "type": "mekanism_incomparable:meteor_collector",
+  "catalyst": {
+    "count": 1,
+    "item": "ae2lt:overload_crystal_dust"
+  },
+  "dimension": "minecraft:overworld",
+  "input": {
+    "count": 1,
+    "item": "extendedae_plus:oblivion_singularity"
+  },
+  "outputs": [
+    {
+      "output": [
+        {
+          "count": 4096,
+          "id": "ae2:sky_dust"
+        },
+        {
+          "count": 16384,
+          "id": "mekanism_incomparable:raw_overload"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_entro"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_amethyst"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_certus_quartz"
+        },
+        {
+          "count": 64,
+          "id": "mekanism_utilities:raw_quartz"
+        }
+      ],
+      "weight": 1
+    }
+  ],
+  "require_advanced": true
+}
